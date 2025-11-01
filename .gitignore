@@ -1,3 +1,8 @@
+nano .gitignore
+```
+
+Reemplaza todo con esto:
+```
 # Prerequisites
 *.d
 
@@ -37,5 +42,20 @@
 *.out
 *.app
 
-# debug information files
+# Debug information files
 *.dwo
+
+# Build and CMake generated files
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakePresets.json
+CMakeUserPresets.json
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Conan files
+conan*
+*.sh
