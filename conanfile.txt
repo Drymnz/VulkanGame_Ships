@@ -1,0 +1,7 @@
+[requires]
+glfw/3.4
+glm/1.0.1
+
+[generators]
+CMakeDeps
+CMakeToolchain
