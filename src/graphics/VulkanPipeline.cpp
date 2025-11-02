@@ -1,20 +1,21 @@
 #include "graphics/VulkanPipeline.h"
 #include <stdexcept>
 #include <iostream>
+#include <array> 
 
 VulkanPipeline::VulkanPipeline()
-    : pipelineLayout(VK_NULL_HANDLE)
-    , graphicsPipeline(VK_NULL_HANDLE)
-    , device(VK_NULL_HANDLE) {}
+    : pipelineLayout(VK_NULL_HANDLE), graphicsPipeline(VK_NULL_HANDLE), device(VK_NULL_HANDLE) {}
 
-VulkanPipeline::~VulkanPipeline() {
+VulkanPipeline::~VulkanPipeline()
+{
     destroy();
 }
 
-void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPass, VkExtent2D swapChainExtent) {
+void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPass, VkExtent2D swapChainExtent)
+{
     device = dev;
     shaderManager.init(device);
-    
+
     auto vertShaderCode = shaderManager.readFile("vert.spv");
     auto fragShaderCode = shaderManager.readFile("frag.spv");
 
@@ -35,27 +36,49 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
 
     VkPipelineShaderStageCreateInfo shaderStages[] = {vertShaderStageInfo, fragShaderStageInfo};
 
+    // Configuración para Vertex3D
     VkVertexInputBindingDescription bindingDescription{};
     bindingDescription.binding = 0;
-    bindingDescription.stride = sizeof(Vertex);
+    bindingDescription.stride = sizeof(Vertex3D);
     bindingDescription.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
-    VkVertexInputAttributeDescription attributeDescription{};
-    attributeDescription.binding = 0;
-    attributeDescription.location = 0;
-    attributeDescription.format = VK_FORMAT_R32G32_SFLOAT;
-    attributeDescription.offset = 0;
+    std::array<VkVertexInputAttributeDescription, 4> attributeDescriptions{};
 
+    // Posición (vec3)
+    attributeDescriptions[0].binding = 0;
+    attributeDescriptions[0].location = 0;
+    attributeDescriptions[0].format = VK_FORMAT_R32G32B32_SFLOAT;
+    attributeDescriptions[0].offset = offsetof(Vertex3D, pos);
+
+    // Normal (vec3)
+    attributeDescriptions[1].binding = 0;
+    attributeDescriptions[1].location = 1;
+    attributeDescriptions[1].format = VK_FORMAT_R32G32B32_SFLOAT;
+    attributeDescriptions[1].offset = offsetof(Vertex3D, normal);
+
+    // TexCoord (vec2)
+    attributeDescriptions[2].binding = 0;
+    attributeDescriptions[2].location = 2;
+    attributeDescriptions[2].format = VK_FORMAT_R32G32_SFLOAT;
+    attributeDescriptions[2].offset = offsetof(Vertex3D, texCoord);
+
+    // Color (vec3)
+    attributeDescriptions[3].binding = 0;
+    attributeDescriptions[3].location = 3;
+    attributeDescriptions[3].format = VK_FORMAT_R32G32B32_SFLOAT;
+    attributeDescriptions[3].offset = offsetof(Vertex3D, color);
+
+    // AQUÍ ESTÁ LO QUE FALTABA - Declarar vertexInputInfo
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
     vertexInputInfo.vertexBindingDescriptionCount = 1;
     vertexInputInfo.pVertexBindingDescriptions = &bindingDescription;
-    vertexInputInfo.vertexAttributeDescriptionCount = 1;
-    vertexInputInfo.pVertexAttributeDescriptions = &attributeDescription;
+    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescriptions.size());
+    vertexInputInfo.pVertexAttributeDescriptions = attributeDescriptions.data();
 
     VkPipelineInputAssemblyStateCreateInfo inputAssembly{};
     inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
-    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_POINT_LIST;
+    inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
     inputAssembly.primitiveRestartEnable = VK_FALSE;
 
     VkViewport viewport{};
@@ -84,7 +107,7 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
     rasterizer.lineWidth = 1.0f;
     rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
-    rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE;
+    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;  // <-- Cambiar a COUNTER_CLOCKWISE
     rasterizer.depthBiasEnable = VK_FALSE;
 
     VkPipelineMultisampleStateCreateInfo multisampling{};
@@ -106,7 +129,8 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
 
-    if (vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS) {
+    if (vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS)
+    {
         throw std::runtime_error("Error al crear pipeline layout");
     }
 
@@ -124,24 +148,29 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     pipelineInfo.renderPass = renderPass;
     pipelineInfo.subpass = 0;
 
-    if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS) {
+    if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS)
+    {
         throw std::runtime_error("Error al crear graphics pipeline");
     }
 
     std::cout << "Pipeline gráfico creado" << std::endl;
 }
 
-void VulkanPipeline::destroy() {
-    if (device == VK_NULL_HANDLE) return;
-    
+void VulkanPipeline::destroy()
+{
+    if (device == VK_NULL_HANDLE)
+        return;
+
     shaderManager.destroy();
-    
-    if (graphicsPipeline != VK_NULL_HANDLE) {
+
+    if (graphicsPipeline != VK_NULL_HANDLE)
+    {
         vkDestroyPipeline(device, graphicsPipeline, nullptr);
         graphicsPipeline = VK_NULL_HANDLE;
     }
-    
-    if (pipelineLayout != VK_NULL_HANDLE) {
+
+    if (pipelineLayout != VK_NULL_HANDLE)
+    {
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
         pipelineLayout = VK_NULL_HANDLE;
     }

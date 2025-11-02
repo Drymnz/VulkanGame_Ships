@@ -3735,6 +3735,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/c++/15.2.1/array \
   /usr/include/c++/15.2.1/backward/binders.h \
   /usr/include/c++/15.2.1/bit \
   /usr/include/c++/15.2.1/bits/alloc_traits.h \
@@ -3800,6 +3801,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/cctype \
   /usr/include/c++/15.2.1/cerrno \
   /usr/include/c++/15.2.1/clocale \
+  /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdio \

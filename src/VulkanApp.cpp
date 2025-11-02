@@ -13,7 +13,7 @@ VulkanApp::VulkanApp()
 
 VulkanApp::~VulkanApp()
 {
-    //cleanup();
+    // cleanup();
 }
 
 void VulkanApp::run()
@@ -75,7 +75,7 @@ void VulkanApp::initVulkan()
                   vulkanDevice.getQueueIndices().graphicsFamily);
 
     // CARGAR MODELO <-- AGREGAR ESTO
-    if (modelLoader.loadModel("assets/models/ship.glb"))
+    if (modelLoader.loadModel("ship.glb"))
     {
         renderer.loadModel(modelLoader.getVertices(), modelLoader.getIndices());
     }
@@ -143,7 +143,7 @@ void VulkanApp::cleanup() {
         vkDeviceWaitIdle(vulkanDevice.getLogicalDevice());
     }
     
-    renderer.destroy();  // Solo una vez
+    renderer.destroy();
     pipeline.destroy();
     renderPass.destroy();
     swapChain.destroy();
