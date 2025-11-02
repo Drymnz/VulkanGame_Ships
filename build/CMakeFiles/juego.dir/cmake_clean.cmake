@@ -28,6 +28,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o.d"
   "CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o"
   "CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o.d"
+  "CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o"
+  "CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o.d"
   "CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o"
   "CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o.d"
   "CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o"

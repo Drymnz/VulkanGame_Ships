@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 include_directories(external/imgui)
 include_directories(external/imgui/backends)
+include_directories(external)
+find_package(nlohmann_json REQUIRED)
 
 # Definir directorio de ImGui
 set(IMGUI_DIR external/imgui)
@@ -26,6 +28,7 @@ set(SOURCES
     src/graphics/FramebufferManager.cpp
     src/graphics/ShaderManager.cpp
     src/graphics/SyncManager.cpp
+    src/graphics/ModelLoader.cpp 
     src/input/InputManager.cpp
     # ImGui core
     ${IMGUI_DIR}/imgui.cpp
@@ -48,6 +51,7 @@ find_package(glfw3 REQUIRED)
 target_link_libraries(juego 
     Vulkan::Vulkan 
     glfw 
+    nlohmann_json::nlohmann_json
 )
 
 # Copiar shaders al directorio de build

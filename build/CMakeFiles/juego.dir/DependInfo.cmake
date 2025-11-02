@@ -22,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/BufferManager.cpp" "CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o.d"
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/CommandManager.cpp" "CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o.d"
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/FramebufferManager.cpp" "CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o.d"
+  "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ModelLoader.cpp" "CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o.d"
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ShaderManager.cpp" "CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o.d"
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/SyncManager.cpp" "CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o.d"
   "/home/drymnz/Proyects/VulkanGame_Ships/src/graphics/VulkanPipeline.cpp" "CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o" "gcc" "CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o.d"

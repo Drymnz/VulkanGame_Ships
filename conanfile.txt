@@ -2,6 +2,7 @@
 glfw/3.4
 glm/1.0.1
 imgui/1.91.5
+nlohmann_json/3.11.3
 
 [generators]
 CMakeDeps

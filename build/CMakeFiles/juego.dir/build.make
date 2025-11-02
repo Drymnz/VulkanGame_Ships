@@ -268,10 +268,24 @@ CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/SyncManager.cpp -o CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.s
 
+CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o: CMakeFiles/juego.dir/flags.make
+CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ModelLoader.cpp
+CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o -MF CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o.d -o CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ModelLoader.cpp
+
+CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ModelLoader.cpp > CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.i
+
+CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/ModelLoader.cpp -o CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.s
+
 CMakeFiles/juego.dir/src/input/InputManager.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/src/input/InputManager.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/input/InputManager.cpp
 CMakeFiles/juego.dir/src/input/InputManager.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/juego.dir/src/input/InputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/juego.dir/src/input/InputManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/src/input/InputManager.cpp.o -MF CMakeFiles/juego.dir/src/input/InputManager.cpp.o.d -o CMakeFiles/juego.dir/src/input/InputManager.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/src/input/InputManager.cpp
 
 CMakeFiles/juego.dir/src/input/InputManager.cpp.i: cmake_force
@@ -285,7 +299,7 @@ CMakeFiles/juego.dir/src/input/InputManager.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/imgui.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/imgui.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui.cpp
 CMakeFiles/juego.dir/external/imgui/imgui.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/imgui.cpp.o -MF CMakeFiles/juego.dir/external/imgui/imgui.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/imgui.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui.cpp
 
 CMakeFiles/juego.dir/external/imgui/imgui.cpp.i: cmake_force
@@ -299,7 +313,7 @@ CMakeFiles/juego.dir/external/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_demo.cpp
 CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o -MF CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_demo.cpp
 
 CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.i: cmake_force
@@ -313,7 +327,7 @@ CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_draw.cpp
 CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o -MF CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_draw.cpp
 
 CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.i: cmake_force
@@ -327,7 +341,7 @@ CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_tables.cpp
 CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o -MF CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_tables.cpp
 
 CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.i: cmake_force
@@ -341,7 +355,7 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_widgets.cpp
 CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o -MF CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/imgui_widgets.cpp
 
 CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.i: cmake_force
@@ -355,7 +369,7 @@ CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -369,7 +383,7 @@ CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o: CMakeFiles/juego.dir/flags.make
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_vulkan.cpp
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o: CMakeFiles/juego.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o -MF CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o.d -o CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o -c /home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_vulkan.cpp
 
 CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.i: cmake_force
@@ -396,6 +410,7 @@ juego_OBJECTS = \
 "CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o" \
 "CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o" \
 "CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o" \
+"CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o" \
 "CMakeFiles/juego.dir/src/input/InputManager.cpp.o" \
 "CMakeFiles/juego.dir/external/imgui/imgui.cpp.o" \
 "CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o" \
@@ -422,6 +437,7 @@ juego: CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o
 juego: CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o
 juego: CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o
 juego: CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o
+juego: CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o
 juego: CMakeFiles/juego.dir/src/input/InputManager.cpp.o
 juego: CMakeFiles/juego.dir/external/imgui/imgui.cpp.o
 juego: CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o
@@ -433,9 +449,9 @@ juego: CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o
 juego: CMakeFiles/juego.dir/build.make
 juego: CMakeFiles/juego.dir/compiler_depend.ts
 juego: /lib/libvulkan.so
-juego: /usr/lib/libglfw.so.3.4
+juego: /home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/lib/libglfw3.a
 juego: CMakeFiles/juego.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable juego"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable juego"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/juego.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

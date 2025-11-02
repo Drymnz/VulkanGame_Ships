@@ -465,6 +465,30 @@ src/graphics/FramebufferManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.s
 .PHONY : src/graphics/FramebufferManager.cpp.s
 
+src/graphics/ModelLoader.o: src/graphics/ModelLoader.cpp.o
+.PHONY : src/graphics/ModelLoader.o
+
+# target to build an object file
+src/graphics/ModelLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o
+.PHONY : src/graphics/ModelLoader.cpp.o
+
+src/graphics/ModelLoader.i: src/graphics/ModelLoader.cpp.i
+.PHONY : src/graphics/ModelLoader.i
+
+# target to preprocess a source file
+src/graphics/ModelLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.i
+.PHONY : src/graphics/ModelLoader.cpp.i
+
+src/graphics/ModelLoader.s: src/graphics/ModelLoader.cpp.s
+.PHONY : src/graphics/ModelLoader.s
+
+# target to generate assembly for a file
+src/graphics/ModelLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.s
+.PHONY : src/graphics/ModelLoader.cpp.s
+
 src/graphics/ShaderManager.o: src/graphics/ShaderManager.cpp.o
 .PHONY : src/graphics/ShaderManager.o
 
@@ -708,6 +732,9 @@ help:
 	@echo "... src/graphics/FramebufferManager.o"
 	@echo "... src/graphics/FramebufferManager.i"
 	@echo "... src/graphics/FramebufferManager.s"
+	@echo "... src/graphics/ModelLoader.o"
+	@echo "... src/graphics/ModelLoader.i"
+	@echo "... src/graphics/ModelLoader.s"
 	@echo "... src/graphics/ShaderManager.o"
 	@echo "... src/graphics/ShaderManager.i"
 	@echo "... src/graphics/ShaderManager.s"

@@ -11,6 +11,7 @@
 #include "graphics/VulkanRenderPass.h"
 #include "graphics/VulkanRenderer.h"
 #include "input/InputManager.h"
+#include "graphics/ModelLoader.h" 
 
 class VulkanApp {
 public:
@@ -31,6 +32,7 @@ private:
     VulkanRenderPass renderPass;
     VulkanRenderer renderer;
     InputManager inputManager;
+    ModelLoader modelLoader; 
     
     int targetFPS;
     float pointX, pointY;

@@ -1,0 +1,167 @@
+.
+├── assets
+│   ├── models
+│   └── textures
+├── build
+│   └── CMakeFiles
+│       ├── 4.1.2
+│       │   ├── CompilerIdC
+│       │   │   └── tmp
+│       │   └── CompilerIdCXX
+│       │       └── tmp
+│       ├── juego.dir
+│       │   ├── external
+│       │   │   └── imgui
+│       │   │       └── backends
+│       │   └── src
+│       │       ├── core
+│       │       ├── graphics
+│       │       └── input
+│       ├── pkgRedirects
+│       └── Progress
+├── CMakeFiles
+│   └── pkgRedirects
+├── docs
+├── external
+│   ├── imgui
+│   │   ├── backends
+│   │   │   ├── sdlgpu3
+│   │   │   └── vulkan
+│   │   ├── docs
+│   │   ├── examples
+│   │   │   ├── example_allegro5
+│   │   │   ├── example_android_opengl3
+│   │   │   │   └── android
+│   │   │   │       ├── app
+│   │   │   │       │   └── src
+│   │   │   │       │       └── main
+│   │   │   │       │           └── java
+│   │   │   │       └── gradle
+│   │   │   ├── example_apple_metal
+│   │   │   │   ├── example_apple_metal.xcodeproj
+│   │   │   │   ├── iOS
+│   │   │   │   └── macOS
+│   │   │   ├── example_apple_opengl2
+│   │   │   │   └── example_apple_opengl2.xcodeproj
+│   │   │   ├── example_glfw_metal
+│   │   │   ├── example_glfw_opengl2
+│   │   │   ├── example_glfw_opengl3
+│   │   │   ├── example_glfw_vulkan
+│   │   │   ├── example_glfw_wgpu
+│   │   │   ├── example_glut_opengl2
+│   │   │   ├── example_null
+│   │   │   ├── example_sdl2_directx11
+│   │   │   ├── example_sdl2_metal
+│   │   │   ├── example_sdl2_opengl2
+│   │   │   ├── example_sdl2_opengl3
+│   │   │   ├── example_sdl2_sdlrenderer2
+│   │   │   ├── example_sdl2_vulkan
+│   │   │   ├── example_sdl2_wgpu
+│   │   │   ├── example_sdl3_directx11
+│   │   │   ├── example_sdl3_metal
+│   │   │   ├── example_sdl3_opengl3
+│   │   │   ├── example_sdl3_sdlgpu3
+│   │   │   ├── example_sdl3_sdlrenderer3
+│   │   │   ├── example_sdl3_vulkan
+│   │   │   ├── example_sdl3_wgpu
+│   │   │   ├── example_win32_directx10
+│   │   │   ├── example_win32_directx11
+│   │   │   ├── example_win32_directx12
+│   │   │   ├── example_win32_directx9
+│   │   │   ├── example_win32_opengl3
+│   │   │   ├── example_win32_vulkan
+│   │   │   └── libs
+│   │   │       ├── emscripten
+│   │   │       ├── glfw
+│   │   │       │   ├── include
+│   │   │       │   │   └── GLFW
+│   │   │       │   ├── lib-vc2010-32
+│   │   │       │   └── lib-vc2010-64
+│   │   │       └── usynergy
+│   │   └── misc
+│   │       ├── cpp
+│   │       ├── debuggers
+│   │       ├── fonts
+│   │       ├── freetype
+│   │       └── single_file
+│   └── tinygltf
+│       ├── cmake
+│       ├── deps
+│       ├── examples
+│       │   ├── basic
+│       │   │   └── basic
+│       │   ├── build-gltf
+│       │   ├── common
+│       │   │   ├── glm
+│       │   │   │   ├── cmake
+│       │   │   │   ├── doc
+│       │   │   │   │   ├── api
+│       │   │   │   │   │   └── search
+│       │   │   │   │   ├── manual
+│       │   │   │   │   └── theme
+│       │   │   │   ├── glm
+│       │   │   │   │   ├── detail
+│       │   │   │   │   ├── gtc
+│       │   │   │   │   ├── gtx
+│       │   │   │   │   └── simd
+│       │   │   │   ├── test
+│       │   │   │   │   ├── bug
+│       │   │   │   │   ├── core
+│       │   │   │   │   ├── external
+│       │   │   │   │   │   └── gli
+│       │   │   │   │   │       └── core
+│       │   │   │   │   ├── gtc
+│       │   │   │   │   └── gtx
+│       │   │   │   └── util
+│       │   │   │       └── conan-package
+│       │   │   │           ├── lib_licenses
+│       │   │   │           └── test_package
+│       │   │   ├── imgui
+│       │   │   ├── nativefiledialog
+│       │   │   │   ├── screens
+│       │   │   │   ├── src
+│       │   │   │   │   └── include
+│       │   │   │   └── test
+│       │   │   ├── OpenGLWindow
+│       │   │   └── ThirdPartyLibs
+│       │   │       └── Glew
+│       │   │           └── CustomGL
+│       │   ├── dxview
+│       │   │   ├── res
+│       │   │   └── src
+│       │   ├── gltfutil
+│       │   ├── glview
+│       │   │   ├── cmake
+│       │   │   └── glview
+│       │   ├── raytrace
+│       │   │   └── images
+│       │   ├── saver
+│       │   └── validator
+│       │       ├── app
+│       │       └── src
+│       ├── experimental
+│       ├── models
+│       │   ├── BoundsChecking
+│       │   ├── Cube
+│       │   ├── CubeImageUriSpaces
+│       │   ├── Cube-texture-ext
+│       │   ├── Extensions-issue97
+│       │   ├── Extensions-overwrite-issue261
+│       │   ├── regression
+│       │   └── SparseMorphTargets-issue280
+│       ├── tests
+│       │   └── fuzzer
+│       ├── tools
+│       │   └── windows
+│       └── wasm
+├── include
+│   ├── core
+│   ├── graphics
+│   └── input
+├── shaders
+└── src
+    ├── core
+    ├── graphics
+    └── input
+
+165 directories

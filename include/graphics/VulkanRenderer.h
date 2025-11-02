@@ -22,6 +22,10 @@ public:
                    VkRenderPass renderPass, VkPipeline pipeline, VkExtent2D extent);
     void destroy();
 
+
+    void loadModel(const std::vector<Vertex3D>& vertices, const std::vector<uint32_t>& indices);
+    void createDefaultBuffer();
+
 private:
     VkDevice device;
     uint32_t currentFrame;
@@ -30,6 +34,7 @@ private:
     CommandManager commandManager;
     SyncManager syncManager;
     FramebufferManager framebufferManager;
+     bool useIndexBuffer;
 };
 
 #endif // VULKAN_RENDERER_H
