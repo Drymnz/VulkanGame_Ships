@@ -1,14 +1,18 @@
 #include "VulkanApp.h"
 #include <stdexcept>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 VulkanApp::VulkanApp() 
     : window(nullptr)
     , surface(VK_NULL_HANDLE)
     , imguiDescriptorPool(VK_NULL_HANDLE)
-    , targetFPS(60)
+    , targetFPS(0)  // 0 = sin límite
     , pointX(0.0f)
-    , pointY(0.0f) {}
+    , pointY(0.0f)
+    , frameCount(0)
+    , lastFPSTime(0.0) {}
 
 VulkanApp::~VulkanApp() {
     cleanup();
@@ -36,6 +40,8 @@ void VulkanApp::initWindow() {
 
     glfwSetWindowUserPointer(window, this);
     glfwSetKeyCallback(window, keyCallback);
+    
+    lastFPSTime = glfwGetTime();
     
     std::cout << "Ventana creada" << std::endl;
 }
@@ -89,6 +95,26 @@ void VulkanApp::mainLoop() {
                           renderPass.getRenderPass(),
                           pipeline.getPipeline(), 
                           swapChain.getExtent());
+        
+        updateFPS();
+    }
+}
+
+void VulkanApp::updateFPS() {
+    frameCount++;
+    double currentTime = glfwGetTime();
+    double elapsed = currentTime - lastFPSTime;
+    
+    // Actualizar título cada 0.5 segundos
+    if (elapsed >= 0.5) {
+        double fps = frameCount / elapsed;
+        
+        std::ostringstream title;
+        title << "Vulkan Game - " << std::fixed << std::setprecision(1) << fps << " FPS";
+        glfwSetWindowTitle(window, title.str().c_str());
+        
+        frameCount = 0;
+        lastFPSTime = currentTime;
     }
 }
 

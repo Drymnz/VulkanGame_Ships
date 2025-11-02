@@ -3,6 +3,7 @@
 
 #include <vulkan/vulkan.h>
 #include <vector>
+#include "VulkanConfig.h"
 
 class SyncManager {
 public:
@@ -12,19 +13,18 @@ public:
     void init(VkDevice device);
     void destroy();
 
-    VkSemaphore getImageAvailableSemaphore(size_t frame) const { return imageAvailableSemaphores[frame]; }
-    VkSemaphore getRenderFinishedSemaphore(size_t frame) const { return renderFinishedSemaphores[frame]; }
-    VkFence getInFlightFence(size_t frame) const { return inFlightFences[frame]; }
+    // Getters que devuelven los vectores completos
+    const std::vector<VkSemaphore>& getImageAvailableSemaphores() const { return imageAvailableSemaphores; }
+    const std::vector<VkSemaphore>& getRenderFinishedSemaphores() const { return renderFinishedSemaphores; }
+    const std::vector<VkFence>& getInFlightFences() const { return inFlightFences; }
 
 private:
-    void createSyncObjects();
-
-    static const int MAX_FRAMES_IN_FLIGHT = 2;
-
     VkDevice device;
     std::vector<VkSemaphore> imageAvailableSemaphores;
     std::vector<VkSemaphore> renderFinishedSemaphores;
     std::vector<VkFence> inFlightFences;
+
+    void createSyncObjects();
 };
 
-#endif
+#endif // SYNC_MANAGER_H

@@ -1,5 +1,6 @@
 #include "graphics/SyncManager.h"
 #include <stdexcept>
+#include <iostream>
 
 SyncManager::SyncManager()
     : device(VK_NULL_HANDLE) {}
@@ -32,17 +33,19 @@ void SyncManager::createSyncObjects() {
             throw std::runtime_error("Error al crear objetos de sincronización");
         }
     }
+    
+    std::cout << "Objetos de sincronización creados" << std::endl;
 }
 
 void SyncManager::destroy() {
     if (device == VK_NULL_HANDLE) return;
 
     for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
-        if (imageAvailableSemaphores[i] != VK_NULL_HANDLE)
+        if (i < imageAvailableSemaphores.size() && imageAvailableSemaphores[i] != VK_NULL_HANDLE)
             vkDestroySemaphore(device, imageAvailableSemaphores[i], nullptr);
-        if (renderFinishedSemaphores[i] != VK_NULL_HANDLE)
+        if (i < renderFinishedSemaphores.size() && renderFinishedSemaphores[i] != VK_NULL_HANDLE)
             vkDestroySemaphore(device, renderFinishedSemaphores[i], nullptr);
-        if (inFlightFences[i] != VK_NULL_HANDLE)
+        if (i < inFlightFences.size() && inFlightFences[i] != VK_NULL_HANDLE)
             vkDestroyFence(device, inFlightFences[i], nullptr);
     }
 

@@ -7,8 +7,8 @@
 #include "core/VulkanInstance.h"
 #include "core/VulkanDevice.h"
 #include "graphics/VulkanSwapChain.h"
-#include "graphics/VulkanRenderPass.h"
 #include "graphics/VulkanPipeline.h"
+#include "graphics/VulkanRenderPass.h"
 #include "graphics/VulkanRenderer.h"
 #include "input/InputManager.h"
 
@@ -18,17 +18,8 @@ public:
     ~VulkanApp();
     
     void run();
-
-private:
-    void initWindow();
-    void initVulkan();
-    void initImGui();
-    void mainLoop();
-    void cleanup();
     
-    static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
-    void handleKeyPress(int key, int action);
-
+private:
     GLFWwindow* window;
     VkSurfaceKHR surface;
     VkDescriptorPool imguiDescriptorPool;
@@ -36,14 +27,27 @@ private:
     VulkanInstance vulkanInstance;
     VulkanDevice vulkanDevice;
     VulkanSwapChain swapChain;
-    VulkanRenderPass renderPass;
     VulkanPipeline pipeline;
+    VulkanRenderPass renderPass;
     VulkanRenderer renderer;
     InputManager inputManager;
     
     int targetFPS;
-    float pointX;
-    float pointY;
+    float pointX, pointY;
+    
+    // FPS counter
+    int frameCount;
+    double lastFPSTime;
+    
+    void initWindow();
+    void initVulkan();
+    void initImGui();
+    void mainLoop();
+    void updateFPS();
+    void cleanup();
+    
+    static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    void handleKeyPress(int key, int action);
 };
 
-#endif
+#endif // VULKAN_APP_H

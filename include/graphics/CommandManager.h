@@ -3,6 +3,7 @@
 
 #include <vulkan/vulkan.h>
 #include <vector>
+#include "VulkanConfig.h"
 
 class CommandManager {
 public:
@@ -12,19 +13,15 @@ public:
     void init(VkDevice device, uint32_t graphicsQueueFamily);
     void destroy();
 
-    VkCommandPool getCommandPool() const { return commandPool; }
     const std::vector<VkCommandBuffer>& getCommandBuffers() const { return commandBuffers; }
-    VkCommandBuffer getCurrentCommandBuffer(size_t frame) const { return commandBuffers[frame]; }
 
 private:
-    void createCommandPool(uint32_t graphicsQueueFamily);
-    void createCommandBuffers();
-
-    static const int MAX_FRAMES_IN_FLIGHT = 2;
-
     VkDevice device;
     VkCommandPool commandPool;
     std::vector<VkCommandBuffer> commandBuffers;
+
+    void createCommandPool(uint32_t graphicsQueueFamily);
+    void createCommandBuffers();
 };
 
-#endif
+#endif // COMMAND_MANAGER_H
