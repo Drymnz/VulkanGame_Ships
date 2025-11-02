@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/include -isystem /home/drymnz/.conan2/p/glmc7261f667dea4/p/include
+CXX_INCLUDES = -I/home/drymnz/Proyects/VulkanGame_Ships/include -I/home/drymnz/Proyects/VulkanGame_Ships/external/imgui -I/home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends
 
-CXX_FLAGS = -m64 -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -std=gnu++17
 

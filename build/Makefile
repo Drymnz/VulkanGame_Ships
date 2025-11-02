@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/drymnz/Proyects/VulkanGame
+CMAKE_SOURCE_DIR = /home/drymnz/Proyects/VulkanGame_Ships
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/drymnz/Proyects/VulkanGame/build
+CMAKE_BINARY_DIR = /home/drymnz/Proyects/VulkanGame_Ships/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame/build/CMakeFiles /home/drymnz/Proyects/VulkanGame/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles /home/drymnz/Proyects/VulkanGame_Ships/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,510 @@ juego/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/build
 .PHONY : juego/fast
 
+external/imgui/backends/imgui_impl_glfw.o: external/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+external/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.o
+
+external/imgui/backends/imgui_impl_glfw.i: external/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.i
+
+external/imgui/backends/imgui_impl_glfw.s: external/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_glfw.cpp.s
+
+external/imgui/backends/imgui_impl_vulkan.o: external/imgui/backends/imgui_impl_vulkan.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_vulkan.o
+
+# target to build an object file
+external/imgui/backends/imgui_impl_vulkan.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.o
+.PHONY : external/imgui/backends/imgui_impl_vulkan.cpp.o
+
+external/imgui/backends/imgui_impl_vulkan.i: external/imgui/backends/imgui_impl_vulkan.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_vulkan.i
+
+# target to preprocess a source file
+external/imgui/backends/imgui_impl_vulkan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.i
+.PHONY : external/imgui/backends/imgui_impl_vulkan.cpp.i
+
+external/imgui/backends/imgui_impl_vulkan.s: external/imgui/backends/imgui_impl_vulkan.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_vulkan.s
+
+# target to generate assembly for a file
+external/imgui/backends/imgui_impl_vulkan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/backends/imgui_impl_vulkan.cpp.s
+.PHONY : external/imgui/backends/imgui_impl_vulkan.cpp.s
+
+external/imgui/imgui.o: external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.o
+
+# target to build an object file
+external/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui.cpp.o
+.PHONY : external/imgui/imgui.cpp.o
+
+external/imgui/imgui.i: external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.i
+
+# target to preprocess a source file
+external/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui.cpp.i
+.PHONY : external/imgui/imgui.cpp.i
+
+external/imgui/imgui.s: external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.s
+
+# target to generate assembly for a file
+external/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui.cpp.s
+.PHONY : external/imgui/imgui.cpp.s
+
+external/imgui/imgui_demo.o: external/imgui/imgui_demo.cpp.o
+.PHONY : external/imgui/imgui_demo.o
+
+# target to build an object file
+external/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.o
+.PHONY : external/imgui/imgui_demo.cpp.o
+
+external/imgui/imgui_demo.i: external/imgui/imgui_demo.cpp.i
+.PHONY : external/imgui/imgui_demo.i
+
+# target to preprocess a source file
+external/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.i
+.PHONY : external/imgui/imgui_demo.cpp.i
+
+external/imgui/imgui_demo.s: external/imgui/imgui_demo.cpp.s
+.PHONY : external/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+external/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_demo.cpp.s
+.PHONY : external/imgui/imgui_demo.cpp.s
+
+external/imgui/imgui_draw.o: external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.o
+
+# target to build an object file
+external/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.o
+.PHONY : external/imgui/imgui_draw.cpp.o
+
+external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.i
+
+# target to preprocess a source file
+external/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.i
+.PHONY : external/imgui/imgui_draw.cpp.i
+
+external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+external/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_draw.cpp.s
+.PHONY : external/imgui/imgui_draw.cpp.s
+
+external/imgui/imgui_tables.o: external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.o
+
+# target to build an object file
+external/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o
+.PHONY : external/imgui/imgui_tables.cpp.o
+
+external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.i
+
+# target to preprocess a source file
+external/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.i
+.PHONY : external/imgui/imgui_tables.cpp.i
+
+external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+external/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.s
+.PHONY : external/imgui/imgui_tables.cpp.s
+
+external/imgui/imgui_widgets.o: external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.o
+
+# target to build an object file
+external/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o
+.PHONY : external/imgui/imgui_widgets.cpp.o
+
+external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+external/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.i
+.PHONY : external/imgui/imgui_widgets.cpp.i
+
+external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+external/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.s
+.PHONY : external/imgui/imgui_widgets.cpp.s
+
+src/VulkanApp.o: src/VulkanApp.cpp.o
+.PHONY : src/VulkanApp.o
+
+# target to build an object file
+src/VulkanApp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/VulkanApp.cpp.o
+.PHONY : src/VulkanApp.cpp.o
+
+src/VulkanApp.i: src/VulkanApp.cpp.i
+.PHONY : src/VulkanApp.i
+
+# target to preprocess a source file
+src/VulkanApp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/VulkanApp.cpp.i
+.PHONY : src/VulkanApp.cpp.i
+
+src/VulkanApp.s: src/VulkanApp.cpp.s
+.PHONY : src/VulkanApp.s
+
+# target to generate assembly for a file
+src/VulkanApp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/VulkanApp.cpp.s
+.PHONY : src/VulkanApp.cpp.s
+
+src/core/FPSController.o: src/core/FPSController.cpp.o
+.PHONY : src/core/FPSController.o
+
+# target to build an object file
+src/core/FPSController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/FPSController.cpp.o
+.PHONY : src/core/FPSController.cpp.o
+
+src/core/FPSController.i: src/core/FPSController.cpp.i
+.PHONY : src/core/FPSController.i
+
+# target to preprocess a source file
+src/core/FPSController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/FPSController.cpp.i
+.PHONY : src/core/FPSController.cpp.i
+
+src/core/FPSController.s: src/core/FPSController.cpp.s
+.PHONY : src/core/FPSController.s
+
+# target to generate assembly for a file
+src/core/FPSController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/FPSController.cpp.s
+.PHONY : src/core/FPSController.cpp.s
+
+src/core/VulkanDevice.o: src/core/VulkanDevice.cpp.o
+.PHONY : src/core/VulkanDevice.o
+
+# target to build an object file
+src/core/VulkanDevice.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.o
+.PHONY : src/core/VulkanDevice.cpp.o
+
+src/core/VulkanDevice.i: src/core/VulkanDevice.cpp.i
+.PHONY : src/core/VulkanDevice.i
+
+# target to preprocess a source file
+src/core/VulkanDevice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.i
+.PHONY : src/core/VulkanDevice.cpp.i
+
+src/core/VulkanDevice.s: src/core/VulkanDevice.cpp.s
+.PHONY : src/core/VulkanDevice.s
+
+# target to generate assembly for a file
+src/core/VulkanDevice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.s
+.PHONY : src/core/VulkanDevice.cpp.s
+
+src/core/VulkanInstance.o: src/core/VulkanInstance.cpp.o
+.PHONY : src/core/VulkanInstance.o
+
+# target to build an object file
+src/core/VulkanInstance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.o
+.PHONY : src/core/VulkanInstance.cpp.o
+
+src/core/VulkanInstance.i: src/core/VulkanInstance.cpp.i
+.PHONY : src/core/VulkanInstance.i
+
+# target to preprocess a source file
+src/core/VulkanInstance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.i
+.PHONY : src/core/VulkanInstance.cpp.i
+
+src/core/VulkanInstance.s: src/core/VulkanInstance.cpp.s
+.PHONY : src/core/VulkanInstance.s
+
+# target to generate assembly for a file
+src/core/VulkanInstance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.s
+.PHONY : src/core/VulkanInstance.cpp.s
+
+src/graphics/BufferManager.o: src/graphics/BufferManager.cpp.o
+.PHONY : src/graphics/BufferManager.o
+
+# target to build an object file
+src/graphics/BufferManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o
+.PHONY : src/graphics/BufferManager.cpp.o
+
+src/graphics/BufferManager.i: src/graphics/BufferManager.cpp.i
+.PHONY : src/graphics/BufferManager.i
+
+# target to preprocess a source file
+src/graphics/BufferManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.i
+.PHONY : src/graphics/BufferManager.cpp.i
+
+src/graphics/BufferManager.s: src/graphics/BufferManager.cpp.s
+.PHONY : src/graphics/BufferManager.s
+
+# target to generate assembly for a file
+src/graphics/BufferManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.s
+.PHONY : src/graphics/BufferManager.cpp.s
+
+src/graphics/CommandManager.o: src/graphics/CommandManager.cpp.o
+.PHONY : src/graphics/CommandManager.o
+
+# target to build an object file
+src/graphics/CommandManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o
+.PHONY : src/graphics/CommandManager.cpp.o
+
+src/graphics/CommandManager.i: src/graphics/CommandManager.cpp.i
+.PHONY : src/graphics/CommandManager.i
+
+# target to preprocess a source file
+src/graphics/CommandManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.i
+.PHONY : src/graphics/CommandManager.cpp.i
+
+src/graphics/CommandManager.s: src/graphics/CommandManager.cpp.s
+.PHONY : src/graphics/CommandManager.s
+
+# target to generate assembly for a file
+src/graphics/CommandManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.s
+.PHONY : src/graphics/CommandManager.cpp.s
+
+src/graphics/FramebufferManager.o: src/graphics/FramebufferManager.cpp.o
+.PHONY : src/graphics/FramebufferManager.o
+
+# target to build an object file
+src/graphics/FramebufferManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o
+.PHONY : src/graphics/FramebufferManager.cpp.o
+
+src/graphics/FramebufferManager.i: src/graphics/FramebufferManager.cpp.i
+.PHONY : src/graphics/FramebufferManager.i
+
+# target to preprocess a source file
+src/graphics/FramebufferManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.i
+.PHONY : src/graphics/FramebufferManager.cpp.i
+
+src/graphics/FramebufferManager.s: src/graphics/FramebufferManager.cpp.s
+.PHONY : src/graphics/FramebufferManager.s
+
+# target to generate assembly for a file
+src/graphics/FramebufferManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.s
+.PHONY : src/graphics/FramebufferManager.cpp.s
+
+src/graphics/ShaderManager.o: src/graphics/ShaderManager.cpp.o
+.PHONY : src/graphics/ShaderManager.o
+
+# target to build an object file
+src/graphics/ShaderManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o
+.PHONY : src/graphics/ShaderManager.cpp.o
+
+src/graphics/ShaderManager.i: src/graphics/ShaderManager.cpp.i
+.PHONY : src/graphics/ShaderManager.i
+
+# target to preprocess a source file
+src/graphics/ShaderManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.i
+.PHONY : src/graphics/ShaderManager.cpp.i
+
+src/graphics/ShaderManager.s: src/graphics/ShaderManager.cpp.s
+.PHONY : src/graphics/ShaderManager.s
+
+# target to generate assembly for a file
+src/graphics/ShaderManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.s
+.PHONY : src/graphics/ShaderManager.cpp.s
+
+src/graphics/SyncManager.o: src/graphics/SyncManager.cpp.o
+.PHONY : src/graphics/SyncManager.o
+
+# target to build an object file
+src/graphics/SyncManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o
+.PHONY : src/graphics/SyncManager.cpp.o
+
+src/graphics/SyncManager.i: src/graphics/SyncManager.cpp.i
+.PHONY : src/graphics/SyncManager.i
+
+# target to preprocess a source file
+src/graphics/SyncManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.i
+.PHONY : src/graphics/SyncManager.cpp.i
+
+src/graphics/SyncManager.s: src/graphics/SyncManager.cpp.s
+.PHONY : src/graphics/SyncManager.s
+
+# target to generate assembly for a file
+src/graphics/SyncManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.s
+.PHONY : src/graphics/SyncManager.cpp.s
+
+src/graphics/VulkanPipeline.o: src/graphics/VulkanPipeline.cpp.o
+.PHONY : src/graphics/VulkanPipeline.o
+
+# target to build an object file
+src/graphics/VulkanPipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o
+.PHONY : src/graphics/VulkanPipeline.cpp.o
+
+src/graphics/VulkanPipeline.i: src/graphics/VulkanPipeline.cpp.i
+.PHONY : src/graphics/VulkanPipeline.i
+
+# target to preprocess a source file
+src/graphics/VulkanPipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.i
+.PHONY : src/graphics/VulkanPipeline.cpp.i
+
+src/graphics/VulkanPipeline.s: src/graphics/VulkanPipeline.cpp.s
+.PHONY : src/graphics/VulkanPipeline.s
+
+# target to generate assembly for a file
+src/graphics/VulkanPipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.s
+.PHONY : src/graphics/VulkanPipeline.cpp.s
+
+src/graphics/VulkanRenderPass.o: src/graphics/VulkanRenderPass.cpp.o
+.PHONY : src/graphics/VulkanRenderPass.o
+
+# target to build an object file
+src/graphics/VulkanRenderPass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.o
+.PHONY : src/graphics/VulkanRenderPass.cpp.o
+
+src/graphics/VulkanRenderPass.i: src/graphics/VulkanRenderPass.cpp.i
+.PHONY : src/graphics/VulkanRenderPass.i
+
+# target to preprocess a source file
+src/graphics/VulkanRenderPass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.i
+.PHONY : src/graphics/VulkanRenderPass.cpp.i
+
+src/graphics/VulkanRenderPass.s: src/graphics/VulkanRenderPass.cpp.s
+.PHONY : src/graphics/VulkanRenderPass.s
+
+# target to generate assembly for a file
+src/graphics/VulkanRenderPass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.s
+.PHONY : src/graphics/VulkanRenderPass.cpp.s
+
+src/graphics/VulkanRenderer.o: src/graphics/VulkanRenderer.cpp.o
+.PHONY : src/graphics/VulkanRenderer.o
+
+# target to build an object file
+src/graphics/VulkanRenderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o
+.PHONY : src/graphics/VulkanRenderer.cpp.o
+
+src/graphics/VulkanRenderer.i: src/graphics/VulkanRenderer.cpp.i
+.PHONY : src/graphics/VulkanRenderer.i
+
+# target to preprocess a source file
+src/graphics/VulkanRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.i
+.PHONY : src/graphics/VulkanRenderer.cpp.i
+
+src/graphics/VulkanRenderer.s: src/graphics/VulkanRenderer.cpp.s
+.PHONY : src/graphics/VulkanRenderer.s
+
+# target to generate assembly for a file
+src/graphics/VulkanRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.s
+.PHONY : src/graphics/VulkanRenderer.cpp.s
+
+src/graphics/VulkanSwapChain.o: src/graphics/VulkanSwapChain.cpp.o
+.PHONY : src/graphics/VulkanSwapChain.o
+
+# target to build an object file
+src/graphics/VulkanSwapChain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanSwapChain.cpp.o
+.PHONY : src/graphics/VulkanSwapChain.cpp.o
+
+src/graphics/VulkanSwapChain.i: src/graphics/VulkanSwapChain.cpp.i
+.PHONY : src/graphics/VulkanSwapChain.i
+
+# target to preprocess a source file
+src/graphics/VulkanSwapChain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanSwapChain.cpp.i
+.PHONY : src/graphics/VulkanSwapChain.cpp.i
+
+src/graphics/VulkanSwapChain.s: src/graphics/VulkanSwapChain.cpp.s
+.PHONY : src/graphics/VulkanSwapChain.s
+
+# target to generate assembly for a file
+src/graphics/VulkanSwapChain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/VulkanSwapChain.cpp.s
+.PHONY : src/graphics/VulkanSwapChain.cpp.s
+
+src/input/InputManager.o: src/input/InputManager.cpp.o
+.PHONY : src/input/InputManager.o
+
+# target to build an object file
+src/input/InputManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/input/InputManager.cpp.o
+.PHONY : src/input/InputManager.cpp.o
+
+src/input/InputManager.i: src/input/InputManager.cpp.i
+.PHONY : src/input/InputManager.i
+
+# target to preprocess a source file
+src/input/InputManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/input/InputManager.cpp.i
+.PHONY : src/input/InputManager.cpp.i
+
+src/input/InputManager.s: src/input/InputManager.cpp.s
+.PHONY : src/input/InputManager.s
+
+# target to generate assembly for a file
+src/input/InputManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/input/InputManager.cpp.s
+.PHONY : src/input/InputManager.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +666,69 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... juego"
+	@echo "... external/imgui/backends/imgui_impl_glfw.o"
+	@echo "... external/imgui/backends/imgui_impl_glfw.i"
+	@echo "... external/imgui/backends/imgui_impl_glfw.s"
+	@echo "... external/imgui/backends/imgui_impl_vulkan.o"
+	@echo "... external/imgui/backends/imgui_impl_vulkan.i"
+	@echo "... external/imgui/backends/imgui_impl_vulkan.s"
+	@echo "... external/imgui/imgui.o"
+	@echo "... external/imgui/imgui.i"
+	@echo "... external/imgui/imgui.s"
+	@echo "... external/imgui/imgui_demo.o"
+	@echo "... external/imgui/imgui_demo.i"
+	@echo "... external/imgui/imgui_demo.s"
+	@echo "... external/imgui/imgui_draw.o"
+	@echo "... external/imgui/imgui_draw.i"
+	@echo "... external/imgui/imgui_draw.s"
+	@echo "... external/imgui/imgui_tables.o"
+	@echo "... external/imgui/imgui_tables.i"
+	@echo "... external/imgui/imgui_tables.s"
+	@echo "... external/imgui/imgui_widgets.o"
+	@echo "... external/imgui/imgui_widgets.i"
+	@echo "... external/imgui/imgui_widgets.s"
+	@echo "... src/VulkanApp.o"
+	@echo "... src/VulkanApp.i"
+	@echo "... src/VulkanApp.s"
+	@echo "... src/core/FPSController.o"
+	@echo "... src/core/FPSController.i"
+	@echo "... src/core/FPSController.s"
+	@echo "... src/core/VulkanDevice.o"
+	@echo "... src/core/VulkanDevice.i"
+	@echo "... src/core/VulkanDevice.s"
+	@echo "... src/core/VulkanInstance.o"
+	@echo "... src/core/VulkanInstance.i"
+	@echo "... src/core/VulkanInstance.s"
+	@echo "... src/graphics/BufferManager.o"
+	@echo "... src/graphics/BufferManager.i"
+	@echo "... src/graphics/BufferManager.s"
+	@echo "... src/graphics/CommandManager.o"
+	@echo "... src/graphics/CommandManager.i"
+	@echo "... src/graphics/CommandManager.s"
+	@echo "... src/graphics/FramebufferManager.o"
+	@echo "... src/graphics/FramebufferManager.i"
+	@echo "... src/graphics/FramebufferManager.s"
+	@echo "... src/graphics/ShaderManager.o"
+	@echo "... src/graphics/ShaderManager.i"
+	@echo "... src/graphics/ShaderManager.s"
+	@echo "... src/graphics/SyncManager.o"
+	@echo "... src/graphics/SyncManager.i"
+	@echo "... src/graphics/SyncManager.s"
+	@echo "... src/graphics/VulkanPipeline.o"
+	@echo "... src/graphics/VulkanPipeline.i"
+	@echo "... src/graphics/VulkanPipeline.s"
+	@echo "... src/graphics/VulkanRenderPass.o"
+	@echo "... src/graphics/VulkanRenderPass.i"
+	@echo "... src/graphics/VulkanRenderPass.s"
+	@echo "... src/graphics/VulkanRenderer.o"
+	@echo "... src/graphics/VulkanRenderer.i"
+	@echo "... src/graphics/VulkanRenderer.s"
+	@echo "... src/graphics/VulkanSwapChain.o"
+	@echo "... src/graphics/VulkanSwapChain.i"
+	@echo "... src/graphics/VulkanSwapChain.s"
+	@echo "... src/input/InputManager.o"
+	@echo "... src/input/InputManager.i"
+	@echo "... src/input/InputManager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

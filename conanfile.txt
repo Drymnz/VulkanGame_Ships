@@ -1,6 +1,7 @@
 [requires]
 glfw/3.4
 glm/1.0.1
+imgui/1.91.5
 
 [generators]
 CMakeDeps

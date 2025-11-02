@@ -1,3 +1,3 @@
-/home/drymnz/Proyects/VulkanGame/build/CMakeFiles/juego.dir
-/home/drymnz/Proyects/VulkanGame/build/CMakeFiles/edit_cache.dir
-/home/drymnz/Proyects/VulkanGame/build/CMakeFiles/rebuild_cache.dir
+/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir
+/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/edit_cache.dir
+/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/rebuild_cache.dir

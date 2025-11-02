@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Conan Install",
+            "type": "shell",
+            "command": "conan install . --output-folder=build --build=missing",
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake -B build -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release",
+            "dependsOn": ["Conan Install"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cmake --build build",
+            "dependsOn": ["CMake Configure"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "./build/juego",
+            "dependsOn": ["Build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

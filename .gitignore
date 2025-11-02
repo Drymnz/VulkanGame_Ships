@@ -1,61 +1,26 @@
-nano .gitignore
-```
-
-Reemplaza todo con esto:
-```
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# Build
+build/
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+*.a
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
 
-# Debug information files
-*.dwo
-
-# Build and CMake generated files
-build/
+# CMake
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
-CMakePresets.json
-CMakeUserPresets.json
-Makefile
-*.cmake
-!CMakeLists.txt
 
-# Conan files
-conan*
-*.sh
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Compiled shaders (opcional, si prefieres compilarlos localmente)
+# shaders/*.spv
+
+# Conan
+conan.lock
+conanbuildinfo.*
+conaninfo.txt

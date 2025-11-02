@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/drymnz/Proyects/VulkanGame
+CMAKE_SOURCE_DIR = /home/drymnz/Proyects/VulkanGame_Ships
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/drymnz/Proyects/VulkanGame/build
+CMAKE_BINARY_DIR = /home/drymnz/Proyects/VulkanGame_Ships/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/juego.dir/clean
 CMakeFiles/juego.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/drymnz/Proyects/VulkanGame/build/CMakeFiles --progress-num=1,2 "Built target juego"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target juego"
 .PHONY : CMakeFiles/juego.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/juego.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/juego.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles 0
 .PHONY : CMakeFiles/juego.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ juego: CMakeFiles/juego.dir/rule
 # codegen rule for target.
 CMakeFiles/juego.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/drymnz/Proyects/VulkanGame/build/CMakeFiles --progress-num=1,2 "Finished codegen for target juego"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Finished codegen for target juego"
 .PHONY : CMakeFiles/juego.dir/codegen
 
 # clean rule for target.

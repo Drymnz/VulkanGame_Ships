@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/drymnz/Proyects/VulkanGame/build/cmake_install.cmake"
+		"/home/drymnz/Proyects/VulkanGame_Ships/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

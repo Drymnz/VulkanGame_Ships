@@ -1,1 +1,0 @@
-. "/home/drymnz/Proyects/VulkanGame/build/conanbuildenv-release-x86_64.sh"
