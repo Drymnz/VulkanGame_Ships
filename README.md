@@ -1,8 +1,3 @@
-Perfecto 🔥 — aquí tienes un **`README.md`** claro, moderno y con formato profesional para tu proyecto Vulkan.
-Está escrito en **Markdown** y documenta desde la estructura general hasta cómo compilarlo en Linux (Arch incluido).
-
----
-
 ```markdown
 # 🌀 Vulkan Game Framework
 
