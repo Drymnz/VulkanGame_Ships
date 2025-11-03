@@ -49,6 +49,7 @@ void GameLoop::run(GLFWwindow* window,
             gameObjects.push_back(playerShip); // Luego la nave
             
             // Renderizar todos los objetos
+            // CORREGIDO: Agregado el parámetro descriptorSetLayout
             renderer.drawFrame(
                 vulkanDevice.getLogicalDevice(),
                 swapChain.getSwapChain(),
@@ -57,6 +58,7 @@ void GameLoop::run(GLFWwindow* window,
                 renderPass.getRenderPass(),
                 pipeline.getPipeline(),
                 pipeline.getPipelineLayout(),
+                pipeline.getDescriptorSetLayout(),  // ← NUEVO parámetro
                 swapChain.getExtent(),
                 gameObjects  // Lista de objetos
             );

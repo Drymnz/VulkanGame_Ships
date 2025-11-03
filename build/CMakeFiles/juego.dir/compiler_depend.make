@@ -1340,6 +1340,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/LightData.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ModelLoader.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ShaderManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/SyncManager.h \
@@ -1503,6 +1504,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -1562,6 +1564,8 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -1722,6 +1726,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/LightData.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ShaderManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/SyncManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Transform.h \
@@ -1890,6 +1895,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/ctime \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
@@ -1956,6 +1962,8 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -4682,6 +4690,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/LightData.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/SyncManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Transform.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Vertex.h \
@@ -4836,6 +4845,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -4895,6 +4905,8 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -5200,6 +5212,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/LightData.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ModelLoader.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ShaderManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/SyncManager.h \
@@ -5363,6 +5376,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -5422,6 +5436,8 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -6595,6 +6611,12 @@ CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o:
 
 /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h:
 
+/home/drymnz/Proyects/VulkanGame_Ships/include/graphics/LightData.h:
+
+/usr/lib/libfontenc.so:
+
+/usr/include/linux/sched/types.h:
+
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/ModelLoader.h:
@@ -6824,10 +6846,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxtf32intrin.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/lib/libfontenc.so:
-
-/usr/include/linux/sched/types.h:
 
 /usr/lib/libmvec.so.1:
 

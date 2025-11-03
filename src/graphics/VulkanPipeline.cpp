@@ -4,16 +4,49 @@
 #include <array>
 
 VulkanPipeline::VulkanPipeline()
-    : pipelineLayout(VK_NULL_HANDLE), graphicsPipeline(VK_NULL_HANDLE), device(VK_NULL_HANDLE) {}
+    : pipelineLayout(VK_NULL_HANDLE)
+    , graphicsPipeline(VK_NULL_HANDLE)
+    , descriptorSetLayout(VK_NULL_HANDLE)
+    , device(VK_NULL_HANDLE) {
+    std::cout << "VulkanPipeline constructor llamado" << std::endl;
+}
 
-VulkanPipeline::~VulkanPipeline()
-{
+VulkanPipeline::~VulkanPipeline() {
     destroy();
 }
 
-void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPass, VkExtent2D swapChainExtent)
-{
+void VulkanPipeline::createDescriptorSetLayout() {
+    std::cout << "Creando descriptor set layout..." << std::endl;
+    
+    // Configurar binding para el uniform buffer de iluminación
+    VkDescriptorSetLayoutBinding uboLayoutBinding{};
+    uboLayoutBinding.binding = 0;
+    uboLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    uboLayoutBinding.descriptorCount = 1;
+    uboLayoutBinding.stageFlags = VK_SHADER_STAGE_FRAGMENT_BIT;
+    uboLayoutBinding.pImmutableSamplers = nullptr;
+
+    VkDescriptorSetLayoutCreateInfo layoutInfo{};
+    layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+    layoutInfo.bindingCount = 1;
+    layoutInfo.pBindings = &uboLayoutBinding;
+
+    if (vkCreateDescriptorSetLayout(device, &layoutInfo, nullptr, &descriptorSetLayout) != VK_SUCCESS) {
+        throw std::runtime_error("Error al crear descriptor set layout");
+    }
+
+    std::cout << "✓ Descriptor set layout creado exitosamente" << std::endl;
+}
+
+void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPass, VkExtent2D swapChainExtent) {
+    std::cout << "Iniciando createGraphicsPipeline..." << std::endl;
     device = dev;
+    
+    // 🔥 CREAR DESCRIPTOR SET LAYOUT PRIMERO
+    std::cout << "Llamando a createDescriptorSetLayout..." << std::endl;
+    createDescriptorSetLayout();
+    std::cout << "Descriptor set layout creado, valor: " << descriptorSetLayout << std::endl;
+    
     shaderManager.init(device);
 
     auto vertShaderCode = shaderManager.readFile("vert.spv");
@@ -68,7 +101,6 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     attributeDescriptions[3].format = VK_FORMAT_R32G32B32_SFLOAT;
     attributeDescriptions[3].offset = offsetof(Vertex3D, color);
 
-    // AQUÍ ESTÁ LO QUE FALTABA - Declarar vertexInputInfo
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
     vertexInputInfo.vertexBindingDescriptionCount = 1;
@@ -106,8 +138,8 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     rasterizer.rasterizerDiscardEnable = VK_FALSE;
     rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
     rasterizer.lineWidth = 1.0f;
-    rasterizer.cullMode = VK_CULL_MODE_NONE;  // <-- Cambiar de BACK_BIT a NONE
-    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE; // <-- Cambiar a COUNTER_CLOCKWISE
+    rasterizer.cullMode = VK_CULL_MODE_NONE;
+    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
     rasterizer.depthBiasEnable = VK_FALSE;
 
     VkPipelineMultisampleStateCreateInfo multisampling{};
@@ -132,15 +164,21 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     pushConstantRange.offset = 0;
     pushConstantRange.size = sizeof(PushConstants);
 
+    std::cout << "Creando pipeline layout con descriptor set layout..." << std::endl;
+    
+    // 🔥 AGREGAR DESCRIPTOR SET LAYOUT AL PIPELINE LAYOUT
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+    pipelineLayoutInfo.setLayoutCount = 1;
+    pipelineLayoutInfo.pSetLayouts = &descriptorSetLayout;
     pipelineLayoutInfo.pushConstantRangeCount = 1;
     pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
 
-    if (vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS)
-    {
+    if (vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS) {
         throw std::runtime_error("Error al crear pipeline layout");
     }
+    
+    std::cout << "Pipeline layout creado" << std::endl;
 
     VkGraphicsPipelineCreateInfo pipelineInfo{};
     pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
@@ -156,30 +194,33 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     pipelineInfo.renderPass = renderPass;
     pipelineInfo.subpass = 0;
 
-    if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS)
-    {
+    if (vkCreateGraphicsPipelines(device, VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &graphicsPipeline) != VK_SUCCESS) {
         throw std::runtime_error("Error al crear graphics pipeline");
     }
 
-    std::cout << "Pipeline gráfico creado" << std::endl;
+    std::cout << "Pipeline gráfico creado exitosamente" << std::endl;
 }
 
-void VulkanPipeline::destroy()
-{
+void VulkanPipeline::destroy() {
     if (device == VK_NULL_HANDLE)
         return;
 
     shaderManager.destroy();
 
-    if (graphicsPipeline != VK_NULL_HANDLE)
-    {
+    if (graphicsPipeline != VK_NULL_HANDLE) {
         vkDestroyPipeline(device, graphicsPipeline, nullptr);
         graphicsPipeline = VK_NULL_HANDLE;
     }
 
-    if (pipelineLayout != VK_NULL_HANDLE)
-    {
+    if (pipelineLayout != VK_NULL_HANDLE) {
         vkDestroyPipelineLayout(device, pipelineLayout, nullptr);
         pipelineLayout = VK_NULL_HANDLE;
+    }
+
+    // 🔥 DESTRUIR DESCRIPTOR SET LAYOUT
+    if (descriptorSetLayout != VK_NULL_HANDLE) {
+        vkDestroyDescriptorSetLayout(device, descriptorSetLayout, nullptr);
+        descriptorSetLayout = VK_NULL_HANDLE;
+        std::cout << "Descriptor set layout destruido" << std::endl;
     }
 }

@@ -75,6 +75,14 @@ void VulkanApp::initVulkan() {
                   vulkanDevice.getPhysicalDevice(),
                   vulkanDevice.getQueueIndices().graphicsFamily);
 
+    // 🔥 CRÍTICO: Crear uniform buffers y descriptor sets
+    std::cout << "Inicializando sistema de iluminación..." << std::endl;
+    renderer.createUniformBuffers(vulkanDevice.getPhysicalDevice());
+    renderer.createDescriptorPool(vulkanDevice.getLogicalDevice());
+    renderer.createDescriptorSets(vulkanDevice.getLogicalDevice(), 
+                                  pipeline.getDescriptorSetLayout());
+    std::cout << "✓ Sistema de iluminación inicializado" << std::endl;
+
     // Cargar el modelo de la nave
     if (modelLoader.loadModel("ship.glb")) {
         auto shipBuffers = renderer.loadNamedModel(
