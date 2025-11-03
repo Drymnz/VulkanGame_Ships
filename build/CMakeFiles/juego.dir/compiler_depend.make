@@ -1443,6 +1443,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -1462,6 +1463,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -1479,7 +1481,10 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
@@ -1503,6 +1508,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -1513,6 +1519,7 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
@@ -1818,6 +1825,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -1840,6 +1848,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -1859,7 +1868,10 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
@@ -1884,6 +1896,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -1896,6 +1909,7 @@ CMakeFiles/juego.dir/src/core/GameLoop.cpp.o: /home/drymnz/Proyects/VulkanGame_S
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
   /usr/include/c++/15.2.1/locale \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
@@ -2611,7 +2625,41 @@ CMakeFiles/juego.dir/src/core/WindowManager.cpp.o: /home/drymnz/Proyects/VulkanG
 CMakeFiles/juego.dir/src/game/GameObject.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/game/GameObject.cpp \
   /home/drymnz/Proyects/VulkanGame_Ships/include/game/GameObject.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Transform.h \
-  /usr/include/stdc-predef.h
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_vp9std.h \
+  /usr/include/vk_video/vulkan_video_codec_vp9std_decode.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
 CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/BufferManager.cpp \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
@@ -2705,6 +2753,7 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/Vul
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -2724,6 +2773,7 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/Vul
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -2741,7 +2791,10 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/Vul
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
@@ -2766,6 +2819,7 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/Vul
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -2776,6 +2830,7 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/Vul
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
@@ -4623,6 +4678,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.o: /home/drymnz/Proyects/
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
 CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/VulkanRenderer.cpp \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/game/GameObject.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/CommandManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h \
@@ -4720,6 +4776,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -4739,6 +4796,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -4756,7 +4814,10 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
@@ -4780,6 +4841,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -4790,6 +4852,7 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o: /home/drymnz/Proyects/Vu
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
@@ -5240,6 +5303,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -5259,6 +5323,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -5276,7 +5341,10 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
@@ -5300,6 +5368,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
@@ -5310,6 +5379,7 @@ CMakeFiles/juego.dir/src/main.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
@@ -5675,8 +5745,6 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o:
 
 /usr/include/c++/15.2.1/bits/uniform_int_dist.h:
 
-/usr/include/c++/15.2.1/bits/stl_tree.h:
-
 /usr/include/c++/15.2.1/bits/stl_tempbuf.h:
 
 /usr/include/c++/15.2.1/bits/stl_relops.h:
@@ -5685,9 +5753,15 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o:
 
 /usr/include/c++/15.2.1/bits/stl_numeric.h:
 
-/usr/include/c++/15.2.1/bits/stl_multimap.h:
+/usr/include/c++/15.2.1/bits/stl_heap.h:
 
-/usr/include/c++/15.2.1/bits/stl_map.h:
+/usr/include/c++/15.2.1/bits/stl_algo.h:
+
+/usr/include/c++/15.2.1/bits/std_function.h:
+
+/usr/lib/libz.so.1:
+
+/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
 
 /usr/lib/libX11.so:
 
@@ -5848,6 +5922,10 @@ CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o:
 /usr/include/bits/waitflags.h:
 
 /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/VulkanRenderer.h:
+
+/usr/include/c++/15.2.1/bits/slice_array.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512fp16vlintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2bf16intrin.h:
 
@@ -6013,10 +6091,6 @@ CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2mediaintrin.h:
 
-/usr/lib/libz.so.1:
-
-/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
-
 /usr/include/bits/stdio.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512ifmavlintrin.h:
@@ -6028,10 +6102,6 @@ CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/clzerointrin.h:
 
 /usr/include/c++/15.2.1/istream:
-
-/usr/include/c++/15.2.1/ext/aligned_buffer.h:
-
-/home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_vulkan.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx2intrin.h:
 
@@ -6515,6 +6585,8 @@ CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o:
 
 /home/drymnz/Proyects/VulkanGame_Ships/src/VulkanApp.cpp:
 
+/usr/include/c++/15.2.1/bits/stl_tree.h:
+
 /home/drymnz/Proyects/VulkanGame_Ships/include/VulkanApp.h:
 
 /home/drymnz/Proyects/VulkanGame_Ships/include/core/VulkanInstance.h:
@@ -6563,17 +6635,13 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o:
 
 /usr/include/c++/15.2.1/exception:
 
-/usr/include/c++/15.2.1/bits/stl_heap.h:
-
 /home/drymnz/Proyects/VulkanGame_Ships/src/main.cpp:
 
 /usr/include/asm-generic/errno-base.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512fp16vlintrin.h:
-
-/usr/include/c++/15.2.1/bits/slice_array.h:
-
 /usr/include/asm-generic/posix_types.h:
+
+/usr/include/c++/15.2.1/bits/stl_map.h:
 
 /usr/include/asm/posix_types.h:
 
@@ -6623,12 +6691,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 
 /usr/include/c++/15.2.1/bits/basic_string.tcc:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxvnniintrin.h:
-
-/usr/include/assert.h:
-
-/home/drymnz/Proyects/VulkanGame_Ships/include/core/FPSController.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxifmaintrin.h:
 
 /usr/include/bits/types/struct_timeval.h:
@@ -6636,6 +6698,12 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/FramebufferManager.h:
 
 /usr/include/c++/15.2.1/bits/node_handle.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxvnniintrin.h:
+
+/usr/include/assert.h:
+
+/home/drymnz/Proyects/VulkanGame_Ships/include/core/FPSController.h:
 
 /usr/include/c++/15.2.1/bits/char_traits.h:
 
@@ -6645,6 +6713,12 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
 
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/messages_members.h:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/c++/15.2.1/bits/erase_if.h:
+
 /usr/lib/libGLX.so.0:
 
 /usr/lib/libXdmcp.so:
@@ -6652,6 +6726,8 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/pkuintrin.h:
 
 /usr/include/c++/15.2.1/bits/exception_ptr.h:
+
+/usr/include/c++/15.2.1/bits/stl_multimap.h:
 
 /usr/include/bits/statx.h:
 
@@ -6691,8 +6767,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 
 /usr/include/pthread.h:
 
-/usr/include/c++/15.2.1/bits/stl_algo.h:
-
 /usr/include/signal.h:
 
 /usr/include/bits/atomic_wide_counter.h:
@@ -6708,6 +6782,14 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxvnniint8intrin.h:
 
 /usr/include/c++/15.2.1/cstdio:
+
+/home/drymnz/Proyects/VulkanGame_Ships/external/imgui/backends/imgui_impl_vulkan.h:
+
+/usr/include/c++/15.2.1/ext/aligned_buffer.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vnniintrin.h:
+
+/usr/include/c++/15.2.1/locale:
 
 /usr/include/linux/types.h:
 
@@ -6793,10 +6875,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 
 /usr/include/c++/15.2.1/bits/sstream.tcc:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vnniintrin.h:
-
-/usr/include/c++/15.2.1/locale:
-
 /usr/lib/libxcb-render-util.so:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h:
@@ -6812,8 +6890,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/CommandManager.cpp:
 
 /home/drymnz/Proyects/VulkanGame_Ships/external/json.hpp:
-
-/usr/include/c++/15.2.1/bits/std_function.h:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -6846,12 +6922,6 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /usr/lib/libXfixes.so:
 
 /usr/include/c++/15.2.1/backward/auto_ptr.h:
-
-/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/messages_members.h:
-
-/usr/include/bits/mathcalls-narrow.h:
-
-/usr/include/c++/15.2.1/bits/erase_if.h:
 
 /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
 

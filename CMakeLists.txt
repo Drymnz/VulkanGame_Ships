@@ -85,6 +85,9 @@ target_link_libraries(juego
 # Copiar shaders al directorio de build
 file(COPY shaders/vert.spv DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY shaders/frag.spv DESTINATION ${CMAKE_BINARY_DIR})
+# Copiar modelos al build directory
+file(COPY ${CMAKE_SOURCE_DIR}/assets/models/ 
+     DESTINATION ${CMAKE_BINARY_DIR}/)
 
 # Opcional: Copiar assets si existen
 if(EXISTS ${CMAKE_SOURCE_DIR}/assets)

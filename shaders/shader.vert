@@ -5,19 +5,30 @@ layout(location = 1) in vec3 inNormal;
 layout(location = 2) in vec2 inTexCoord;
 layout(location = 3) in vec3 inColor;
 
+// Push constants para la matriz del modelo
 layout(push_constant) uniform PushConstants {
     mat4 model;
 } push;
 
+// Uniform buffer para la iluminación
+layout(binding = 0) uniform LightUBO {
+    vec3 lightDirection;   // Dirección de la luz (sol)
+    float lightIntensity;  // Intensidad de la luz
+    vec3 lightColor;       // Color de la luz
+    float ambientStrength; // Luz ambiente
+} light;
+
+// Outputs al fragment shader
 layout(location = 0) out vec3 fragColor;
 layout(location = 1) out vec3 fragNormal;
+layout(location = 2) out vec3 fragWorldPos;
 
 void main() {
-    // Transformar posición
+    // Transformar posición a espacio mundial
     vec4 worldPos = push.model * vec4(inPosition, 1.0);
     
-    // Proyección perspectiva simple
-    float fov = 1.0;  // Field of view
+    // Proyección perspectiva
+    float fov = 1.0;
     float aspect = 800.0 / 600.0;
     float near = 0.1;
     float far = 100.0;
@@ -40,6 +51,8 @@ void main() {
     
     gl_Position = projection * view * worldPos;
     
+    // Transformar la normal al espacio mundial
     fragNormal = mat3(push.model) * inNormal;
+    fragWorldPos = worldPos.xyz;
     fragColor = inColor;
 }

@@ -1,19 +1,35 @@
-#ifndef GAME_OBJECT_H
-#define GAME_OBJECT_H
+// ============================================
+// game/GameObject.h
+// ============================================
+#pragma once
 
+#include <vulkan/vulkan.h>
 #include "graphics/Transform.h"
 
 class GameObject {
 public:
     GameObject();
 
+    // Actualiza el estado del objeto (por frame)
     void update(float deltaTime);
 
+    // Acceso al transform
     Transform& getTransform();
     const Transform& getTransform() const;
 
-private:
-    Transform transform;
-};
+    // Asignar buffers de vértices e índices
+    void setBuffers(VkBuffer vertexBuffer, VkBuffer indexBuffer, uint32_t indexCount);
 
-#endif // GAME_OBJECT_H
+    // Getters
+    VkBuffer getVertexBuffer() const;
+    VkBuffer getIndexBuffer() const;
+    uint32_t getIndexCount() const;
+    bool hasBuffers() const;
+
+private:
+    Transform transform;     // Posición, rotación, escala
+
+    VkBuffer vertexBuffer;   // Buffer de vértices
+    VkBuffer indexBuffer;    // Buffer de índices
+    uint32_t indexCount;     // Número de índices
+};

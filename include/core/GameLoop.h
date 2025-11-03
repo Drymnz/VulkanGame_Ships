@@ -21,21 +21,22 @@ public:
              VulkanRenderPass& renderPass,
              VulkanPipeline& pipeline,
              InputManager& inputManager,
-             GameObject& playerShip);
+             GameObject* playerShip,
+             GameObject* floor);
 
     void stop();
 
 private:
+    void updateFPS(GLFWwindow* window);
+
     bool running;
     int frameCount;
     double lastFPSTime;
-
+    
     // Variables de movimiento
     float vertical;
     float depth;
     float horizontal;
-
-    void updateFPS(GLFWwindow* window);
 };
 
 #endif // GAME_LOOP_H

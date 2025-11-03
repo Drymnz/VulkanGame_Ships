@@ -1,30 +1,20 @@
-// ============================================
-// include/VulkanApp.h - CORREGIDO
-// ============================================
 #ifndef VULKAN_APP_H
 #define VULKAN_APP_H
 
-#define GLFW_INCLUDE_VULKAN  // <-- AGREGAR ESTO
-#include <GLFW/glfw3.h>
-
-// Core
+#include <vulkan/vulkan.h>
+#include "core/WindowManager.h"
 #include "core/VulkanInstance.h"
 #include "core/VulkanDevice.h"
 #include "core/GameLoop.h"
-#include "core/WindowManager.h"
-
-// Graphics
 #include "graphics/VulkanSwapChain.h"
 #include "graphics/VulkanRenderPass.h"
 #include "graphics/VulkanPipeline.h"
 #include "graphics/VulkanRenderer.h"
 #include "graphics/ModelLoader.h"
-
-// Game
+#include "input/InputManager.h"
 #include "game/GameObject.h"
 
-// Input
-#include "input/InputManager.h"
+struct GLFWwindow;
 
 class VulkanApp {
 public:
@@ -34,13 +24,17 @@ public:
     void run();
 
 private:
-    // Window
-    WindowManager windowManager;
+    void initVulkan();
+    void initImGui();
+    void cleanup();
 
-    // Vulkan Core
+    static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
+    // Core
+    WindowManager windowManager;
     VulkanInstance vulkanInstance;
     VulkanDevice vulkanDevice;
-    VkSurfaceKHR surface;
+    GameLoop gameLoop;
 
     // Graphics
     VulkanSwapChain swapChain;
@@ -49,22 +43,16 @@ private:
     VulkanRenderer renderer;
     ModelLoader modelLoader;
 
-    // Game Loop
-    GameLoop gameLoop;
-
     // Input
     InputManager inputManager;
 
-    // ImGui
+    // Vulkan resources
+    VkSurfaceKHR surface;
     VkDescriptorPool imguiDescriptorPool;
 
-    // Methods
-    void initVulkan();
-    void initImGui();
-    void cleanup();
-
-    // Callbacks
-    static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    // Game objects
+    GameObject* playerShip;
+    GameObject* floor;
 };
 
 #endif // VULKAN_APP_H

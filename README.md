@@ -136,16 +136,3 @@ game/
 
 MIT License © 2025
 Desarrollado por **Benjamin Aguilar**
-
----
-
-> 🧠 *“La base más simple es la que te permite construir lo más complejo.”*
-> — Vulkan Game Framework
-
-```
-
----
-
-¿Querés que te genere también el **`CMakeLists.txt`** base correspondiente a esta estructura? (con detección automática de Vulkan y GLFW).  
-Así queda el proyecto 100 % compilable desde cero.
-```

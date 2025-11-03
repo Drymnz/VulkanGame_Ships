@@ -2380,3 +2380,57 @@ events:
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/glfw3-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/glfw3Targets.cmake:24 (include)"
+      - "build/glfw3-config.cmake:16 (include)"
+      - "CMakeLists.txt:77 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "glfw3"
+    candidate_directories:
+      - "/home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/lib/"
+    found: "/home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/lib/libglfw3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/lib"
+        - "/home/drymnz/.conan2/p/b/imgui3ef61f08954e2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/drymnz/Proyects/VulkanGame_Ships/build"
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+...
