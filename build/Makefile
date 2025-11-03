@@ -345,6 +345,30 @@ src/core/FPSController.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/FPSController.cpp.s
 .PHONY : src/core/FPSController.cpp.s
 
+src/core/GameLoop.o: src/core/GameLoop.cpp.o
+.PHONY : src/core/GameLoop.o
+
+# target to build an object file
+src/core/GameLoop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/GameLoop.cpp.o
+.PHONY : src/core/GameLoop.cpp.o
+
+src/core/GameLoop.i: src/core/GameLoop.cpp.i
+.PHONY : src/core/GameLoop.i
+
+# target to preprocess a source file
+src/core/GameLoop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/GameLoop.cpp.i
+.PHONY : src/core/GameLoop.cpp.i
+
+src/core/GameLoop.s: src/core/GameLoop.cpp.s
+.PHONY : src/core/GameLoop.s
+
+# target to generate assembly for a file
+src/core/GameLoop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/GameLoop.cpp.s
+.PHONY : src/core/GameLoop.cpp.s
+
 src/core/VulkanDevice.o: src/core/VulkanDevice.cpp.o
 .PHONY : src/core/VulkanDevice.o
 
@@ -392,6 +416,54 @@ src/core/VulkanInstance.s: src/core/VulkanInstance.cpp.s
 src/core/VulkanInstance.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.s
 .PHONY : src/core/VulkanInstance.cpp.s
+
+src/core/WindowManager.o: src/core/WindowManager.cpp.o
+.PHONY : src/core/WindowManager.o
+
+# target to build an object file
+src/core/WindowManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/WindowManager.cpp.o
+.PHONY : src/core/WindowManager.cpp.o
+
+src/core/WindowManager.i: src/core/WindowManager.cpp.i
+.PHONY : src/core/WindowManager.i
+
+# target to preprocess a source file
+src/core/WindowManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/WindowManager.cpp.i
+.PHONY : src/core/WindowManager.cpp.i
+
+src/core/WindowManager.s: src/core/WindowManager.cpp.s
+.PHONY : src/core/WindowManager.s
+
+# target to generate assembly for a file
+src/core/WindowManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/core/WindowManager.cpp.s
+.PHONY : src/core/WindowManager.cpp.s
+
+src/game/GameObject.o: src/game/GameObject.cpp.o
+.PHONY : src/game/GameObject.o
+
+# target to build an object file
+src/game/GameObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/game/GameObject.cpp.o
+.PHONY : src/game/GameObject.cpp.o
+
+src/game/GameObject.i: src/game/GameObject.cpp.i
+.PHONY : src/game/GameObject.i
+
+# target to preprocess a source file
+src/game/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/game/GameObject.cpp.i
+.PHONY : src/game/GameObject.cpp.i
+
+src/game/GameObject.s: src/game/GameObject.cpp.s
+.PHONY : src/game/GameObject.s
+
+# target to generate assembly for a file
+src/game/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/game/GameObject.cpp.s
+.PHONY : src/game/GameObject.cpp.s
 
 src/graphics/BufferManager.o: src/graphics/BufferManager.cpp.o
 .PHONY : src/graphics/BufferManager.o
@@ -536,6 +608,30 @@ src/graphics/SyncManager.s: src/graphics/SyncManager.cpp.s
 src/graphics/SyncManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.s
 .PHONY : src/graphics/SyncManager.cpp.s
+
+src/graphics/Transform.o: src/graphics/Transform.cpp.o
+.PHONY : src/graphics/Transform.o
+
+# target to build an object file
+src/graphics/Transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/Transform.cpp.o
+.PHONY : src/graphics/Transform.cpp.o
+
+src/graphics/Transform.i: src/graphics/Transform.cpp.i
+.PHONY : src/graphics/Transform.i
+
+# target to preprocess a source file
+src/graphics/Transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/Transform.cpp.i
+.PHONY : src/graphics/Transform.cpp.i
+
+src/graphics/Transform.s: src/graphics/Transform.cpp.s
+.PHONY : src/graphics/Transform.s
+
+# target to generate assembly for a file
+src/graphics/Transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/src/graphics/Transform.cpp.s
+.PHONY : src/graphics/Transform.cpp.s
 
 src/graphics/VulkanPipeline.o: src/graphics/VulkanPipeline.cpp.o
 .PHONY : src/graphics/VulkanPipeline.o
@@ -717,12 +813,21 @@ help:
 	@echo "... src/core/FPSController.o"
 	@echo "... src/core/FPSController.i"
 	@echo "... src/core/FPSController.s"
+	@echo "... src/core/GameLoop.o"
+	@echo "... src/core/GameLoop.i"
+	@echo "... src/core/GameLoop.s"
 	@echo "... src/core/VulkanDevice.o"
 	@echo "... src/core/VulkanDevice.i"
 	@echo "... src/core/VulkanDevice.s"
 	@echo "... src/core/VulkanInstance.o"
 	@echo "... src/core/VulkanInstance.i"
 	@echo "... src/core/VulkanInstance.s"
+	@echo "... src/core/WindowManager.o"
+	@echo "... src/core/WindowManager.i"
+	@echo "... src/core/WindowManager.s"
+	@echo "... src/game/GameObject.o"
+	@echo "... src/game/GameObject.i"
+	@echo "... src/game/GameObject.s"
 	@echo "... src/graphics/BufferManager.o"
 	@echo "... src/graphics/BufferManager.i"
 	@echo "... src/graphics/BufferManager.s"
@@ -741,6 +846,9 @@ help:
 	@echo "... src/graphics/SyncManager.o"
 	@echo "... src/graphics/SyncManager.i"
 	@echo "... src/graphics/SyncManager.s"
+	@echo "... src/graphics/Transform.o"
+	@echo "... src/graphics/Transform.i"
+	@echo "... src/graphics/Transform.s"
 	@echo "... src/graphics/VulkanPipeline.o"
 	@echo "... src/graphics/VulkanPipeline.i"
 	@echo "... src/graphics/VulkanPipeline.s"

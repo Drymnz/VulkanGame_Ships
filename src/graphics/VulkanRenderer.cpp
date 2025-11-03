@@ -1,124 +1,95 @@
+// ============================================
+// graphics/VulkanRenderer.cpp - CORREGIDO
+// ============================================
 #include "graphics/VulkanRenderer.h"
 #include <stdexcept>
 #include <iostream>
-#include <cmath>
-#include <cstring>
 
 VulkanRenderer::VulkanRenderer()
     : device(VK_NULL_HANDLE)
     , currentFrame(0)
-    , useIndexBuffer(false)
-    , modelX(0.0f)
-    , modelY(-2.0f)  // Profundidad inicial
-    , modelZ(0.0f) {}
+    , useIndexBuffer(false) {}
 
-    
-VulkanRenderer::~VulkanRenderer()
-{
+VulkanRenderer::~VulkanRenderer() {
     destroy();
 }
 
-void VulkanRenderer::init(VkDevice dev, VkPhysicalDevice physDev, uint32_t graphicsQueueFamily)
-{
+void VulkanRenderer::init(VkDevice dev, VkPhysicalDevice physDev, uint32_t graphicsQueueFamily) {
     device = dev;
-
     commandManager.init(device, graphicsQueueFamily);
     syncManager.init(device);
     bufferManager.init(device, physDev);
-    bufferManager.createVertexBuffer();
     framebufferManager.init(device);
-
     std::cout << "Renderer inicializado" << std::endl;
 }
 
-void VulkanRenderer::loadModel(const std::vector<Vertex3D> &vertices, const std::vector<uint32_t> &indices)
-{
+void VulkanRenderer::loadModel(const std::vector<Vertex3D>& vertices, 
+                               const std::vector<uint32_t>& indices) {
     bufferManager.createVertexBuffer3D(vertices);
     bufferManager.createIndexBuffer(indices);
     useIndexBuffer = true;
     std::cout << "Modelo cargado en renderer" << std::endl;
 }
 
-void VulkanRenderer::createDefaultBuffer()
-{
+void VulkanRenderer::createDefaultBuffer() {
     bufferManager.createVertexBuffer();
     useIndexBuffer = false;
     std::cout << "Buffer por defecto creado" << std::endl;
 }
 
 void VulkanRenderer::createFramebuffers(VkRenderPass renderPass,
-                                        const std::vector<VkImageView> &imageViews,
-                                        VkExtent2D extent)
-{
+                                       const std::vector<VkImageView>& imageViews,
+                                       VkExtent2D extent) {
     framebufferManager.createFramebuffers(renderPass, imageViews, extent);
 }
 
-// Establecer posición del modelo
-// x = vertical (arriba/abajo en pantalla)
-// y = profundidad (alejamiento de cámara, negativo = lejos)
-// z = horizontal (izquierda/derecha en pantalla)
-void setModelPosition(float x, float y, float z);
-
-void VulkanRenderer::setModelPosition(float x, float y, float z) {
-    modelX = x;
-    modelY = y;
-    modelZ = z;
-}
-
-void VulkanRenderer::createModelMatrix(float* matrix, float x, float y, float z) {
-    // Matriz identidad
-    memset(matrix, 0, 16 * sizeof(float));
+void VulkanRenderer::drawFrame(VkDevice device, 
+                               VkSwapchainKHR swapChain,
+                               VkQueue graphicsQueue, 
+                               VkQueue presentQueue,
+                               VkRenderPass renderPass, 
+                               VkPipeline pipeline,
+                               VkPipelineLayout pipelineLayout, 
+                               VkExtent2D extent,
+                               const Transform& transform) {
     
-    float scale = 1.0f;
-    matrix[0] = scale;
-    matrix[5] = scale;
-    matrix[10] = scale;
-    matrix[15] = 1.0f;
-    
-    // Sistema de coordenadas interno:
-    // x = vertical (arriba/abajo en pantalla)
-    // y = profundidad (cerca/lejos de cámara)
-    // z = horizontal (izquierda/derecha en pantalla)
-    matrix[12] = x;
-    matrix[13] = y;
-    matrix[14] = z;
-}
-
-void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
-                               VkQueue graphicsQueue, VkQueue presentQueue,
-                               VkRenderPass renderPass, VkPipeline pipeline,
-                               VkPipelineLayout pipelineLayout, VkExtent2D extent)
-{
-    // Esperar a que el frame anterior termine
     vkWaitForFences(device, 1, &syncManager.getInFlightFences()[currentFrame], VK_TRUE, UINT64_MAX);
 
-    // Adquirir imagen del swap chain
     uint32_t imageIndex;
     VkResult result = vkAcquireNextImageKHR(device, swapChain, UINT64_MAX,
                                             syncManager.getImageAvailableSemaphores()[currentFrame],
                                             VK_NULL_HANDLE, &imageIndex);
 
-    if (result == VK_ERROR_OUT_OF_DATE_KHR)
-    {
-        return; // Swap chain necesita recrearse
-    }
-    else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
-    {
+    if (result == VK_ERROR_OUT_OF_DATE_KHR) {
+        return;
+    } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
         throw std::runtime_error("Error al adquirir imagen del swap chain");
     }
 
-    // Reset fence solo si vamos a enviar trabajo
     vkResetFences(device, 1, &syncManager.getInFlightFences()[currentFrame]);
 
-    // Grabar command buffer
     VkCommandBuffer commandBuffer = commandManager.getCommandBuffers()[currentFrame];
+    recordCommandBuffer(commandBuffer, imageIndex, renderPass, pipeline, 
+                       pipelineLayout, extent, transform);
+
+    submitCommandBuffer(commandBuffer, graphicsQueue, presentQueue, swapChain, imageIndex);
+
+    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
+}
+
+void VulkanRenderer::recordCommandBuffer(VkCommandBuffer commandBuffer, 
+                                         uint32_t imageIndex,
+                                         VkRenderPass renderPass,
+                                         VkPipeline pipeline,
+                                         VkPipelineLayout pipelineLayout,
+                                         VkExtent2D extent,
+                                         const Transform& transform) {
     vkResetCommandBuffer(commandBuffer, 0);
 
     VkCommandBufferBeginInfo beginInfo{};
     beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
 
-    if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS)
-    {
+    if (vkBeginCommandBuffer(commandBuffer, &beginInfo) != VK_SUCCESS) {
         throw std::runtime_error("Error al comenzar command buffer");
     }
 
@@ -136,35 +107,35 @@ void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
     vkCmdBeginRenderPass(commandBuffer, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline);
 
-    // Crear y enviar matriz de transformación
+    // Obtener matriz del Transform
     float modelMatrix[16];
-    createModelMatrix(modelMatrix, modelX, modelY, modelZ);
-    vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 
+    transform.getModelMatrix(modelMatrix);
+    vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT,
                        0, sizeof(modelMatrix), modelMatrix);
 
     VkBuffer vertexBuffers[] = {bufferManager.getVertexBuffer()};
     VkDeviceSize offsets[] = {0};
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
 
-    // Dibujar con índices si tenemos un modelo cargado
-    if (useIndexBuffer && bufferManager.getIndexCount() > 0)
-    {
+    if (useIndexBuffer && bufferManager.getIndexCount() > 0) {
         vkCmdBindIndexBuffer(commandBuffer, bufferManager.getIndexBuffer(), 0, VK_INDEX_TYPE_UINT32);
         vkCmdDrawIndexed(commandBuffer, bufferManager.getIndexCount(), 1, 0, 0, 0);
-    }
-    else
-    {
+    } else {
         vkCmdDraw(commandBuffer, 1, 1, 0, 0);
     }
 
     vkCmdEndRenderPass(commandBuffer);
 
-    if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS)
-    {
+    if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS) {
         throw std::runtime_error("Error al grabar command buffer");
     }
+}
 
-    // Submit command buffer
+void VulkanRenderer::submitCommandBuffer(VkCommandBuffer commandBuffer,
+                                         VkQueue graphicsQueue,
+                                         VkQueue presentQueue,
+                                         VkSwapchainKHR swapChain,
+                                         uint32_t imageIndex) {
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
@@ -180,12 +151,10 @@ void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphores;
 
-    if (vkQueueSubmit(graphicsQueue, 1, &submitInfo, syncManager.getInFlightFences()[currentFrame]) != VK_SUCCESS)
-    {
+    if (vkQueueSubmit(graphicsQueue, 1, &submitInfo, syncManager.getInFlightFences()[currentFrame]) != VK_SUCCESS) {
         throw std::runtime_error("Error al enviar command buffer");
     }
 
-    // Presentar
     VkPresentInfoKHR presentInfo{};
     presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
     presentInfo.waitSemaphoreCount = 1;
@@ -196,30 +165,22 @@ void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
     presentInfo.pSwapchains = swapChains;
     presentInfo.pImageIndices = &imageIndex;
 
-    result = vkQueuePresentKHR(presentQueue, &presentInfo);
+    VkResult result = vkQueuePresentKHR(presentQueue, &presentInfo);
 
-    if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR)
-    {
+    if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR) {
         // Swap chain necesita recrearse
-    }
-    else if (result != VK_SUCCESS)
-    {
+    } else if (result != VK_SUCCESS) {
         throw std::runtime_error("Error al presentar imagen");
     }
-
-    // Avanzar al siguiente frame
-    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 }
 
-void VulkanRenderer::destroy()
-{
-    if (device == VK_NULL_HANDLE)
-        return;
-
+void VulkanRenderer::destroy() {
+    if (device == VK_NULL_HANDLE) return;
+    
     framebufferManager.destroy();
     syncManager.destroy();
     bufferManager.destroy();
     commandManager.destroy();
-
+    
     std::cout << "Renderer destruido" << std::endl;
 }
