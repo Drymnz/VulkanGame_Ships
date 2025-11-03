@@ -1,167 +1,1947 @@
 .
 ├── assets
 │   ├── models
+│   │   └── ship.glb
 │   └── textures
 ├── build
-│   └── CMakeFiles
-│       ├── 4.1.2
-│       │   ├── CompilerIdC
-│       │   │   └── tmp
-│       │   └── CompilerIdCXX
-│       │       └── tmp
-│       ├── juego.dir
-│       │   ├── external
-│       │   │   └── imgui
-│       │   │       └── backends
-│       │   └── src
-│       │       ├── core
-│       │       ├── graphics
-│       │       └── input
-│       ├── pkgRedirects
-│       └── Progress
-├── CMakeFiles
-│   └── pkgRedirects
+│   ├── assets
+│   │   ├── models
+│   │   │   └── ship.glb
+│   │   └── textures
+│   ├── CMakeCache.txt
+│   ├── cmakedeps_macros.cmake
+│   ├── CMakeFiles
+│   │   ├── 4.1.2
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeConfigureLog.yaml
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── InstallScripts.json
+│   │   ├── juego.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── compiler_depend.internal
+│   │   │   ├── compiler_depend.make
+│   │   │   ├── compiler_depend.ts
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.make
+│   │   │   ├── external
+│   │   │   │   └── imgui
+│   │   │   │       ├── backends
+│   │   │   │       │   ├── imgui_impl_glfw.cpp.o
+│   │   │   │       │   ├── imgui_impl_glfw.cpp.o.d
+│   │   │   │       │   ├── imgui_impl_vulkan.cpp.o
+│   │   │   │       │   └── imgui_impl_vulkan.cpp.o.d
+│   │   │   │       ├── imgui.cpp.o
+│   │   │   │       ├── imgui.cpp.o.d
+│   │   │   │       ├── imgui_demo.cpp.o
+│   │   │   │       ├── imgui_demo.cpp.o.d
+│   │   │   │       ├── imgui_draw.cpp.o
+│   │   │   │       ├── imgui_draw.cpp.o.d
+│   │   │   │       ├── imgui_tables.cpp.o
+│   │   │   │       ├── imgui_tables.cpp.o.d
+│   │   │   │       ├── imgui_widgets.cpp.o
+│   │   │   │       └── imgui_widgets.cpp.o.d
+│   │   │   ├── flags.make
+│   │   │   ├── link.d
+│   │   │   ├── link.txt
+│   │   │   ├── progress.make
+│   │   │   └── src
+│   │   │       ├── core
+│   │   │       │   ├── FPSController.cpp.o
+│   │   │       │   ├── FPSController.cpp.o.d
+│   │   │       │   ├── GameLoop.cpp.o
+│   │   │       │   ├── GameLoop.cpp.o.d
+│   │   │       │   ├── VulkanDevice.cpp.o
+│   │   │       │   ├── VulkanDevice.cpp.o.d
+│   │   │       │   ├── VulkanInstance.cpp.o
+│   │   │       │   ├── VulkanInstance.cpp.o.d
+│   │   │       │   ├── WindowManager.cpp.o
+│   │   │       │   └── WindowManager.cpp.o.d
+│   │   │       ├── game
+│   │   │       │   ├── GameObject.cpp.o
+│   │   │       │   └── GameObject.cpp.o.d
+│   │   │       ├── graphics
+│   │   │       │   ├── BufferManager.cpp.o
+│   │   │       │   ├── BufferManager.cpp.o.d
+│   │   │       │   ├── CommandManager.cpp.o
+│   │   │       │   ├── CommandManager.cpp.o.d
+│   │   │       │   ├── FramebufferManager.cpp.o
+│   │   │       │   ├── FramebufferManager.cpp.o.d
+│   │   │       │   ├── ModelLoader.cpp.o
+│   │   │       │   ├── ModelLoader.cpp.o.d
+│   │   │       │   ├── ShaderManager.cpp.o
+│   │   │       │   ├── ShaderManager.cpp.o.d
+│   │   │       │   ├── SyncManager.cpp.o
+│   │   │       │   ├── SyncManager.cpp.o.d
+│   │   │       │   ├── Transform.cpp.o
+│   │   │       │   ├── Transform.cpp.o.d
+│   │   │       │   ├── VulkanPipeline.cpp.o
+│   │   │       │   ├── VulkanPipeline.cpp.o.d
+│   │   │       │   ├── VulkanRenderer.cpp.o
+│   │   │       │   ├── VulkanRenderer.cpp.o.d
+│   │   │       │   ├── VulkanRenderPass.cpp.o
+│   │   │       │   ├── VulkanRenderPass.cpp.o.d
+│   │   │       │   ├── VulkanSwapChain.cpp.o
+│   │   │       │   └── VulkanSwapChain.cpp.o.d
+│   │   │       ├── input
+│   │   │       │   ├── InputManager.cpp.o
+│   │   │       │   └── InputManager.cpp.o.d
+│   │   │       ├── main.cpp.o
+│   │   │       ├── main.cpp.o.d
+│   │   │       ├── VulkanApp.cpp.o
+│   │   │       └── VulkanApp.cpp.o.d
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── pkgRedirects
+│   │   ├── progress.marks
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   ├── CMakePresets.json
+│   ├── conanbuildenv-release-x86_64.sh
+│   ├── conanbuild.sh
+│   ├── conandeps_legacy.cmake
+│   ├── conanrunenv-release-x86_64.sh
+│   ├── conanrun.sh
+│   ├── conan_toolchain.cmake
+│   ├── deactivate_conanbuildenv-release-x86_64.sh
+│   ├── deactivate_conanbuild.sh
+│   ├── deactivate_conanrun.sh
+│   ├── frag.spv
+│   ├── glfw3-config.cmake
+│   ├── glfw3-config-version.cmake
+│   ├── glfw3-release-x86_64-data.cmake
+│   ├── glfw3-Target-release.cmake
+│   ├── glfw3Targets.cmake
+│   ├── glm-config.cmake
+│   ├── glm-config-version.cmake
+│   ├── glm-release-x86_64-data.cmake
+│   ├── glm-Target-release.cmake
+│   ├── glmTargets.cmake
+│   ├── imgui-config.cmake
+│   ├── imgui-config-version.cmake
+│   ├── imgui-release-x86_64-data.cmake
+│   ├── imgui-Target-release.cmake
+│   ├── imguiTargets.cmake
+│   ├── juego
+│   ├── Makefile
+│   ├── models
+│   │   └── ship.glb
+│   ├── nlohmann_json-config.cmake
+│   ├── nlohmann_json-config-version.cmake
+│   ├── nlohmann_json-release-x86_64-data.cmake
+│   ├── nlohmann_json-Target-release.cmake
+│   ├── nlohmann_jsonTargets.cmake
+│   ├── opengl_system-config.cmake
+│   ├── opengl_system-config-version.cmake
+│   ├── opengl_system-release-x86_64-data.cmake
+│   ├── opengl_system-Target-release.cmake
+│   ├── opengl_systemTargets.cmake
+│   ├── ship.glb
+│   ├── vert.spv
+│   ├── xorg-config.cmake
+│   ├── xorg-config-version.cmake
+│   ├── xorg-release-x86_64-data.cmake
+│   ├── xorg-Target-release.cmake
+│   └── xorgTargets.cmake
+├── build.sh
+├── CMakeLists.txt
+├── CMakeUserPresets.json
+├── conanfile.txt
 ├── docs
 ├── external
 │   ├── imgui
 │   │   ├── backends
+│   │   │   ├── imgui_impl_allegro5.cpp
+│   │   │   ├── imgui_impl_allegro5.h
+│   │   │   ├── imgui_impl_android.cpp
+│   │   │   ├── imgui_impl_android.h
+│   │   │   ├── imgui_impl_dx10.cpp
+│   │   │   ├── imgui_impl_dx10.h
+│   │   │   ├── imgui_impl_dx11.cpp
+│   │   │   ├── imgui_impl_dx11.h
+│   │   │   ├── imgui_impl_dx12.cpp
+│   │   │   ├── imgui_impl_dx12.h
+│   │   │   ├── imgui_impl_dx9.cpp
+│   │   │   ├── imgui_impl_dx9.h
+│   │   │   ├── imgui_impl_glfw.cpp
+│   │   │   ├── imgui_impl_glfw.h
+│   │   │   ├── imgui_impl_glut.cpp
+│   │   │   ├── imgui_impl_glut.h
+│   │   │   ├── imgui_impl_metal.h
+│   │   │   ├── imgui_impl_metal.mm
+│   │   │   ├── imgui_impl_opengl2.cpp
+│   │   │   ├── imgui_impl_opengl2.h
+│   │   │   ├── imgui_impl_opengl3.cpp
+│   │   │   ├── imgui_impl_opengl3.h
+│   │   │   ├── imgui_impl_opengl3_loader.h
+│   │   │   ├── imgui_impl_osx.h
+│   │   │   ├── imgui_impl_osx.mm
+│   │   │   ├── imgui_impl_sdl2.cpp
+│   │   │   ├── imgui_impl_sdl2.h
+│   │   │   ├── imgui_impl_sdl3.cpp
+│   │   │   ├── imgui_impl_sdl3.h
+│   │   │   ├── imgui_impl_sdlgpu3.cpp
+│   │   │   ├── imgui_impl_sdlgpu3.h
+│   │   │   ├── imgui_impl_sdlgpu3_shaders.h
+│   │   │   ├── imgui_impl_sdlrenderer2.cpp
+│   │   │   ├── imgui_impl_sdlrenderer2.h
+│   │   │   ├── imgui_impl_sdlrenderer3.cpp
+│   │   │   ├── imgui_impl_sdlrenderer3.h
+│   │   │   ├── imgui_impl_vulkan.cpp
+│   │   │   ├── imgui_impl_vulkan.h
+│   │   │   ├── imgui_impl_wgpu.cpp
+│   │   │   ├── imgui_impl_wgpu.h
+│   │   │   ├── imgui_impl_win32.cpp
+│   │   │   ├── imgui_impl_win32.h
 │   │   │   ├── sdlgpu3
+│   │   │   │   ├── build_instructions.txt
+│   │   │   │   ├── shader.frag
+│   │   │   │   └── shader.vert
 │   │   │   └── vulkan
+│   │   │       ├── build_instructions.txt
+│   │   │       ├── generate_spv.sh
+│   │   │       ├── glsl_shader.frag
+│   │   │       └── glsl_shader.vert
 │   │   ├── docs
+│   │   │   ├── BACKENDS.md
+│   │   │   ├── CHANGELOG.txt
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── EXAMPLES.md
+│   │   │   ├── FAQ.md
+│   │   │   ├── FONTS.md
+│   │   │   ├── README.md
+│   │   │   └── TODO.txt
 │   │   ├── examples
 │   │   │   ├── example_allegro5
+│   │   │   │   ├── example_allegro5.vcxproj
+│   │   │   │   ├── example_allegro5.vcxproj.filters
+│   │   │   │   ├── imconfig_allegro5.h
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── README.md
 │   │   │   ├── example_android_opengl3
-│   │   │   │   └── android
-│   │   │   │       ├── app
-│   │   │   │       │   └── src
-│   │   │   │       │       └── main
-│   │   │   │       │           └── java
-│   │   │   │       └── gradle
+│   │   │   │   ├── android
+│   │   │   │   │   ├── app
+│   │   │   │   │   │   ├── build.gradle
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       └── main
+│   │   │   │   │   │           ├── AndroidManifest.xml
+│   │   │   │   │   │           └── java
+│   │   │   │   │   │               └── MainActivity.kt
+│   │   │   │   │   ├── build.gradle
+│   │   │   │   │   ├── gradle
+│   │   │   │   │   │   └── libs.versions.toml
+│   │   │   │   │   └── settings.gradle
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_apple_metal
 │   │   │   │   ├── example_apple_metal.xcodeproj
+│   │   │   │   │   └── project.pbxproj
 │   │   │   │   ├── iOS
-│   │   │   │   └── macOS
+│   │   │   │   │   ├── Info-iOS.plist
+│   │   │   │   │   └── LaunchScreen.storyboard
+│   │   │   │   ├── macOS
+│   │   │   │   │   ├── Info-macOS.plist
+│   │   │   │   │   └── MainMenu.storyboard
+│   │   │   │   ├── main.mm
+│   │   │   │   ├── Makefile
+│   │   │   │   └── README.md
 │   │   │   ├── example_apple_opengl2
-│   │   │   │   └── example_apple_opengl2.xcodeproj
+│   │   │   │   ├── example_apple_opengl2.xcodeproj
+│   │   │   │   │   └── project.pbxproj
+│   │   │   │   ├── main.mm
+│   │   │   │   └── Makefile
 │   │   │   ├── example_glfw_metal
+│   │   │   │   ├── main.mm
+│   │   │   │   └── Makefile
 │   │   │   ├── example_glfw_opengl2
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_glfw_opengl2.vcxproj
+│   │   │   │   ├── example_glfw_opengl2.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_glfw_opengl3
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_glfw_opengl3.vcxproj
+│   │   │   │   ├── example_glfw_opengl3.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile
+│   │   │   │   └── Makefile.emscripten
 │   │   │   ├── example_glfw_vulkan
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── example_glfw_vulkan.vcxproj
+│   │   │   │   ├── example_glfw_vulkan.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_glfw_wgpu
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile.emscripten
+│   │   │   │   └── README.md
 │   │   │   ├── example_glut_opengl2
+│   │   │   │   ├── example_glut_opengl2.vcxproj
+│   │   │   │   ├── example_glut_opengl2.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_null
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl2_directx11
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl2_directx11.vcxproj
+│   │   │   │   ├── example_sdl2_directx11.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_sdl2_metal
+│   │   │   │   ├── main.mm
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl2_opengl2
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl2_opengl2.vcxproj
+│   │   │   │   ├── example_sdl2_opengl2.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile
+│   │   │   │   └── README.md
 │   │   │   ├── example_sdl2_opengl3
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl2_opengl3.vcxproj
+│   │   │   │   ├── example_sdl2_opengl3.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.emscripten
+│   │   │   │   └── README.md
 │   │   │   ├── example_sdl2_sdlrenderer2
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl2_sdlrenderer2.vcxproj
+│   │   │   │   ├── example_sdl2_sdlrenderer2.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile
+│   │   │   │   └── README.md
 │   │   │   ├── example_sdl2_vulkan
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── example_sdl2_vulkan.vcxproj
+│   │   │   │   ├── example_sdl2_vulkan.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl2_wgpu
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile.emscripten
+│   │   │   │   └── README.md
 │   │   │   ├── example_sdl3_directx11
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl3_directx11.vcxproj
+│   │   │   │   ├── example_sdl3_directx11.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_sdl3_metal
+│   │   │   │   ├── main.mm
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl3_opengl3
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── example_sdl3_opengl3.vcxproj
+│   │   │   │   ├── example_sdl3_opengl3.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.emscripten
+│   │   │   │   └── README.md
 │   │   │   ├── example_sdl3_sdlgpu3
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── example_sdl3_sdlgpu3.vcxproj
+│   │   │   │   ├── example_sdl3_sdlgpu3.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl3_sdlrenderer3
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_sdl3_sdlrenderer3.vcxproj
+│   │   │   │   ├── example_sdl3_sdlrenderer3.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl3_vulkan
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── example_sdl3_vulkan.vcxproj
+│   │   │   │   ├── example_sdl3_vulkan.vcxproj.filters
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Makefile
 │   │   │   ├── example_sdl3_wgpu
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Makefile.emscripten
+│   │   │   │   └── README.md
 │   │   │   ├── example_win32_directx10
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_win32_directx10.vcxproj
+│   │   │   │   ├── example_win32_directx10.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_win32_directx11
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_win32_directx11.vcxproj
+│   │   │   │   ├── example_win32_directx11.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_win32_directx12
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_win32_directx12.vcxproj
+│   │   │   │   ├── example_win32_directx12.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_win32_directx9
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_win32_directx9.vcxproj
+│   │   │   │   ├── example_win32_directx9.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_win32_opengl3
+│   │   │   │   ├── build_mingw.bat
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── example_win32_opengl3.vcxproj
+│   │   │   │   ├── example_win32_opengl3.vcxproj.filters
+│   │   │   │   └── main.cpp
 │   │   │   ├── example_win32_vulkan
-│   │   │   └── libs
-│   │   │       ├── emscripten
-│   │   │       ├── glfw
-│   │   │       │   ├── include
-│   │   │       │   │   └── GLFW
-│   │   │       │   ├── lib-vc2010-32
-│   │   │       │   └── lib-vc2010-64
-│   │   │       └── usynergy
+│   │   │   │   ├── build_win32.bat
+│   │   │   │   ├── build_win64.bat
+│   │   │   │   ├── example_win32_vulkan.vcxproj
+│   │   │   │   ├── example_win32_vulkan.vcxproj.filters
+│   │   │   │   └── main.cpp
+│   │   │   ├── imgui_examples.sln
+│   │   │   ├── libs
+│   │   │   │   ├── emscripten
+│   │   │   │   │   ├── emscripten_mainloop_stub.h
+│   │   │   │   │   └── shell_minimal.html
+│   │   │   │   ├── glfw
+│   │   │   │   │   ├── COPYING.txt
+│   │   │   │   │   ├── include
+│   │   │   │   │   │   └── GLFW
+│   │   │   │   │   │       ├── glfw3.h
+│   │   │   │   │   │       └── glfw3native.h
+│   │   │   │   │   ├── lib-vc2010-32
+│   │   │   │   │   │   └── glfw3.lib
+│   │   │   │   │   └── lib-vc2010-64
+│   │   │   │   │       └── glfw3.lib
+│   │   │   │   └── usynergy
+│   │   │   │       ├── README.txt
+│   │   │   │       ├── uSynergy.c
+│   │   │   │       └── uSynergy.h
+│   │   │   └── README.txt
+│   │   ├── imconfig.h
+│   │   ├── imgui.cpp
+│   │   ├── imgui_demo.cpp
+│   │   ├── imgui_draw.cpp
+│   │   ├── imgui.h
+│   │   ├── imgui_internal.h
+│   │   ├── imgui_tables.cpp
+│   │   ├── imgui_widgets.cpp
+│   │   ├── imstb_rectpack.h
+│   │   ├── imstb_textedit.h
+│   │   ├── imstb_truetype.h
+│   │   ├── LICENSE.txt
 │   │   └── misc
 │   │       ├── cpp
+│   │       │   ├── imgui_stdlib.cpp
+│   │       │   ├── imgui_stdlib.h
+│   │       │   └── README.txt
 │   │       ├── debuggers
+│   │       │   ├── imgui.gdb
+│   │       │   ├── imgui_lldb.py
+│   │       │   ├── imgui.natstepfilter
+│   │       │   ├── imgui.natvis
+│   │       │   └── README.txt
 │   │       ├── fonts
+│   │       │   ├── binary_to_compressed_c.cpp
+│   │       │   ├── Cousine-Regular.ttf
+│   │       │   ├── DroidSans.ttf
+│   │       │   ├── Karla-Regular.ttf
+│   │       │   ├── ProggyClean.ttf
+│   │       │   ├── ProggyTiny.ttf
+│   │       │   └── Roboto-Medium.ttf
 │   │       ├── freetype
+│   │       │   ├── imgui_freetype.cpp
+│   │       │   ├── imgui_freetype.h
+│   │       │   └── README.md
+│   │       ├── README.txt
 │   │       └── single_file
-│   └── tinygltf
-│       ├── cmake
-│       ├── deps
-│       ├── examples
-│       │   ├── basic
-│       │   │   └── basic
-│       │   ├── build-gltf
-│       │   ├── common
-│       │   │   ├── glm
-│       │   │   │   ├── cmake
-│       │   │   │   ├── doc
-│       │   │   │   │   ├── api
-│       │   │   │   │   │   └── search
-│       │   │   │   │   ├── manual
-│       │   │   │   │   └── theme
-│       │   │   │   ├── glm
-│       │   │   │   │   ├── detail
-│       │   │   │   │   ├── gtc
-│       │   │   │   │   ├── gtx
-│       │   │   │   │   └── simd
-│       │   │   │   ├── test
-│       │   │   │   │   ├── bug
-│       │   │   │   │   ├── core
-│       │   │   │   │   ├── external
-│       │   │   │   │   │   └── gli
-│       │   │   │   │   │       └── core
-│       │   │   │   │   ├── gtc
-│       │   │   │   │   └── gtx
-│       │   │   │   └── util
-│       │   │   │       └── conan-package
-│       │   │   │           ├── lib_licenses
-│       │   │   │           └── test_package
-│       │   │   ├── imgui
-│       │   │   ├── nativefiledialog
-│       │   │   │   ├── screens
-│       │   │   │   ├── src
-│       │   │   │   │   └── include
-│       │   │   │   └── test
-│       │   │   ├── OpenGLWindow
-│       │   │   └── ThirdPartyLibs
-│       │   │       └── Glew
-│       │   │           └── CustomGL
-│       │   ├── dxview
-│       │   │   ├── res
-│       │   │   └── src
-│       │   ├── gltfutil
-│       │   ├── glview
-│       │   │   ├── cmake
-│       │   │   └── glview
-│       │   ├── raytrace
-│       │   │   └── images
-│       │   ├── saver
-│       │   └── validator
-│       │       ├── app
-│       │       └── src
-│       ├── experimental
-│       ├── models
-│       │   ├── BoundsChecking
-│       │   ├── Cube
-│       │   ├── CubeImageUriSpaces
-│       │   ├── Cube-texture-ext
-│       │   ├── Extensions-issue97
-│       │   ├── Extensions-overwrite-issue261
-│       │   ├── regression
-│       │   └── SparseMorphTargets-issue280
-│       ├── tests
-│       │   └── fuzzer
-│       ├── tools
-│       │   └── windows
-│       └── wasm
+│   │           └── imgui_single_file.h
+│   ├── json.hpp
+│   ├── stb_image.h
+│   ├── stb_image_write.h
+│   ├── tinygltf
+│   │   ├── appveyor.yml
+│   │   ├── cmake
+│   │   │   └── TinyGLTFConfig.cmake.in
+│   │   ├── CMakeLists.txt
+│   │   ├── deps
+│   │   │   └── cpplint.py
+│   │   ├── examples
+│   │   │   ├── basic
+│   │   │   │   ├── basic
+│   │   │   │   │   ├── basic.sln
+│   │   │   │   │   ├── basic.vcxproj
+│   │   │   │   │   ├── basic.vcxproj.filters
+│   │   │   │   │   ├── basic.vcxproj.user
+│   │   │   │   │   └── packages.config
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── premake5.lua
+│   │   │   │   ├── README.md
+│   │   │   │   ├── screenshot.JPG
+│   │   │   │   ├── shaders.cpp
+│   │   │   │   ├── shaders.h
+│   │   │   │   ├── window.cpp
+│   │   │   │   └── window.h
+│   │   │   ├── build-gltf
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── create_triangle_gltf.cpp
+│   │   │   │   └── Makefile
+│   │   │   ├── common
+│   │   │   │   ├── findOpenGLGlewGlut.lua
+│   │   │   │   ├── glm
+│   │   │   │   │   ├── cmake
+│   │   │   │   │   │   ├── glmBuildConfig.cmake.in
+│   │   │   │   │   │   ├── glmConfig.cmake.in
+│   │   │   │   │   │   └── glm.pc.in
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── doc
+│   │   │   │   │   │   ├── api
+│   │   │   │   │   │   │   ├── a00001.html
+│   │   │   │   │   │   │   ├── a00001_source.html
+│   │   │   │   │   │   │   ├── a00002.html
+│   │   │   │   │   │   │   ├── a00002_source.html
+│   │   │   │   │   │   │   ├── a00003.html
+│   │   │   │   │   │   │   ├── a00003_source.html
+│   │   │   │   │   │   │   ├── a00004.html
+│   │   │   │   │   │   │   ├── a00004_source.html
+│   │   │   │   │   │   │   ├── a00005.html
+│   │   │   │   │   │   │   ├── a00005_source.html
+│   │   │   │   │   │   │   ├── a00006.html
+│   │   │   │   │   │   │   ├── a00006_source.html
+│   │   │   │   │   │   │   ├── a00007.html
+│   │   │   │   │   │   │   ├── a00007_source.html
+│   │   │   │   │   │   │   ├── a00008.html
+│   │   │   │   │   │   │   ├── a00008_source.html
+│   │   │   │   │   │   │   ├── a00009.html
+│   │   │   │   │   │   │   ├── a00009_source.html
+│   │   │   │   │   │   │   ├── a00010.html
+│   │   │   │   │   │   │   ├── a00010_source.html
+│   │   │   │   │   │   │   ├── a00011.html
+│   │   │   │   │   │   │   ├── a00011_source.html
+│   │   │   │   │   │   │   ├── a00012.html
+│   │   │   │   │   │   │   ├── a00012_source.html
+│   │   │   │   │   │   │   ├── a00013.html
+│   │   │   │   │   │   │   ├── a00013_source.html
+│   │   │   │   │   │   │   ├── a00014.html
+│   │   │   │   │   │   │   ├── a00014_source.html
+│   │   │   │   │   │   │   ├── a00015.html
+│   │   │   │   │   │   │   ├── a00015_source.html
+│   │   │   │   │   │   │   ├── a00016.html
+│   │   │   │   │   │   │   ├── a00016_source.html
+│   │   │   │   │   │   │   ├── a00017.html
+│   │   │   │   │   │   │   ├── a00017_source.html
+│   │   │   │   │   │   │   ├── a00018.html
+│   │   │   │   │   │   │   ├── a00018_source.html
+│   │   │   │   │   │   │   ├── a00019.html
+│   │   │   │   │   │   │   ├── a00019_source.html
+│   │   │   │   │   │   │   ├── a00020.html
+│   │   │   │   │   │   │   ├── a00020_source.html
+│   │   │   │   │   │   │   ├── a00021.html
+│   │   │   │   │   │   │   ├── a00021_source.html
+│   │   │   │   │   │   │   ├── a00022.html
+│   │   │   │   │   │   │   ├── a00022_source.html
+│   │   │   │   │   │   │   ├── a00023.html
+│   │   │   │   │   │   │   ├── a00023_source.html
+│   │   │   │   │   │   │   ├── a00024.html
+│   │   │   │   │   │   │   ├── a00024_source.html
+│   │   │   │   │   │   │   ├── a00025.html
+│   │   │   │   │   │   │   ├── a00025_source.html
+│   │   │   │   │   │   │   ├── a00026.html
+│   │   │   │   │   │   │   ├── a00026_source.html
+│   │   │   │   │   │   │   ├── a00027.html
+│   │   │   │   │   │   │   ├── a00027_source.html
+│   │   │   │   │   │   │   ├── a00028.html
+│   │   │   │   │   │   │   ├── a00028_source.html
+│   │   │   │   │   │   │   ├── a00029.html
+│   │   │   │   │   │   │   ├── a00029_source.html
+│   │   │   │   │   │   │   ├── a00030.html
+│   │   │   │   │   │   │   ├── a00030_source.html
+│   │   │   │   │   │   │   ├── a00031.html
+│   │   │   │   │   │   │   ├── a00031_source.html
+│   │   │   │   │   │   │   ├── a00032.html
+│   │   │   │   │   │   │   ├── a00032_source.html
+│   │   │   │   │   │   │   ├── a00033.html
+│   │   │   │   │   │   │   ├── a00033_source.html
+│   │   │   │   │   │   │   ├── a00034.html
+│   │   │   │   │   │   │   ├── a00034_source.html
+│   │   │   │   │   │   │   ├── a00035.html
+│   │   │   │   │   │   │   ├── a00035_source.html
+│   │   │   │   │   │   │   ├── a00036.html
+│   │   │   │   │   │   │   ├── a00036_source.html
+│   │   │   │   │   │   │   ├── a00037.html
+│   │   │   │   │   │   │   ├── a00037_source.html
+│   │   │   │   │   │   │   ├── a00038.html
+│   │   │   │   │   │   │   ├── a00038_source.html
+│   │   │   │   │   │   │   ├── a00039.html
+│   │   │   │   │   │   │   ├── a00039_source.html
+│   │   │   │   │   │   │   ├── a00040.html
+│   │   │   │   │   │   │   ├── a00040_source.html
+│   │   │   │   │   │   │   ├── a00041.html
+│   │   │   │   │   │   │   ├── a00041_source.html
+│   │   │   │   │   │   │   ├── a00042.html
+│   │   │   │   │   │   │   ├── a00042_source.html
+│   │   │   │   │   │   │   ├── a00043.html
+│   │   │   │   │   │   │   ├── a00043_source.html
+│   │   │   │   │   │   │   ├── a00044.html
+│   │   │   │   │   │   │   ├── a00044_source.html
+│   │   │   │   │   │   │   ├── a00045.html
+│   │   │   │   │   │   │   ├── a00045_source.html
+│   │   │   │   │   │   │   ├── a00046.html
+│   │   │   │   │   │   │   ├── a00046_source.html
+│   │   │   │   │   │   │   ├── a00047.html
+│   │   │   │   │   │   │   ├── a00047_source.html
+│   │   │   │   │   │   │   ├── a00048.html
+│   │   │   │   │   │   │   ├── a00048_source.html
+│   │   │   │   │   │   │   ├── a00049.html
+│   │   │   │   │   │   │   ├── a00049_source.html
+│   │   │   │   │   │   │   ├── a00050.html
+│   │   │   │   │   │   │   ├── a00050_source.html
+│   │   │   │   │   │   │   ├── a00051_source.html
+│   │   │   │   │   │   │   ├── a00052.html
+│   │   │   │   │   │   │   ├── a00052_source.html
+│   │   │   │   │   │   │   ├── a00053.html
+│   │   │   │   │   │   │   ├── a00053_source.html
+│   │   │   │   │   │   │   ├── a00054.html
+│   │   │   │   │   │   │   ├── a00054_source.html
+│   │   │   │   │   │   │   ├── a00055.html
+│   │   │   │   │   │   │   ├── a00055_source.html
+│   │   │   │   │   │   │   ├── a00056.html
+│   │   │   │   │   │   │   ├── a00056_source.html
+│   │   │   │   │   │   │   ├── a00057.html
+│   │   │   │   │   │   │   ├── a00057_source.html
+│   │   │   │   │   │   │   ├── a00058.html
+│   │   │   │   │   │   │   ├── a00058_source.html
+│   │   │   │   │   │   │   ├── a00059.html
+│   │   │   │   │   │   │   ├── a00059_source.html
+│   │   │   │   │   │   │   ├── a00060.html
+│   │   │   │   │   │   │   ├── a00060_source.html
+│   │   │   │   │   │   │   ├── a00061.html
+│   │   │   │   │   │   │   ├── a00061_source.html
+│   │   │   │   │   │   │   ├── a00062.html
+│   │   │   │   │   │   │   ├── a00062_source.html
+│   │   │   │   │   │   │   ├── a00063.html
+│   │   │   │   │   │   │   ├── a00063_source.html
+│   │   │   │   │   │   │   ├── a00064.html
+│   │   │   │   │   │   │   ├── a00064_source.html
+│   │   │   │   │   │   │   ├── a00065.html
+│   │   │   │   │   │   │   ├── a00065_source.html
+│   │   │   │   │   │   │   ├── a00066.html
+│   │   │   │   │   │   │   ├── a00066_source.html
+│   │   │   │   │   │   │   ├── a00067.html
+│   │   │   │   │   │   │   ├── a00067_source.html
+│   │   │   │   │   │   │   ├── a00068.html
+│   │   │   │   │   │   │   ├── a00068_source.html
+│   │   │   │   │   │   │   ├── a00069.html
+│   │   │   │   │   │   │   ├── a00069_source.html
+│   │   │   │   │   │   │   ├── a00070.html
+│   │   │   │   │   │   │   ├── a00070_source.html
+│   │   │   │   │   │   │   ├── a00071.html
+│   │   │   │   │   │   │   ├── a00071_source.html
+│   │   │   │   │   │   │   ├── a00072.html
+│   │   │   │   │   │   │   ├── a00072_source.html
+│   │   │   │   │   │   │   ├── a00073.html
+│   │   │   │   │   │   │   ├── a00073_source.html
+│   │   │   │   │   │   │   ├── a00074.html
+│   │   │   │   │   │   │   ├── a00074_source.html
+│   │   │   │   │   │   │   ├── a00075.html
+│   │   │   │   │   │   │   ├── a00075_source.html
+│   │   │   │   │   │   │   ├── a00076.html
+│   │   │   │   │   │   │   ├── a00076_source.html
+│   │   │   │   │   │   │   ├── a00077.html
+│   │   │   │   │   │   │   ├── a00077_source.html
+│   │   │   │   │   │   │   ├── a00078.html
+│   │   │   │   │   │   │   ├── a00078_source.html
+│   │   │   │   │   │   │   ├── a00079.html
+│   │   │   │   │   │   │   ├── a00079_source.html
+│   │   │   │   │   │   │   ├── a00080.html
+│   │   │   │   │   │   │   ├── a00080_source.html
+│   │   │   │   │   │   │   ├── a00081.html
+│   │   │   │   │   │   │   ├── a00081_source.html
+│   │   │   │   │   │   │   ├── a00082.html
+│   │   │   │   │   │   │   ├── a00082_source.html
+│   │   │   │   │   │   │   ├── a00083_source.html
+│   │   │   │   │   │   │   ├── a00084.html
+│   │   │   │   │   │   │   ├── a00084_source.html
+│   │   │   │   │   │   │   ├── a00085.html
+│   │   │   │   │   │   │   ├── a00085_source.html
+│   │   │   │   │   │   │   ├── a00086.html
+│   │   │   │   │   │   │   ├── a00086_source.html
+│   │   │   │   │   │   │   ├── a00087.html
+│   │   │   │   │   │   │   ├── a00087_source.html
+│   │   │   │   │   │   │   ├── a00088.html
+│   │   │   │   │   │   │   ├── a00088_source.html
+│   │   │   │   │   │   │   ├── a00089.html
+│   │   │   │   │   │   │   ├── a00089_source.html
+│   │   │   │   │   │   │   ├── a00090.html
+│   │   │   │   │   │   │   ├── a00090_source.html
+│   │   │   │   │   │   │   ├── a00091.html
+│   │   │   │   │   │   │   ├── a00091_source.html
+│   │   │   │   │   │   │   ├── a00092.html
+│   │   │   │   │   │   │   ├── a00092_source.html
+│   │   │   │   │   │   │   ├── a00093.html
+│   │   │   │   │   │   │   ├── a00093_source.html
+│   │   │   │   │   │   │   ├── a00094.html
+│   │   │   │   │   │   │   ├── a00094_source.html
+│   │   │   │   │   │   │   ├── a00095.html
+│   │   │   │   │   │   │   ├── a00095_source.html
+│   │   │   │   │   │   │   ├── a00096.html
+│   │   │   │   │   │   │   ├── a00096_source.html
+│   │   │   │   │   │   │   ├── a00097.html
+│   │   │   │   │   │   │   ├── a00097_source.html
+│   │   │   │   │   │   │   ├── a00098.html
+│   │   │   │   │   │   │   ├── a00098_source.html
+│   │   │   │   │   │   │   ├── a00099.html
+│   │   │   │   │   │   │   ├── a00099_source.html
+│   │   │   │   │   │   │   ├── a00100.html
+│   │   │   │   │   │   │   ├── a00100_source.html
+│   │   │   │   │   │   │   ├── a00101.html
+│   │   │   │   │   │   │   ├── a00101_source.html
+│   │   │   │   │   │   │   ├── a00102.html
+│   │   │   │   │   │   │   ├── a00102_source.html
+│   │   │   │   │   │   │   ├── a00103.html
+│   │   │   │   │   │   │   ├── a00103_source.html
+│   │   │   │   │   │   │   ├── a00104.html
+│   │   │   │   │   │   │   ├── a00104_source.html
+│   │   │   │   │   │   │   ├── a00105.html
+│   │   │   │   │   │   │   ├── a00105_source.html
+│   │   │   │   │   │   │   ├── a00106.html
+│   │   │   │   │   │   │   ├── a00106_source.html
+│   │   │   │   │   │   │   ├── a00107.html
+│   │   │   │   │   │   │   ├── a00107_source.html
+│   │   │   │   │   │   │   ├── a00108.html
+│   │   │   │   │   │   │   ├── a00108_source.html
+│   │   │   │   │   │   │   ├── a00109.html
+│   │   │   │   │   │   │   ├── a00109_source.html
+│   │   │   │   │   │   │   ├── a00110.html
+│   │   │   │   │   │   │   ├── a00110_source.html
+│   │   │   │   │   │   │   ├── a00111.html
+│   │   │   │   │   │   │   ├── a00111_source.html
+│   │   │   │   │   │   │   ├── a00112.html
+│   │   │   │   │   │   │   ├── a00112_source.html
+│   │   │   │   │   │   │   ├── a00113.html
+│   │   │   │   │   │   │   ├── a00113_source.html
+│   │   │   │   │   │   │   ├── a00114.html
+│   │   │   │   │   │   │   ├── a00114_source.html
+│   │   │   │   │   │   │   ├── a00115.html
+│   │   │   │   │   │   │   ├── a00115_source.html
+│   │   │   │   │   │   │   ├── a00116.html
+│   │   │   │   │   │   │   ├── a00116_source.html
+│   │   │   │   │   │   │   ├── a00117.html
+│   │   │   │   │   │   │   ├── a00117_source.html
+│   │   │   │   │   │   │   ├── a00118.html
+│   │   │   │   │   │   │   ├── a00118_source.html
+│   │   │   │   │   │   │   ├── a00119.html
+│   │   │   │   │   │   │   ├── a00119_source.html
+│   │   │   │   │   │   │   ├── a00120.html
+│   │   │   │   │   │   │   ├── a00120_source.html
+│   │   │   │   │   │   │   ├── a00121.html
+│   │   │   │   │   │   │   ├── a00121_source.html
+│   │   │   │   │   │   │   ├── a00122.html
+│   │   │   │   │   │   │   ├── a00122_source.html
+│   │   │   │   │   │   │   ├── a00123.html
+│   │   │   │   │   │   │   ├── a00123_source.html
+│   │   │   │   │   │   │   ├── a00124.html
+│   │   │   │   │   │   │   ├── a00124_source.html
+│   │   │   │   │   │   │   ├── a00125.html
+│   │   │   │   │   │   │   ├── a00125_source.html
+│   │   │   │   │   │   │   ├── a00126.html
+│   │   │   │   │   │   │   ├── a00126_source.html
+│   │   │   │   │   │   │   ├── a00127.html
+│   │   │   │   │   │   │   ├── a00127_source.html
+│   │   │   │   │   │   │   ├── a00128.html
+│   │   │   │   │   │   │   ├── a00128_source.html
+│   │   │   │   │   │   │   ├── a00129.html
+│   │   │   │   │   │   │   ├── a00129_source.html
+│   │   │   │   │   │   │   ├── a00130.html
+│   │   │   │   │   │   │   ├── a00130_source.html
+│   │   │   │   │   │   │   ├── a00131.html
+│   │   │   │   │   │   │   ├── a00131_source.html
+│   │   │   │   │   │   │   ├── a00132.html
+│   │   │   │   │   │   │   ├── a00132_source.html
+│   │   │   │   │   │   │   ├── a00133.html
+│   │   │   │   │   │   │   ├── a00133_source.html
+│   │   │   │   │   │   │   ├── a00134.html
+│   │   │   │   │   │   │   ├── a00134_source.html
+│   │   │   │   │   │   │   ├── a00135.html
+│   │   │   │   │   │   │   ├── a00135_source.html
+│   │   │   │   │   │   │   ├── a00136.html
+│   │   │   │   │   │   │   ├── a00136_source.html
+│   │   │   │   │   │   │   ├── a00137.html
+│   │   │   │   │   │   │   ├── a00137_source.html
+│   │   │   │   │   │   │   ├── a00138.html
+│   │   │   │   │   │   │   ├── a00138_source.html
+│   │   │   │   │   │   │   ├── a00139.html
+│   │   │   │   │   │   │   ├── a00139_source.html
+│   │   │   │   │   │   │   ├── a00145.html
+│   │   │   │   │   │   │   ├── a00146.html
+│   │   │   │   │   │   │   ├── a00147.html
+│   │   │   │   │   │   │   ├── a00148.html
+│   │   │   │   │   │   │   ├── a00149.html
+│   │   │   │   │   │   │   ├── a00150.html
+│   │   │   │   │   │   │   ├── a00151.html
+│   │   │   │   │   │   │   ├── a00152.html
+│   │   │   │   │   │   │   ├── a00153.html
+│   │   │   │   │   │   │   ├── a00154.html
+│   │   │   │   │   │   │   ├── a00155.html
+│   │   │   │   │   │   │   ├── a00156.html
+│   │   │   │   │   │   │   ├── a00157.html
+│   │   │   │   │   │   │   ├── a00158.html
+│   │   │   │   │   │   │   ├── a00159.html
+│   │   │   │   │   │   │   ├── a00160.html
+│   │   │   │   │   │   │   ├── a00161.html
+│   │   │   │   │   │   │   ├── a00162.html
+│   │   │   │   │   │   │   ├── a00163.html
+│   │   │   │   │   │   │   ├── a00164.html
+│   │   │   │   │   │   │   ├── a00165.html
+│   │   │   │   │   │   │   ├── a00166.html
+│   │   │   │   │   │   │   ├── a00167.html
+│   │   │   │   │   │   │   ├── a00168.html
+│   │   │   │   │   │   │   ├── a00169.html
+│   │   │   │   │   │   │   ├── a00170.html
+│   │   │   │   │   │   │   ├── a00171.html
+│   │   │   │   │   │   │   ├── a00172.html
+│   │   │   │   │   │   │   ├── a00173.html
+│   │   │   │   │   │   │   ├── a00174.html
+│   │   │   │   │   │   │   ├── a00175.html
+│   │   │   │   │   │   │   ├── a00176.html
+│   │   │   │   │   │   │   ├── a00177.html
+│   │   │   │   │   │   │   ├── a00178.html
+│   │   │   │   │   │   │   ├── a00179.html
+│   │   │   │   │   │   │   ├── a00180.html
+│   │   │   │   │   │   │   ├── a00181.html
+│   │   │   │   │   │   │   ├── a00182.html
+│   │   │   │   │   │   │   ├── a00183.html
+│   │   │   │   │   │   │   ├── a00184.html
+│   │   │   │   │   │   │   ├── a00185.html
+│   │   │   │   │   │   │   ├── a00186.html
+│   │   │   │   │   │   │   ├── a00187.html
+│   │   │   │   │   │   │   ├── a00188.html
+│   │   │   │   │   │   │   ├── a00189.html
+│   │   │   │   │   │   │   ├── a00190.html
+│   │   │   │   │   │   │   ├── a00191.html
+│   │   │   │   │   │   │   ├── a00192.html
+│   │   │   │   │   │   │   ├── a00193.html
+│   │   │   │   │   │   │   ├── a00194.html
+│   │   │   │   │   │   │   ├── a00195.html
+│   │   │   │   │   │   │   ├── a00196.html
+│   │   │   │   │   │   │   ├── a00197.html
+│   │   │   │   │   │   │   ├── a00198.html
+│   │   │   │   │   │   │   ├── a00199.html
+│   │   │   │   │   │   │   ├── a00200.html
+│   │   │   │   │   │   │   ├── a00201.html
+│   │   │   │   │   │   │   ├── a00202.html
+│   │   │   │   │   │   │   ├── a00203.html
+│   │   │   │   │   │   │   ├── a00204.html
+│   │   │   │   │   │   │   ├── a00205.html
+│   │   │   │   │   │   │   ├── a00206.html
+│   │   │   │   │   │   │   ├── a00207.html
+│   │   │   │   │   │   │   ├── a00208.html
+│   │   │   │   │   │   │   ├── a00209.html
+│   │   │   │   │   │   │   ├── a00210.html
+│   │   │   │   │   │   │   ├── a00211.html
+│   │   │   │   │   │   │   ├── a00212.html
+│   │   │   │   │   │   │   ├── a00213.html
+│   │   │   │   │   │   │   ├── a00214.html
+│   │   │   │   │   │   │   ├── a00215.html
+│   │   │   │   │   │   │   ├── a00216.html
+│   │   │   │   │   │   │   ├── a00217.html
+│   │   │   │   │   │   │   ├── a00218.html
+│   │   │   │   │   │   │   ├── a00219.html
+│   │   │   │   │   │   │   ├── a00220.html
+│   │   │   │   │   │   │   ├── a00221.html
+│   │   │   │   │   │   │   ├── a00222.html
+│   │   │   │   │   │   │   ├── a00223.html
+│   │   │   │   │   │   │   ├── a00224.html
+│   │   │   │   │   │   │   ├── a00225.html
+│   │   │   │   │   │   │   ├── a00226.html
+│   │   │   │   │   │   │   ├── a00227.html
+│   │   │   │   │   │   │   ├── a00228.html
+│   │   │   │   │   │   │   ├── a00229.html
+│   │   │   │   │   │   │   ├── a00230.html
+│   │   │   │   │   │   │   ├── a00231.html
+│   │   │   │   │   │   │   ├── a00232.html
+│   │   │   │   │   │   │   ├── a00233.html
+│   │   │   │   │   │   │   ├── a00234.html
+│   │   │   │   │   │   │   ├── a00235.html
+│   │   │   │   │   │   │   ├── a00236.html
+│   │   │   │   │   │   │   ├── arrowdown.png
+│   │   │   │   │   │   │   ├── arrowright.png
+│   │   │   │   │   │   │   ├── bc_s.png
+│   │   │   │   │   │   │   ├── bdwn.png
+│   │   │   │   │   │   │   ├── closed.png
+│   │   │   │   │   │   │   ├── dir_304be5dfae1339a7705426c0b536faf2.html
+│   │   │   │   │   │   │   ├── dir_45973f864e07b2505003ae343b7c8af7.html
+│   │   │   │   │   │   │   ├── dir_48eca2e6cf73effdec262031e861eeb0.html
+│   │   │   │   │   │   │   ├── dir_7997edb062bdde9a99cb6835d42b0d9d.html
+│   │   │   │   │   │   │   ├── dir_9344afb825aed5e2f5be1d2015dde43c.html
+│   │   │   │   │   │   │   ├── dir_934f46a345653ef2b3014a1b37a162c1.html
+│   │   │   │   │   │   │   ├── dir_98f7f9d41f9d3029bd68cf237526a774.html
+│   │   │   │   │   │   │   ├── dir_da256b9dd32ba43e2eaa8a2832c37f1b.html
+│   │   │   │   │   │   │   ├── dir_e8f3c1046ba4b357711397765359cd18.html
+│   │   │   │   │   │   │   ├── doc.png
+│   │   │   │   │   │   │   ├── doxygen.css
+│   │   │   │   │   │   │   ├── doxygen.png
+│   │   │   │   │   │   │   ├── dynsections.js
+│   │   │   │   │   │   │   ├── files.html
+│   │   │   │   │   │   │   ├── folderclosed.png
+│   │   │   │   │   │   │   ├── folderopen.png
+│   │   │   │   │   │   │   ├── index.html
+│   │   │   │   │   │   │   ├── jquery.js
+│   │   │   │   │   │   │   ├── logo-mini.png
+│   │   │   │   │   │   │   ├── modules.html
+│   │   │   │   │   │   │   ├── nav_f.png
+│   │   │   │   │   │   │   ├── nav_g.png
+│   │   │   │   │   │   │   ├── nav_h.png
+│   │   │   │   │   │   │   ├── open.png
+│   │   │   │   │   │   │   ├── search
+│   │   │   │   │   │   │   │   ├── all_0.html
+│   │   │   │   │   │   │   │   ├── all_0.js
+│   │   │   │   │   │   │   │   ├── all_10.html
+│   │   │   │   │   │   │   │   ├── all_10.js
+│   │   │   │   │   │   │   │   ├── all_11.html
+│   │   │   │   │   │   │   │   ├── all_11.js
+│   │   │   │   │   │   │   │   ├── all_12.html
+│   │   │   │   │   │   │   │   ├── all_12.js
+│   │   │   │   │   │   │   │   ├── all_13.html
+│   │   │   │   │   │   │   │   ├── all_13.js
+│   │   │   │   │   │   │   │   ├── all_14.html
+│   │   │   │   │   │   │   │   ├── all_14.js
+│   │   │   │   │   │   │   │   ├── all_15.html
+│   │   │   │   │   │   │   │   ├── all_15.js
+│   │   │   │   │   │   │   │   ├── all_16.html
+│   │   │   │   │   │   │   │   ├── all_16.js
+│   │   │   │   │   │   │   │   ├── all_17.html
+│   │   │   │   │   │   │   │   ├── all_17.js
+│   │   │   │   │   │   │   │   ├── all_1.html
+│   │   │   │   │   │   │   │   ├── all_1.js
+│   │   │   │   │   │   │   │   ├── all_2.html
+│   │   │   │   │   │   │   │   ├── all_2.js
+│   │   │   │   │   │   │   │   ├── all_3.html
+│   │   │   │   │   │   │   │   ├── all_3.js
+│   │   │   │   │   │   │   │   ├── all_4.html
+│   │   │   │   │   │   │   │   ├── all_4.js
+│   │   │   │   │   │   │   │   ├── all_5.html
+│   │   │   │   │   │   │   │   ├── all_5.js
+│   │   │   │   │   │   │   │   ├── all_6.html
+│   │   │   │   │   │   │   │   ├── all_6.js
+│   │   │   │   │   │   │   │   ├── all_7.html
+│   │   │   │   │   │   │   │   ├── all_7.js
+│   │   │   │   │   │   │   │   ├── all_8.html
+│   │   │   │   │   │   │   │   ├── all_8.js
+│   │   │   │   │   │   │   │   ├── all_9.html
+│   │   │   │   │   │   │   │   ├── all_9.js
+│   │   │   │   │   │   │   │   ├── all_a.html
+│   │   │   │   │   │   │   │   ├── all_a.js
+│   │   │   │   │   │   │   │   ├── all_b.html
+│   │   │   │   │   │   │   │   ├── all_b.js
+│   │   │   │   │   │   │   │   ├── all_c.html
+│   │   │   │   │   │   │   │   ├── all_c.js
+│   │   │   │   │   │   │   │   ├── all_d.html
+│   │   │   │   │   │   │   │   ├── all_d.js
+│   │   │   │   │   │   │   │   ├── all_e.html
+│   │   │   │   │   │   │   │   ├── all_e.js
+│   │   │   │   │   │   │   │   ├── all_f.html
+│   │   │   │   │   │   │   │   ├── all_f.js
+│   │   │   │   │   │   │   │   ├── close.png
+│   │   │   │   │   │   │   │   ├── files_0.html
+│   │   │   │   │   │   │   │   ├── files_0.js
+│   │   │   │   │   │   │   │   ├── files_10.html
+│   │   │   │   │   │   │   │   ├── files_10.js
+│   │   │   │   │   │   │   │   ├── files_11.html
+│   │   │   │   │   │   │   │   ├── files_11.js
+│   │   │   │   │   │   │   │   ├── files_12.html
+│   │   │   │   │   │   │   │   ├── files_12.js
+│   │   │   │   │   │   │   │   ├── files_13.html
+│   │   │   │   │   │   │   │   ├── files_13.js
+│   │   │   │   │   │   │   │   ├── files_14.html
+│   │   │   │   │   │   │   │   ├── files_14.js
+│   │   │   │   │   │   │   │   ├── files_1.html
+│   │   │   │   │   │   │   │   ├── files_1.js
+│   │   │   │   │   │   │   │   ├── files_2.html
+│   │   │   │   │   │   │   │   ├── files_2.js
+│   │   │   │   │   │   │   │   ├── files_3.html
+│   │   │   │   │   │   │   │   ├── files_3.js
+│   │   │   │   │   │   │   │   ├── files_4.html
+│   │   │   │   │   │   │   │   ├── files_4.js
+│   │   │   │   │   │   │   │   ├── files_5.html
+│   │   │   │   │   │   │   │   ├── files_5.js
+│   │   │   │   │   │   │   │   ├── files_6.html
+│   │   │   │   │   │   │   │   ├── files_6.js
+│   │   │   │   │   │   │   │   ├── files_7.html
+│   │   │   │   │   │   │   │   ├── files_7.js
+│   │   │   │   │   │   │   │   ├── files_8.html
+│   │   │   │   │   │   │   │   ├── files_8.js
+│   │   │   │   │   │   │   │   ├── files_9.html
+│   │   │   │   │   │   │   │   ├── files_9.js
+│   │   │   │   │   │   │   │   ├── files_a.html
+│   │   │   │   │   │   │   │   ├── files_a.js
+│   │   │   │   │   │   │   │   ├── files_b.html
+│   │   │   │   │   │   │   │   ├── files_b.js
+│   │   │   │   │   │   │   │   ├── files_c.html
+│   │   │   │   │   │   │   │   ├── files_c.js
+│   │   │   │   │   │   │   │   ├── files_d.html
+│   │   │   │   │   │   │   │   ├── files_d.js
+│   │   │   │   │   │   │   │   ├── files_e.html
+│   │   │   │   │   │   │   │   ├── files_e.js
+│   │   │   │   │   │   │   │   ├── files_f.html
+│   │   │   │   │   │   │   │   ├── files_f.js
+│   │   │   │   │   │   │   │   ├── functions_0.html
+│   │   │   │   │   │   │   │   ├── functions_0.js
+│   │   │   │   │   │   │   │   ├── functions_10.html
+│   │   │   │   │   │   │   │   ├── functions_10.js
+│   │   │   │   │   │   │   │   ├── functions_11.html
+│   │   │   │   │   │   │   │   ├── functions_11.js
+│   │   │   │   │   │   │   │   ├── functions_12.html
+│   │   │   │   │   │   │   │   ├── functions_12.js
+│   │   │   │   │   │   │   │   ├── functions_13.html
+│   │   │   │   │   │   │   │   ├── functions_13.js
+│   │   │   │   │   │   │   │   ├── functions_14.html
+│   │   │   │   │   │   │   │   ├── functions_14.js
+│   │   │   │   │   │   │   │   ├── functions_15.html
+│   │   │   │   │   │   │   │   ├── functions_15.js
+│   │   │   │   │   │   │   │   ├── functions_16.html
+│   │   │   │   │   │   │   │   ├── functions_16.js
+│   │   │   │   │   │   │   │   ├── functions_1.html
+│   │   │   │   │   │   │   │   ├── functions_1.js
+│   │   │   │   │   │   │   │   ├── functions_2.html
+│   │   │   │   │   │   │   │   ├── functions_2.js
+│   │   │   │   │   │   │   │   ├── functions_3.html
+│   │   │   │   │   │   │   │   ├── functions_3.js
+│   │   │   │   │   │   │   │   ├── functions_4.html
+│   │   │   │   │   │   │   │   ├── functions_4.js
+│   │   │   │   │   │   │   │   ├── functions_5.html
+│   │   │   │   │   │   │   │   ├── functions_5.js
+│   │   │   │   │   │   │   │   ├── functions_6.html
+│   │   │   │   │   │   │   │   ├── functions_6.js
+│   │   │   │   │   │   │   │   ├── functions_7.html
+│   │   │   │   │   │   │   │   ├── functions_7.js
+│   │   │   │   │   │   │   │   ├── functions_8.html
+│   │   │   │   │   │   │   │   ├── functions_8.js
+│   │   │   │   │   │   │   │   ├── functions_9.html
+│   │   │   │   │   │   │   │   ├── functions_9.js
+│   │   │   │   │   │   │   │   ├── functions_a.html
+│   │   │   │   │   │   │   │   ├── functions_a.js
+│   │   │   │   │   │   │   │   ├── functions_b.html
+│   │   │   │   │   │   │   │   ├── functions_b.js
+│   │   │   │   │   │   │   │   ├── functions_c.html
+│   │   │   │   │   │   │   │   ├── functions_c.js
+│   │   │   │   │   │   │   │   ├── functions_d.html
+│   │   │   │   │   │   │   │   ├── functions_d.js
+│   │   │   │   │   │   │   │   ├── functions_e.html
+│   │   │   │   │   │   │   │   ├── functions_e.js
+│   │   │   │   │   │   │   │   ├── functions_f.html
+│   │   │   │   │   │   │   │   ├── functions_f.js
+│   │   │   │   │   │   │   │   ├── groups_0.html
+│   │   │   │   │   │   │   │   ├── groups_0.js
+│   │   │   │   │   │   │   │   ├── groups_1.html
+│   │   │   │   │   │   │   │   ├── groups_1.js
+│   │   │   │   │   │   │   │   ├── groups_2.html
+│   │   │   │   │   │   │   │   ├── groups_2.js
+│   │   │   │   │   │   │   │   ├── groups_3.html
+│   │   │   │   │   │   │   │   ├── groups_3.js
+│   │   │   │   │   │   │   │   ├── groups_4.html
+│   │   │   │   │   │   │   │   ├── groups_4.js
+│   │   │   │   │   │   │   │   ├── groups_5.html
+│   │   │   │   │   │   │   │   ├── groups_5.js
+│   │   │   │   │   │   │   │   ├── groups_6.html
+│   │   │   │   │   │   │   │   ├── groups_6.js
+│   │   │   │   │   │   │   │   ├── groups_7.html
+│   │   │   │   │   │   │   │   ├── groups_7.js
+│   │   │   │   │   │   │   │   ├── groups_8.html
+│   │   │   │   │   │   │   │   ├── groups_8.js
+│   │   │   │   │   │   │   │   ├── groups_9.html
+│   │   │   │   │   │   │   │   ├── groups_9.js
+│   │   │   │   │   │   │   │   ├── mag_sel.png
+│   │   │   │   │   │   │   │   ├── nomatches.html
+│   │   │   │   │   │   │   │   ├── pages_0.html
+│   │   │   │   │   │   │   │   ├── pages_0.js
+│   │   │   │   │   │   │   │   ├── search.css
+│   │   │   │   │   │   │   │   ├── searchdata.js
+│   │   │   │   │   │   │   │   ├── search.js
+│   │   │   │   │   │   │   │   ├── search_l.png
+│   │   │   │   │   │   │   │   ├── search_m.png
+│   │   │   │   │   │   │   │   ├── search_r.png
+│   │   │   │   │   │   │   │   ├── typedefs_0.html
+│   │   │   │   │   │   │   │   ├── typedefs_0.js
+│   │   │   │   │   │   │   │   ├── typedefs_1.html
+│   │   │   │   │   │   │   │   ├── typedefs_1.js
+│   │   │   │   │   │   │   │   ├── typedefs_2.html
+│   │   │   │   │   │   │   │   ├── typedefs_2.js
+│   │   │   │   │   │   │   │   ├── typedefs_3.html
+│   │   │   │   │   │   │   │   ├── typedefs_3.js
+│   │   │   │   │   │   │   │   ├── typedefs_4.html
+│   │   │   │   │   │   │   │   ├── typedefs_4.js
+│   │   │   │   │   │   │   │   ├── typedefs_5.html
+│   │   │   │   │   │   │   │   ├── typedefs_5.js
+│   │   │   │   │   │   │   │   ├── typedefs_6.html
+│   │   │   │   │   │   │   │   ├── typedefs_6.js
+│   │   │   │   │   │   │   │   ├── typedefs_7.html
+│   │   │   │   │   │   │   │   ├── typedefs_7.js
+│   │   │   │   │   │   │   │   ├── typedefs_8.html
+│   │   │   │   │   │   │   │   ├── typedefs_8.js
+│   │   │   │   │   │   │   │   ├── typedefs_9.html
+│   │   │   │   │   │   │   │   ├── typedefs_9.js
+│   │   │   │   │   │   │   │   ├── typedefs_a.html
+│   │   │   │   │   │   │   │   ├── typedefs_a.js
+│   │   │   │   │   │   │   │   ├── typedefs_b.html
+│   │   │   │   │   │   │   │   ├── typedefs_b.js
+│   │   │   │   │   │   │   │   ├── typedefs_c.html
+│   │   │   │   │   │   │   │   └── typedefs_c.js
+│   │   │   │   │   │   │   ├── splitbar.png
+│   │   │   │   │   │   │   ├── sync_off.png
+│   │   │   │   │   │   │   ├── sync_on.png
+│   │   │   │   │   │   │   ├── tab_a.png
+│   │   │   │   │   │   │   ├── tab_b.png
+│   │   │   │   │   │   │   ├── tab_h.png
+│   │   │   │   │   │   │   ├── tabs.css
+│   │   │   │   │   │   │   └── tab_s.png
+│   │   │   │   │   │   ├── man.doxy
+│   │   │   │   │   │   ├── manual
+│   │   │   │   │   │   │   ├── frontpage1.png
+│   │   │   │   │   │   │   ├── frontpage2.png
+│   │   │   │   │   │   │   ├── g-truc.png
+│   │   │   │   │   │   │   ├── logo-mini.png
+│   │   │   │   │   │   │   ├── noise-perlin1.jpg
+│   │   │   │   │   │   │   ├── noise-perlin2.jpg
+│   │   │   │   │   │   │   ├── noise-perlin3.jpg
+│   │   │   │   │   │   │   ├── noise-perlin4.png
+│   │   │   │   │   │   │   ├── noise-perlin5.png
+│   │   │   │   │   │   │   ├── noise-perlin6.png
+│   │   │   │   │   │   │   ├── noise-simplex1.jpg
+│   │   │   │   │   │   │   ├── noise-simplex2.jpg
+│   │   │   │   │   │   │   ├── noise-simplex3.jpg
+│   │   │   │   │   │   │   ├── random-ballrand.png
+│   │   │   │   │   │   │   ├── random-circularrand.png
+│   │   │   │   │   │   │   ├── random-diskrand.png
+│   │   │   │   │   │   │   ├── random-gaussrand.png
+│   │   │   │   │   │   │   ├── random-linearrand.png
+│   │   │   │   │   │   │   ├── random-sphericalrand.png
+│   │   │   │   │   │   │   ├── references-cinder.png
+│   │   │   │   │   │   │   ├── references-glsl4book.jpg
+│   │   │   │   │   │   │   ├── references-leosfortune2.jpg
+│   │   │   │   │   │   │   ├── references-leosfortune.jpeg
+│   │   │   │   │   │   │   ├── references-opencloth1.png
+│   │   │   │   │   │   │   ├── references-opencloth3.png
+│   │   │   │   │   │   │   ├── references-outerra1.jpg
+│   │   │   │   │   │   │   ├── references-outerra2.jpg
+│   │   │   │   │   │   │   ├── references-outerra3.jpg
+│   │   │   │   │   │   │   └── references-outerra4.jpg
+│   │   │   │   │   │   ├── pages.doxy
+│   │   │   │   │   │   └── theme
+│   │   │   │   │   │       ├── doxygen.css
+│   │   │   │   │   │       └── tabs.css
+│   │   │   │   │   ├── glm
+│   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   ├── common.hpp
+│   │   │   │   │   │   ├── detail
+│   │   │   │   │   │   │   ├── dummy.cpp
+│   │   │   │   │   │   │   ├── _features.hpp
+│   │   │   │   │   │   │   ├── _fixes.hpp
+│   │   │   │   │   │   │   ├── func_common.hpp
+│   │   │   │   │   │   │   ├── func_common.inl
+│   │   │   │   │   │   │   ├── func_common_simd.inl
+│   │   │   │   │   │   │   ├── func_exponential.hpp
+│   │   │   │   │   │   │   ├── func_exponential.inl
+│   │   │   │   │   │   │   ├── func_exponential_simd.inl
+│   │   │   │   │   │   │   ├── func_geometric.hpp
+│   │   │   │   │   │   │   ├── func_geometric.inl
+│   │   │   │   │   │   │   ├── func_geometric_simd.inl
+│   │   │   │   │   │   │   ├── func_integer.hpp
+│   │   │   │   │   │   │   ├── func_integer.inl
+│   │   │   │   │   │   │   ├── func_integer_simd.inl
+│   │   │   │   │   │   │   ├── func_matrix.hpp
+│   │   │   │   │   │   │   ├── func_matrix.inl
+│   │   │   │   │   │   │   ├── func_matrix_simd.inl
+│   │   │   │   │   │   │   ├── func_packing.hpp
+│   │   │   │   │   │   │   ├── func_packing.inl
+│   │   │   │   │   │   │   ├── func_packing_simd.inl
+│   │   │   │   │   │   │   ├── func_trigonometric.hpp
+│   │   │   │   │   │   │   ├── func_trigonometric.inl
+│   │   │   │   │   │   │   ├── func_trigonometric_simd.inl
+│   │   │   │   │   │   │   ├── func_vector_relational.hpp
+│   │   │   │   │   │   │   ├── func_vector_relational.inl
+│   │   │   │   │   │   │   ├── func_vector_relational_simd.inl
+│   │   │   │   │   │   │   ├── glm.cpp
+│   │   │   │   │   │   │   ├── _noise.hpp
+│   │   │   │   │   │   │   ├── precision.hpp
+│   │   │   │   │   │   │   ├── setup.hpp
+│   │   │   │   │   │   │   ├── _swizzle_func.hpp
+│   │   │   │   │   │   │   ├── _swizzle.hpp
+│   │   │   │   │   │   │   ├── type_float.hpp
+│   │   │   │   │   │   │   ├── type_gentype.hpp
+│   │   │   │   │   │   │   ├── type_gentype.inl
+│   │   │   │   │   │   │   ├── type_half.hpp
+│   │   │   │   │   │   │   ├── type_half.inl
+│   │   │   │   │   │   │   ├── type_int.hpp
+│   │   │   │   │   │   │   ├── type_mat2x2.hpp
+│   │   │   │   │   │   │   ├── type_mat2x2.inl
+│   │   │   │   │   │   │   ├── type_mat2x3.hpp
+│   │   │   │   │   │   │   ├── type_mat2x3.inl
+│   │   │   │   │   │   │   ├── type_mat2x4.hpp
+│   │   │   │   │   │   │   ├── type_mat2x4.inl
+│   │   │   │   │   │   │   ├── type_mat3x2.hpp
+│   │   │   │   │   │   │   ├── type_mat3x2.inl
+│   │   │   │   │   │   │   ├── type_mat3x3.hpp
+│   │   │   │   │   │   │   ├── type_mat3x3.inl
+│   │   │   │   │   │   │   ├── type_mat3x4.hpp
+│   │   │   │   │   │   │   ├── type_mat3x4.inl
+│   │   │   │   │   │   │   ├── type_mat4x2.hpp
+│   │   │   │   │   │   │   ├── type_mat4x2.inl
+│   │   │   │   │   │   │   ├── type_mat4x3.hpp
+│   │   │   │   │   │   │   ├── type_mat4x3.inl
+│   │   │   │   │   │   │   ├── type_mat4x4.hpp
+│   │   │   │   │   │   │   ├── type_mat4x4.inl
+│   │   │   │   │   │   │   ├── type_mat4x4_simd.inl
+│   │   │   │   │   │   │   ├── type_mat.hpp
+│   │   │   │   │   │   │   ├── type_mat.inl
+│   │   │   │   │   │   │   ├── type_vec1.hpp
+│   │   │   │   │   │   │   ├── type_vec1.inl
+│   │   │   │   │   │   │   ├── type_vec2.hpp
+│   │   │   │   │   │   │   ├── type_vec2.inl
+│   │   │   │   │   │   │   ├── type_vec3.hpp
+│   │   │   │   │   │   │   ├── type_vec3.inl
+│   │   │   │   │   │   │   ├── type_vec4.hpp
+│   │   │   │   │   │   │   ├── type_vec4.inl
+│   │   │   │   │   │   │   ├── type_vec4_simd.inl
+│   │   │   │   │   │   │   ├── type_vec.hpp
+│   │   │   │   │   │   │   ├── type_vec.inl
+│   │   │   │   │   │   │   └── _vectorize.hpp
+│   │   │   │   │   │   ├── exponential.hpp
+│   │   │   │   │   │   ├── ext.hpp
+│   │   │   │   │   │   ├── fwd.hpp
+│   │   │   │   │   │   ├── geometric.hpp
+│   │   │   │   │   │   ├── glm.hpp
+│   │   │   │   │   │   ├── gtc
+│   │   │   │   │   │   │   ├── bitfield.hpp
+│   │   │   │   │   │   │   ├── bitfield.inl
+│   │   │   │   │   │   │   ├── color_space.hpp
+│   │   │   │   │   │   │   ├── color_space.inl
+│   │   │   │   │   │   │   ├── constants.hpp
+│   │   │   │   │   │   │   ├── constants.inl
+│   │   │   │   │   │   │   ├── epsilon.hpp
+│   │   │   │   │   │   │   ├── epsilon.inl
+│   │   │   │   │   │   │   ├── functions.hpp
+│   │   │   │   │   │   │   ├── functions.inl
+│   │   │   │   │   │   │   ├── integer.hpp
+│   │   │   │   │   │   │   ├── integer.inl
+│   │   │   │   │   │   │   ├── matrix_access.hpp
+│   │   │   │   │   │   │   ├── matrix_access.inl
+│   │   │   │   │   │   │   ├── matrix_integer.hpp
+│   │   │   │   │   │   │   ├── matrix_inverse.hpp
+│   │   │   │   │   │   │   ├── matrix_inverse.inl
+│   │   │   │   │   │   │   ├── matrix_transform.hpp
+│   │   │   │   │   │   │   ├── matrix_transform.inl
+│   │   │   │   │   │   │   ├── noise.hpp
+│   │   │   │   │   │   │   ├── noise.inl
+│   │   │   │   │   │   │   ├── packing.hpp
+│   │   │   │   │   │   │   ├── packing.inl
+│   │   │   │   │   │   │   ├── quaternion.hpp
+│   │   │   │   │   │   │   ├── quaternion.inl
+│   │   │   │   │   │   │   ├── quaternion_simd.inl
+│   │   │   │   │   │   │   ├── random.hpp
+│   │   │   │   │   │   │   ├── random.inl
+│   │   │   │   │   │   │   ├── reciprocal.hpp
+│   │   │   │   │   │   │   ├── reciprocal.inl
+│   │   │   │   │   │   │   ├── round.hpp
+│   │   │   │   │   │   │   ├── round.inl
+│   │   │   │   │   │   │   ├── type_aligned.hpp
+│   │   │   │   │   │   │   ├── type_precision.hpp
+│   │   │   │   │   │   │   ├── type_precision.inl
+│   │   │   │   │   │   │   ├── type_ptr.hpp
+│   │   │   │   │   │   │   ├── type_ptr.inl
+│   │   │   │   │   │   │   ├── ulp.hpp
+│   │   │   │   │   │   │   ├── ulp.inl
+│   │   │   │   │   │   │   ├── vec1.hpp
+│   │   │   │   │   │   │   └── vec1.inl
+│   │   │   │   │   │   ├── gtx
+│   │   │   │   │   │   │   ├── associated_min_max.hpp
+│   │   │   │   │   │   │   ├── associated_min_max.inl
+│   │   │   │   │   │   │   ├── bit.hpp
+│   │   │   │   │   │   │   ├── bit.inl
+│   │   │   │   │   │   │   ├── closest_point.hpp
+│   │   │   │   │   │   │   ├── closest_point.inl
+│   │   │   │   │   │   │   ├── color_encoding.hpp
+│   │   │   │   │   │   │   ├── color_encoding.inl
+│   │   │   │   │   │   │   ├── color_space.hpp
+│   │   │   │   │   │   │   ├── color_space.inl
+│   │   │   │   │   │   │   ├── color_space_YCoCg.hpp
+│   │   │   │   │   │   │   ├── color_space_YCoCg.inl
+│   │   │   │   │   │   │   ├── common.hpp
+│   │   │   │   │   │   │   ├── common.inl
+│   │   │   │   │   │   │   ├── compatibility.hpp
+│   │   │   │   │   │   │   ├── compatibility.inl
+│   │   │   │   │   │   │   ├── component_wise.hpp
+│   │   │   │   │   │   │   ├── component_wise.inl
+│   │   │   │   │   │   │   ├── dual_quaternion.hpp
+│   │   │   │   │   │   │   ├── dual_quaternion.inl
+│   │   │   │   │   │   │   ├── euler_angles.hpp
+│   │   │   │   │   │   │   ├── euler_angles.inl
+│   │   │   │   │   │   │   ├── extended_min_max.hpp
+│   │   │   │   │   │   │   ├── extended_min_max.inl
+│   │   │   │   │   │   │   ├── extend.hpp
+│   │   │   │   │   │   │   ├── extend.inl
+│   │   │   │   │   │   │   ├── exterior_product.hpp
+│   │   │   │   │   │   │   ├── exterior_product.inl
+│   │   │   │   │   │   │   ├── fast_exponential.hpp
+│   │   │   │   │   │   │   ├── fast_exponential.inl
+│   │   │   │   │   │   │   ├── fast_square_root.hpp
+│   │   │   │   │   │   │   ├── fast_square_root.inl
+│   │   │   │   │   │   │   ├── fast_trigonometry.hpp
+│   │   │   │   │   │   │   ├── fast_trigonometry.inl
+│   │   │   │   │   │   │   ├── float_notmalize.inl
+│   │   │   │   │   │   │   ├── gradient_paint.hpp
+│   │   │   │   │   │   │   ├── gradient_paint.inl
+│   │   │   │   │   │   │   ├── handed_coordinate_space.hpp
+│   │   │   │   │   │   │   ├── handed_coordinate_space.inl
+│   │   │   │   │   │   │   ├── hash.hpp
+│   │   │   │   │   │   │   ├── hash.inl
+│   │   │   │   │   │   │   ├── integer.hpp
+│   │   │   │   │   │   │   ├── integer.inl
+│   │   │   │   │   │   │   ├── intersect.hpp
+│   │   │   │   │   │   │   ├── intersect.inl
+│   │   │   │   │   │   │   ├── io.hpp
+│   │   │   │   │   │   │   ├── io.inl
+│   │   │   │   │   │   │   ├── log_base.hpp
+│   │   │   │   │   │   │   ├── log_base.inl
+│   │   │   │   │   │   │   ├── matrix_cross_product.hpp
+│   │   │   │   │   │   │   ├── matrix_cross_product.inl
+│   │   │   │   │   │   │   ├── matrix_decompose.hpp
+│   │   │   │   │   │   │   ├── matrix_decompose.inl
+│   │   │   │   │   │   │   ├── matrix_factorisation.hpp
+│   │   │   │   │   │   │   ├── matrix_factorisation.inl
+│   │   │   │   │   │   │   ├── matrix_interpolation.hpp
+│   │   │   │   │   │   │   ├── matrix_interpolation.inl
+│   │   │   │   │   │   │   ├── matrix_major_storage.hpp
+│   │   │   │   │   │   │   ├── matrix_major_storage.inl
+│   │   │   │   │   │   │   ├── matrix_operation.hpp
+│   │   │   │   │   │   │   ├── matrix_operation.inl
+│   │   │   │   │   │   │   ├── matrix_query.hpp
+│   │   │   │   │   │   │   ├── matrix_query.inl
+│   │   │   │   │   │   │   ├── matrix_transform_2d.hpp
+│   │   │   │   │   │   │   ├── matrix_transform_2d.inl
+│   │   │   │   │   │   │   ├── mixed_product.hpp
+│   │   │   │   │   │   │   ├── mixed_product.inl
+│   │   │   │   │   │   │   ├── normal.hpp
+│   │   │   │   │   │   │   ├── normal.inl
+│   │   │   │   │   │   │   ├── normalize_dot.hpp
+│   │   │   │   │   │   │   ├── normalize_dot.inl
+│   │   │   │   │   │   │   ├── norm.hpp
+│   │   │   │   │   │   │   ├── norm.inl
+│   │   │   │   │   │   │   ├── number_precision.hpp
+│   │   │   │   │   │   │   ├── number_precision.inl
+│   │   │   │   │   │   │   ├── optimum_pow.hpp
+│   │   │   │   │   │   │   ├── optimum_pow.inl
+│   │   │   │   │   │   │   ├── orthonormalize.hpp
+│   │   │   │   │   │   │   ├── orthonormalize.inl
+│   │   │   │   │   │   │   ├── perpendicular.hpp
+│   │   │   │   │   │   │   ├── perpendicular.inl
+│   │   │   │   │   │   │   ├── polar_coordinates.hpp
+│   │   │   │   │   │   │   ├── polar_coordinates.inl
+│   │   │   │   │   │   │   ├── projection.hpp
+│   │   │   │   │   │   │   ├── projection.inl
+│   │   │   │   │   │   │   ├── quaternion.hpp
+│   │   │   │   │   │   │   ├── quaternion.inl
+│   │   │   │   │   │   │   ├── range.hpp
+│   │   │   │   │   │   │   ├── raw_data.hpp
+│   │   │   │   │   │   │   ├── raw_data.inl
+│   │   │   │   │   │   │   ├── rotate_normalized_axis.hpp
+│   │   │   │   │   │   │   ├── rotate_normalized_axis.inl
+│   │   │   │   │   │   │   ├── rotate_vector.hpp
+│   │   │   │   │   │   │   ├── rotate_vector.inl
+│   │   │   │   │   │   │   ├── scalar_multiplication.hpp
+│   │   │   │   │   │   │   ├── scalar_relational.hpp
+│   │   │   │   │   │   │   ├── scalar_relational.inl
+│   │   │   │   │   │   │   ├── spline.hpp
+│   │   │   │   │   │   │   ├── spline.inl
+│   │   │   │   │   │   │   ├── std_based_type.hpp
+│   │   │   │   │   │   │   ├── std_based_type.inl
+│   │   │   │   │   │   │   ├── string_cast.hpp
+│   │   │   │   │   │   │   ├── string_cast.inl
+│   │   │   │   │   │   │   ├── transform2.hpp
+│   │   │   │   │   │   │   ├── transform2.inl
+│   │   │   │   │   │   │   ├── transform.hpp
+│   │   │   │   │   │   │   ├── transform.inl
+│   │   │   │   │   │   │   ├── type_aligned.hpp
+│   │   │   │   │   │   │   ├── type_aligned.inl
+│   │   │   │   │   │   │   ├── type_trait.hpp
+│   │   │   │   │   │   │   ├── type_trait.inl
+│   │   │   │   │   │   │   ├── vec_swizzle.hpp
+│   │   │   │   │   │   │   ├── vector_angle.hpp
+│   │   │   │   │   │   │   ├── vector_angle.inl
+│   │   │   │   │   │   │   ├── vector_query.hpp
+│   │   │   │   │   │   │   ├── vector_query.inl
+│   │   │   │   │   │   │   ├── wrap.hpp
+│   │   │   │   │   │   │   └── wrap.inl
+│   │   │   │   │   │   ├── integer.hpp
+│   │   │   │   │   │   ├── mat2x2.hpp
+│   │   │   │   │   │   ├── mat2x3.hpp
+│   │   │   │   │   │   ├── mat2x4.hpp
+│   │   │   │   │   │   ├── mat3x2.hpp
+│   │   │   │   │   │   ├── mat3x3.hpp
+│   │   │   │   │   │   ├── mat3x4.hpp
+│   │   │   │   │   │   ├── mat4x2.hpp
+│   │   │   │   │   │   ├── mat4x3.hpp
+│   │   │   │   │   │   ├── mat4x4.hpp
+│   │   │   │   │   │   ├── matrix.hpp
+│   │   │   │   │   │   ├── packing.hpp
+│   │   │   │   │   │   ├── simd
+│   │   │   │   │   │   │   ├── common.h
+│   │   │   │   │   │   │   ├── exponential.h
+│   │   │   │   │   │   │   ├── geometric.h
+│   │   │   │   │   │   │   ├── integer.h
+│   │   │   │   │   │   │   ├── matrix.h
+│   │   │   │   │   │   │   ├── packing.h
+│   │   │   │   │   │   │   ├── platform.h
+│   │   │   │   │   │   │   ├── trigonometric.h
+│   │   │   │   │   │   │   └── vector_relational.h
+│   │   │   │   │   │   ├── trigonometric.hpp
+│   │   │   │   │   │   ├── vec2.hpp
+│   │   │   │   │   │   ├── vec3.hpp
+│   │   │   │   │   │   ├── vec4.hpp
+│   │   │   │   │   │   └── vector_relational.hpp
+│   │   │   │   │   ├── manual.md
+│   │   │   │   │   ├── readme.md
+│   │   │   │   │   ├── test
+│   │   │   │   │   │   ├── bug
+│   │   │   │   │   │   │   ├── bug_ms_vec_static.cpp
+│   │   │   │   │   │   │   └── CMakeLists.txt
+│   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   ├── core
+│   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   │   ├── core_force_pure.cpp
+│   │   │   │   │   │   │   ├── core_force_unrestricted_gentype.cpp
+│   │   │   │   │   │   │   ├── core_func_common.cpp
+│   │   │   │   │   │   │   ├── core_func_exponential.cpp
+│   │   │   │   │   │   │   ├── core_func_geometric.cpp
+│   │   │   │   │   │   │   ├── core_func_integer_bit_count.cpp
+│   │   │   │   │   │   │   ├── core_func_integer.cpp
+│   │   │   │   │   │   │   ├── core_func_integer_find_lsb.cpp
+│   │   │   │   │   │   │   ├── core_func_integer_find_msb.cpp
+│   │   │   │   │   │   │   ├── core_func_matrix.cpp
+│   │   │   │   │   │   │   ├── core_func_noise.cpp
+│   │   │   │   │   │   │   ├── core_func_packing.cpp
+│   │   │   │   │   │   │   ├── core_func_swizzle.cpp
+│   │   │   │   │   │   │   ├── core_func_trigonometric.cpp
+│   │   │   │   │   │   │   ├── core_func_vector_relational.cpp
+│   │   │   │   │   │   │   ├── core_setup_force_cxx98.cpp
+│   │   │   │   │   │   │   ├── core_setup_force_size_t_length.cpp
+│   │   │   │   │   │   │   ├── core_setup_message.cpp
+│   │   │   │   │   │   │   ├── core_setup_precision.cpp
+│   │   │   │   │   │   │   ├── core_type_aligned.cpp
+│   │   │   │   │   │   │   ├── core_type_cast.cpp
+│   │   │   │   │   │   │   ├── core_type_ctor.cpp
+│   │   │   │   │   │   │   ├── core_type_float.cpp
+│   │   │   │   │   │   │   ├── core_type_int.cpp
+│   │   │   │   │   │   │   ├── core_type_length.cpp
+│   │   │   │   │   │   │   ├── core_type_mat2x2.cpp
+│   │   │   │   │   │   │   ├── core_type_mat2x3.cpp
+│   │   │   │   │   │   │   ├── core_type_mat2x4.cpp
+│   │   │   │   │   │   │   ├── core_type_mat3x2.cpp
+│   │   │   │   │   │   │   ├── core_type_mat3x3.cpp
+│   │   │   │   │   │   │   ├── core_type_mat3x4.cpp
+│   │   │   │   │   │   │   ├── core_type_mat4x2.cpp
+│   │   │   │   │   │   │   ├── core_type_mat4x3.cpp
+│   │   │   │   │   │   │   ├── core_type_mat4x4.cpp
+│   │   │   │   │   │   │   ├── core_type_vec1.cpp
+│   │   │   │   │   │   │   ├── core_type_vec2.cpp
+│   │   │   │   │   │   │   ├── core_type_vec3.cpp
+│   │   │   │   │   │   │   └── core_type_vec4.cpp
+│   │   │   │   │   │   ├── external
+│   │   │   │   │   │   │   └── gli
+│   │   │   │   │   │   │       ├── clear.hpp
+│   │   │   │   │   │   │       ├── CMakeLists.txt
+│   │   │   │   │   │   │       ├── comparison.hpp
+│   │   │   │   │   │   │       ├── convert.hpp
+│   │   │   │   │   │   │       ├── copy.hpp
+│   │   │   │   │   │   │       ├── core
+│   │   │   │   │   │   │       │   ├── clear.hpp
+│   │   │   │   │   │   │       │   ├── clear.inl
+│   │   │   │   │   │   │       │   ├── comparison.inl
+│   │   │   │   │   │   │       │   ├── convert_func.hpp
+│   │   │   │   │   │   │       │   ├── convert.inl
+│   │   │   │   │   │   │       │   ├── coord.hpp
+│   │   │   │   │   │   │       │   ├── copy.inl
+│   │   │   │   │   │   │       │   ├── dummy.cpp
+│   │   │   │   │   │   │       │   ├── duplicate.inl
+│   │   │   │   │   │   │       │   ├── dx.inl
+│   │   │   │   │   │   │       │   ├── file.hpp
+│   │   │   │   │   │   │       │   ├── file.inl
+│   │   │   │   │   │   │       │   ├── filter_compute.hpp
+│   │   │   │   │   │   │       │   ├── filter.hpp
+│   │   │   │   │   │   │       │   ├── filter.inl
+│   │   │   │   │   │   │       │   ├── flip.hpp
+│   │   │   │   │   │   │       │   ├── flip.inl
+│   │   │   │   │   │   │       │   ├── format.inl
+│   │   │   │   │   │   │       │   ├── generate_mipmaps.inl
+│   │   │   │   │   │   │       │   ├── gl.inl
+│   │   │   │   │   │   │       │   ├── image.inl
+│   │   │   │   │   │   │       │   ├── levels.inl
+│   │   │   │   │   │   │       │   ├── load_dds.inl
+│   │   │   │   │   │   │       │   ├── load.inl
+│   │   │   │   │   │   │       │   ├── load_kmg.inl
+│   │   │   │   │   │   │       │   ├── load_ktx.inl
+│   │   │   │   │   │   │       │   ├── make_texture.inl
+│   │   │   │   │   │   │       │   ├── mipmaps_compute.hpp
+│   │   │   │   │   │   │       │   ├── reduce.inl
+│   │   │   │   │   │   │       │   ├── sampler1d_array.inl
+│   │   │   │   │   │   │       │   ├── sampler1d.inl
+│   │   │   │   │   │   │       │   ├── sampler2d_array.inl
+│   │   │   │   │   │   │       │   ├── sampler2d.inl
+│   │   │   │   │   │   │       │   ├── sampler3d.inl
+│   │   │   │   │   │   │       │   ├── sampler_cube_array.inl
+│   │   │   │   │   │   │       │   ├── sampler_cube.inl
+│   │   │   │   │   │   │       │   ├── sampler.inl
+│   │   │   │   │   │   │       │   ├── save_dds.inl
+│   │   │   │   │   │   │       │   ├── save.inl
+│   │   │   │   │   │   │       │   ├── save_kmg.inl
+│   │   │   │   │   │   │       │   ├── save_ktx.inl
+│   │   │   │   │   │   │       │   ├── storage.hpp
+│   │   │   │   │   │   │       │   ├── storage.inl
+│   │   │   │   │   │   │       │   ├── storage_linear.hpp
+│   │   │   │   │   │   │       │   ├── storage_linear.inl
+│   │   │   │   │   │   │       │   ├── texture1d_array.inl
+│   │   │   │   │   │   │       │   ├── texture1d.inl
+│   │   │   │   │   │   │       │   ├── texture2d_array.inl
+│   │   │   │   │   │   │       │   ├── texture2d.inl
+│   │   │   │   │   │   │       │   ├── texture3d.inl
+│   │   │   │   │   │   │       │   ├── texture_cube_array.inl
+│   │   │   │   │   │   │       │   ├── texture_cube.inl
+│   │   │   │   │   │   │       │   ├── texture.inl
+│   │   │   │   │   │   │       │   ├── transform.inl
+│   │   │   │   │   │   │       │   ├── view.inl
+│   │   │   │   │   │   │       │   └── workaround.hpp
+│   │   │   │   │   │   │       ├── duplicate.hpp
+│   │   │   │   │   │   │       ├── dx.hpp
+│   │   │   │   │   │   │       ├── format.hpp
+│   │   │   │   │   │   │       ├── generate_mipmaps.hpp
+│   │   │   │   │   │   │       ├── gl.hpp
+│   │   │   │   │   │   │       ├── gli.hpp
+│   │   │   │   │   │   │       ├── image.hpp
+│   │   │   │   │   │   │       ├── levels.hpp
+│   │   │   │   │   │   │       ├── load_dds.hpp
+│   │   │   │   │   │   │       ├── load.hpp
+│   │   │   │   │   │   │       ├── load_kmg.hpp
+│   │   │   │   │   │   │       ├── load_ktx.hpp
+│   │   │   │   │   │   │       ├── make_texture.hpp
+│   │   │   │   │   │   │       ├── reduce.hpp
+│   │   │   │   │   │   │       ├── sampler1d_array.hpp
+│   │   │   │   │   │   │       ├── sampler1d.hpp
+│   │   │   │   │   │   │       ├── sampler2d_array.hpp
+│   │   │   │   │   │   │       ├── sampler2d.hpp
+│   │   │   │   │   │   │       ├── sampler3d.hpp
+│   │   │   │   │   │   │       ├── sampler_cube_array.hpp
+│   │   │   │   │   │   │       ├── sampler_cube.hpp
+│   │   │   │   │   │   │       ├── sampler.hpp
+│   │   │   │   │   │   │       ├── save_dds.hpp
+│   │   │   │   │   │   │       ├── save.hpp
+│   │   │   │   │   │   │       ├── save_kmg.hpp
+│   │   │   │   │   │   │       ├── save_ktx.hpp
+│   │   │   │   │   │   │       ├── target.hpp
+│   │   │   │   │   │   │       ├── texture1d_array.hpp
+│   │   │   │   │   │   │       ├── texture1d.hpp
+│   │   │   │   │   │   │       ├── texture2d_array.hpp
+│   │   │   │   │   │   │       ├── texture2d.hpp
+│   │   │   │   │   │   │       ├── texture3d.hpp
+│   │   │   │   │   │   │       ├── texture_cube_array.hpp
+│   │   │   │   │   │   │       ├── texture_cube.hpp
+│   │   │   │   │   │   │       ├── texture.hpp
+│   │   │   │   │   │   │       ├── transform.hpp
+│   │   │   │   │   │   │       ├── type.hpp
+│   │   │   │   │   │   │       └── view.hpp
+│   │   │   │   │   │   ├── glm.cppcheck
+│   │   │   │   │   │   ├── gtc
+│   │   │   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   │   │   ├── gtc_bitfield.cpp
+│   │   │   │   │   │   │   ├── gtc_color_space.cpp
+│   │   │   │   │   │   │   ├── gtc_constants.cpp
+│   │   │   │   │   │   │   ├── gtc_epsilon.cpp
+│   │   │   │   │   │   │   ├── gtc_functions.cpp
+│   │   │   │   │   │   │   ├── gtc_integer.cpp
+│   │   │   │   │   │   │   ├── gtc_matrix_access.cpp
+│   │   │   │   │   │   │   ├── gtc_matrix_integer.cpp
+│   │   │   │   │   │   │   ├── gtc_matrix_inverse.cpp
+│   │   │   │   │   │   │   ├── gtc_matrix_transform.cpp
+│   │   │   │   │   │   │   ├── gtc_noise.cpp
+│   │   │   │   │   │   │   ├── gtc_packing.cpp
+│   │   │   │   │   │   │   ├── gtc_quaternion.cpp
+│   │   │   │   │   │   │   ├── gtc_random.cpp
+│   │   │   │   │   │   │   ├── gtc_reciprocal.cpp
+│   │   │   │   │   │   │   ├── gtc_round.cpp
+│   │   │   │   │   │   │   ├── gtc_type_aligned.cpp
+│   │   │   │   │   │   │   ├── gtc_type_precision.cpp
+│   │   │   │   │   │   │   ├── gtc_type_ptr.cpp
+│   │   │   │   │   │   │   ├── gtc_ulp.cpp
+│   │   │   │   │   │   │   ├── gtc_user_defined_types.cpp
+│   │   │   │   │   │   │   └── gtc_vec1.cpp
+│   │   │   │   │   │   └── gtx
+│   │   │   │   │   │       ├── CMakeLists.txt
+│   │   │   │   │   │       ├── gtx_associated_min_max.cpp
+│   │   │   │   │   │       ├── gtx_closest_point.cpp
+│   │   │   │   │   │       ├── gtx_color_encoding.cpp
+│   │   │   │   │   │       ├── gtx_color_space.cpp
+│   │   │   │   │   │       ├── gtx_color_space_YCoCg.cpp
+│   │   │   │   │   │       ├── gtx_common.cpp
+│   │   │   │   │   │       ├── gtx_compatibility.cpp
+│   │   │   │   │   │       ├── gtx_component_wise.cpp
+│   │   │   │   │   │       ├── gtx_dual_quaternion.cpp
+│   │   │   │   │   │       ├── gtx_euler_angle.cpp
+│   │   │   │   │   │       ├── gtx_extend.cpp
+│   │   │   │   │   │       ├── gtx_extended_min_max.cpp
+│   │   │   │   │   │       ├── gtx_extented_min_max.cpp
+│   │   │   │   │   │       ├── gtx_exterior_product.cpp
+│   │   │   │   │   │       ├── gtx_fast_exponential.cpp
+│   │   │   │   │   │       ├── gtx_fast_square_root.cpp
+│   │   │   │   │   │       ├── gtx_fast_trigonometry.cpp
+│   │   │   │   │   │       ├── gtx_gradient_paint.cpp
+│   │   │   │   │   │       ├── gtx_handed_coordinate_space.cpp
+│   │   │   │   │   │       ├── gtx_int_10_10_10_2.cpp
+│   │   │   │   │   │       ├── gtx_integer.cpp
+│   │   │   │   │   │       ├── gtx_intersect.cpp
+│   │   │   │   │   │       ├── gtx_io.cpp
+│   │   │   │   │   │       ├── gtx_log_base.cpp
+│   │   │   │   │   │       ├── gtx_matrix_cross_product.cpp
+│   │   │   │   │   │       ├── gtx_matrix_decompose.cpp
+│   │   │   │   │   │       ├── gtx_matrix_factorisation.cpp
+│   │   │   │   │   │       ├── gtx_matrix_interpolation.cpp
+│   │   │   │   │   │       ├── gtx_matrix_major_storage.cpp
+│   │   │   │   │   │       ├── gtx_matrix_operation.cpp
+│   │   │   │   │   │       ├── gtx_matrix_query.cpp
+│   │   │   │   │   │       ├── gtx_matrix_transform_2d.cpp
+│   │   │   │   │   │       ├── gtx_mixed_product.cpp
+│   │   │   │   │   │       ├── gtx_normal.cpp
+│   │   │   │   │   │       ├── gtx_normalize_dot.cpp
+│   │   │   │   │   │       ├── gtx_norm.cpp
+│   │   │   │   │   │       ├── gtx_number_precision.cpp
+│   │   │   │   │   │       ├── gtx_optimum_pow.cpp
+│   │   │   │   │   │       ├── gtx_orthonormalize.cpp
+│   │   │   │   │   │       ├── gtx_perpendicular.cpp
+│   │   │   │   │   │       ├── gtx_polar_coordinates.cpp
+│   │   │   │   │   │       ├── gtx_projection.cpp
+│   │   │   │   │   │       ├── gtx_quaternion.cpp
+│   │   │   │   │   │       ├── gtx_random.cpp
+│   │   │   │   │   │       ├── gtx_range.cpp
+│   │   │   │   │   │       ├── gtx_rotate_normalized_axis.cpp
+│   │   │   │   │   │       ├── gtx_rotate_vector.cpp
+│   │   │   │   │   │       ├── gtx_scalar_multiplication.cpp
+│   │   │   │   │   │       ├── gtx_scalar_relational.cpp
+│   │   │   │   │   │       ├── gtx_simd_mat4.cpp
+│   │   │   │   │   │       ├── gtx_simd_vec4.cpp
+│   │   │   │   │   │       ├── gtx_spline.cpp
+│   │   │   │   │   │       ├── gtx_string_cast.cpp
+│   │   │   │   │   │       ├── gtx_type_aligned.cpp
+│   │   │   │   │   │       ├── gtx_type_trait.cpp
+│   │   │   │   │   │       ├── gtx_vec_swizzle.cpp
+│   │   │   │   │   │       ├── gtx_vector_angle.cpp
+│   │   │   │   │   │       ├── gtx_vector_query.cpp
+│   │   │   │   │   │       └── gtx_wrap.cpp
+│   │   │   │   │   └── util
+│   │   │   │   │       ├── autoexp.txt
+│   │   │   │   │       ├── autoexp.vc2010.dat
+│   │   │   │   │       ├── conan-package
+│   │   │   │   │       │   ├── conanfile.py
+│   │   │   │   │       │   ├── lib_licenses
+│   │   │   │   │       │   │   ├── LICENSE1.txt
+│   │   │   │   │       │   │   └── LICENSE2.txt
+│   │   │   │   │       │   ├── README.md
+│   │   │   │   │       │   └── test_package
+│   │   │   │   │       │       ├── CMakeLists.txt
+│   │   │   │   │       │       ├── conanfile.py
+│   │   │   │   │       │       └── main.cpp
+│   │   │   │   │       ├── glm.natvis
+│   │   │   │   │       └── usertype.dat
+│   │   │   │   ├── imgui
+│   │   │   │   │   ├── imconfig.h
+│   │   │   │   │   ├── imgui.cpp
+│   │   │   │   │   ├── imgui_draw.cpp
+│   │   │   │   │   ├── imgui.h
+│   │   │   │   │   ├── imgui_impl_btgui.cpp
+│   │   │   │   │   ├── imgui_impl_btgui.h
+│   │   │   │   │   ├── imgui_internal.h
+│   │   │   │   │   ├── ImGuizmo.cpp
+│   │   │   │   │   ├── ImGuizmo.h
+│   │   │   │   │   ├── ImGuizmo.LICENSE
+│   │   │   │   │   ├── stb_image.h
+│   │   │   │   │   ├── stb_rect_pack.h
+│   │   │   │   │   ├── stb_textedit.h
+│   │   │   │   │   └── stb_truetype.h
+│   │   │   │   ├── LICENSE.lodepng
+│   │   │   │   ├── lodepng.cpp
+│   │   │   │   ├── lodepng.h
+│   │   │   │   ├── matrix.cc
+│   │   │   │   ├── matrix.h
+│   │   │   │   ├── nativefiledialog
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── screens
+│   │   │   │   │   │   ├── open_cocoa.png
+│   │   │   │   │   │   ├── open_gtk3.png
+│   │   │   │   │   │   └── open_win8.png
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   ├── common.h
+│   │   │   │   │   │   ├── include
+│   │   │   │   │   │   │   └── nfd.h
+│   │   │   │   │   │   ├── nfd_cocoa.m
+│   │   │   │   │   │   ├── nfd_common.c
+│   │   │   │   │   │   ├── nfd_common.h
+│   │   │   │   │   │   ├── nfd_gtk.c
+│   │   │   │   │   │   ├── nfd_win.cpp
+│   │   │   │   │   │   └── SConstruct
+│   │   │   │   │   └── test
+│   │   │   │   │       ├── SConstruct
+│   │   │   │   │       ├── test_opendialog.c
+│   │   │   │   │       ├── test_opendialogmultiple.c
+│   │   │   │   │       └── test_savedialog.c
+│   │   │   │   ├── OpenGLWindow
+│   │   │   │   │   ├── CommonWindowInterface.h
+│   │   │   │   │   ├── MacOpenGLWindow.h
+│   │   │   │   │   ├── MacOpenGLWindow.mm
+│   │   │   │   │   ├── OpenGL2Include.h
+│   │   │   │   │   ├── OpenGLInclude.h
+│   │   │   │   │   ├── Win32InternalWindowData.h
+│   │   │   │   │   ├── Win32OpenGLWindow.cpp
+│   │   │   │   │   ├── Win32OpenGLWindow.h
+│   │   │   │   │   ├── Win32Window.cpp
+│   │   │   │   │   ├── Win32Window.h
+│   │   │   │   │   ├── X11OpenGLWindow.cpp
+│   │   │   │   │   └── X11OpenGLWindow.h
+│   │   │   │   ├── picojson.h
+│   │   │   │   ├── README.md
+│   │   │   │   ├── stb_image_write.h
+│   │   │   │   ├── ThirdPartyLibs
+│   │   │   │   │   └── Glew
+│   │   │   │   │       ├── CustomGL
+│   │   │   │   │       │   ├── glew.h
+│   │   │   │   │       │   ├── glxew.h
+│   │   │   │   │       │   └── wglew.h
+│   │   │   │   │       └── glew.c
+│   │   │   │   ├── tinyexr.h
+│   │   │   │   ├── tiny_obj_loader.cc
+│   │   │   │   ├── tiny_obj_loader.h
+│   │   │   │   ├── trackball.cc
+│   │   │   │   └── trackball.h
+│   │   │   ├── dxview
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── README.md
+│   │   │   │   ├── res
+│   │   │   │   │   ├── gray.hlsl
+│   │   │   │   │   ├── lighting.hlsl
+│   │   │   │   │   └── primitive.hlsl
+│   │   │   │   └── src
+│   │   │   │       ├── dxview.cc
+│   │   │   │       ├── Viewer.cc
+│   │   │   │       └── Viewer.h
+│   │   │   ├── gltfutil
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── gltfuilconfig.h
+│   │   │   │   ├── main.cc
+│   │   │   │   ├── stb_image_write.h
+│   │   │   │   ├── texture_dumper.cc
+│   │   │   │   └── texture_dumper.h
+│   │   │   ├── glview
+│   │   │   │   ├── cmake
+│   │   │   │   │   └── GLFW3Config.cmake
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   ├── glview
+│   │   │   │   │   ├── glview.vcxproj
+│   │   │   │   │   ├── glview.vcxproj.filters
+│   │   │   │   │   ├── glview.vcxproj.user
+│   │   │   │   │   └── packages.config
+│   │   │   │   ├── glview.cc
+│   │   │   │   ├── glview.sln
+│   │   │   │   ├── premake5.lua
+│   │   │   │   ├── README.md
+│   │   │   │   ├── shader.frag
+│   │   │   │   └── shader.vert
+│   │   │   ├── raytrace
+│   │   │   │   ├── config.json
+│   │   │   │   ├── cornellbox_suzanne.obj
+│   │   │   │   ├── gltf-loader.cc
+│   │   │   │   ├── gltf-loader.h
+│   │   │   │   ├── images
+│   │   │   │   │   └── nanosg-demo.png
+│   │   │   │   ├── main.cc
+│   │   │   │   ├── material.h
+│   │   │   │   ├── matrix.cc
+│   │   │   │   ├── mesh.h
+│   │   │   │   ├── nanort.cc
+│   │   │   │   ├── nanort.h
+│   │   │   │   ├── nanosg.h
+│   │   │   │   ├── obj-loader.cc
+│   │   │   │   ├── obj-loader.h
+│   │   │   │   ├── premake5.lua
+│   │   │   │   ├── README.md
+│   │   │   │   ├── render.cc
+│   │   │   │   ├── render-config.cc
+│   │   │   │   ├── render-config.h
+│   │   │   │   ├── render.h
+│   │   │   │   ├── stbi-impl.cc
+│   │   │   │   └── viwewer.make
+│   │   │   ├── saver
+│   │   │   │   ├── main.cc
+│   │   │   │   ├── Makefile.dev
+│   │   │   │   └── README.md
+│   │   │   └── validator
+│   │   │       ├── app
+│   │   │       │   └── tinygltf-validate.cc
+│   │   │       ├── CMakeLists.txt
+│   │   │       ├── LICENSE.jsonhpp.MIT
+│   │   │       ├── LICENSE.json-schema-validator.MIT
+│   │   │       ├── README.md
+│   │   │       └── src
+│   │   │           ├── json.hpp
+│   │   │           ├── json-schema-draft4.json.cpp
+│   │   │           ├── json-schema.hpp
+│   │   │           ├── json-uri.cpp
+│   │   │           └── json-validator.cpp
+│   │   ├── examples.bat
+│   │   ├── experimental
+│   │   │   ├── gen.py
+│   │   │   └── README.md
+│   │   ├── json.hpp
+│   │   ├── json.hpp.1
+│   │   ├── LICENSE
+│   │   ├── loader_example.cc
+│   │   ├── Makefile
+│   │   ├── models
+│   │   │   ├── BoundsChecking
+│   │   │   │   ├── integer-out-of-bounds.gltf
+│   │   │   │   ├── invalid-buffer-index.gltf
+│   │   │   │   ├── invalid-buffer-view-index.gltf
+│   │   │   │   ├── invalid-primitive-indices.gltf
+│   │   │   │   └── simpleTriangle.bin
+│   │   │   ├── box01.glb
+│   │   │   ├── Cube
+│   │   │   │   ├── Cube_BaseColor.png
+│   │   │   │   ├── Cube.bin
+│   │   │   │   ├── Cube.gltf
+│   │   │   │   ├── Cube_MetallicRoughness.png
+│   │   │   │   └── README.md
+│   │   │   ├── CubeImageUriSpaces
+│   │   │   │   ├──  2x2 image  has multiple      spaces.png
+│   │   │   │   ├── 2x2 image has spaces.png
+│   │   │   │   ├── CubeImageUriMultipleSpaces.gltf
+│   │   │   │   ├── CubeImageUriSpaces.bin
+│   │   │   │   └── CubeImageUriSpaces.gltf
+│   │   │   ├── Cube-texture-ext
+│   │   │   │   ├── Cube.bin
+│   │   │   │   ├── Cube_MetallicRoughness.png
+│   │   │   │   ├── Cube-textransform.gltf
+│   │   │   │   └── README.md
+│   │   │   ├── Extensions-issue97
+│   │   │   │   └── test.gltf
+│   │   │   ├── Extensions-overwrite-issue261
+│   │   │   │   ├── issue-261.bin
+│   │   │   │   └── issue-261.gltf
+│   │   │   ├── regression
+│   │   │   │   ├── unassigned-skeleton.gltf
+│   │   │   │   └── zero-sized-bin-chunk-issue-440.glb
+│   │   │   └── SparseMorphTargets-issue280
+│   │   │       └── singleBlendshapeCube_sparse.glb
+│   │   ├── premake5.lua
+│   │   ├── README.md
+│   │   ├── stb_image.h
+│   │   ├── stb_image_write.h
+│   │   ├── test_runner.py
+│   │   ├── tests
+│   │   │   ├── catch.hpp
+│   │   │   ├── fuzzer
+│   │   │   │   ├── fuzz_gltf.cc
+│   │   │   │   ├── meson.build
+│   │   │   │   └── README.md
+│   │   │   ├── issue-416.gltf
+│   │   │   ├── issue-492.glb
+│   │   │   ├── Makefile
+│   │   │   └── tester.cc
+│   │   ├── tiny_gltf.cc
+│   │   ├── tiny_gltf.h
+│   │   ├── tools
+│   │   │   └── windows
+│   │   │       └── premake5.exe
+│   │   ├── vcsetup.bat
+│   │   └── wasm
+│   │       ├── Makefile
+│   │       └── README.md
+│   └── tiny_gltf.h
+├── frag.spv
 ├── include
 │   ├── core
+│   │   ├── FPSController.h
+│   │   ├── GameLoop.h
+│   │   ├── VulkanDevice.h
+│   │   ├── VulkanInstance.h
+│   │   └── WindowManager.h
+│   ├── game
+│   │   └── GameObject.h
 │   ├── graphics
-│   └── input
+│   │   ├── BufferManager.h
+│   │   ├── CommandManager.h
+│   │   ├── FramebufferManager.h
+│   │   ├── ModelLoader.h
+│   │   ├── ShaderManager.h
+│   │   ├── SyncManager.h
+│   │   ├── Transform.h
+│   │   ├── Vertex.h
+│   │   ├── VulkanConfig.h
+│   │   ├── VulkanPipeline.h
+│   │   ├── VulkanRenderer.h
+│   │   ├── VulkanRenderPass.h
+│   │   └── VulkanSwapChain.h
+│   ├── input
+│   │   └── InputManager.h
+│   └── VulkanApp.h
+├── README.md
 ├── shaders
-└── src
-    ├── core
-    ├── graphics
-    └── input
+│   ├── compile_shaders.sh
+│   ├── frag.spv
+│   ├── shader.frag
+│   ├── shader.vert
+│   ├── test.vert
+│   └── vert.spv
+├── src
+│   ├── core
+│   │   ├── FPSController.cpp
+│   │   ├── GameLoop.cpp
+│   │   ├── VulkanDevice.cpp
+│   │   ├── VulkanInstance.cpp
+│   │   └── WindowManager.cpp
+│   ├── game
+│   │   └── GameObject.cpp
+│   ├── graphics
+│   │   ├── BufferManager.cpp
+│   │   ├── CommandManager.cpp
+│   │   ├── FramebufferManager.cpp
+│   │   ├── ModelLoader.cpp
+│   │   ├── ShaderManager.cpp
+│   │   ├── SyncManager.cpp
+│   │   ├── Transform.cpp
+│   │   ├── VulkanPipeline.cpp
+│   │   ├── VulkanRenderer.cpp
+│   │   ├── VulkanRenderPass.cpp
+│   │   └── VulkanSwapChain.cpp
+│   ├── input
+│   │   └── InputManager.cpp
+│   ├── main.cpp
+│   └── VulkanApp.cpp
+├── tasks.json
+├── tree.txt
+└── vert.spv
 
-165 directories
+169 directories, 1776 files

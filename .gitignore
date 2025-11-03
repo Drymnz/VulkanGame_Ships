@@ -1,4 +1,4 @@
-# Build
+# === Build ===
 build/
 *.o
 *.a
@@ -6,21 +6,65 @@ build/
 *.dylib
 *.exe
 
-# CMake
+# === CMake ===
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
+CMakeUserPresets.json
+CMakePresets.json
+Makefile
+Makefile2
+TargetDirectories.txt
 
-# IDE
+# === Conan ===
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+conan*.sh
+conan*.cmake
+deactivate_conan*.sh
+
+# === IDE / Editores ===
 .vscode/
 .idea/
 *.swp
 *~
+*.suo
+*.user
+*.userossc
+*.VC.db
+*.VC.opendb
 
-# Compiled shaders (opcional, si prefieres compilarlos localmente)
-# shaders/*.spv
+# === Compilados ===
+*.spv
+*.out
+*.bin
+*.dSYM/
+*.obj
+*.pdb
 
-# Conan
-conan.lock
-conanbuildinfo.*
-conaninfo.txt
+# === Archivos temporales o de sistema ===
+.DS_Store
+Thumbs.db
+*.log
+
+# === Librerías externas ===
+# (Mantén el código fuente en external/, pero ignora builds intermedios)
+external/**/build/
+external/**/bin/
+external/**/obj/
+
+# === Activos generados ===
+build/assets/
+build/models/
+build/textures/
+
+# === Documentación generada (por doxygen, etc.) ===
+docs/html/
+docs/latex/
+
+# === Scripts y otros ===
+# Ignorar si generas archivos auxiliares temporales
+*.tmp
+*.bak
+*.old
