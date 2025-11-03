@@ -2621,6 +2621,12 @@ CMakeFiles/juego.dir/src/core/WindowManager.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
+CMakeFiles/juego.dir/src/game/GameObject.cpp.o
+ /home/drymnz/Proyects/VulkanGame_Ships/src/game/GameObject.cpp
+ /home/drymnz/Proyects/VulkanGame_Ships/include/game/GameObject.h
+ /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Transform.h
+ /usr/include/stdc-predef.h
+
 CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/BufferManager.cpp
  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h
@@ -5487,14 +5493,18 @@ juego
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/VulkanApp.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/core/FPSController.cpp.o
+ /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/core/GameLoop.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.o
+ /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/core/WindowManager.cpp.o
+ /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/game/GameObject.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o
+ /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/Transform.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.o
  /home/drymnz/Proyects/VulkanGame_Ships/build/CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o

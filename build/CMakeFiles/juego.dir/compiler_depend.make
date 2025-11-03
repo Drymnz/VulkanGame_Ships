@@ -2608,6 +2608,11 @@ CMakeFiles/juego.dir/src/core/WindowManager.cpp.o: /home/drymnz/Proyects/VulkanG
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
+CMakeFiles/juego.dir/src/game/GameObject.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/game/GameObject.cpp \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/game/GameObject.h \
+  /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Transform.h \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o: /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/BufferManager.cpp \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/BufferManager.h \
   /home/drymnz/Proyects/VulkanGame_Ships/include/graphics/Vertex.h \
@@ -5460,14 +5465,18 @@ juego: /home/drymnz/.conan2/p/b/glfwaccb02bb98638/p/lib/libglfw3.a \
   CMakeFiles/juego.dir/external/imgui/imgui_widgets.cpp.o \
   CMakeFiles/juego.dir/src/VulkanApp.cpp.o \
   CMakeFiles/juego.dir/src/core/FPSController.cpp.o \
+  CMakeFiles/juego.dir/src/core/GameLoop.cpp.o \
   CMakeFiles/juego.dir/src/core/VulkanDevice.cpp.o \
   CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.o \
+  CMakeFiles/juego.dir/src/core/WindowManager.cpp.o \
+  CMakeFiles/juego.dir/src/game/GameObject.cpp.o \
   CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o \
   CMakeFiles/juego.dir/src/graphics/CommandManager.cpp.o \
   CMakeFiles/juego.dir/src/graphics/FramebufferManager.cpp.o \
   CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o \
   CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o \
   CMakeFiles/juego.dir/src/graphics/SyncManager.cpp.o \
+  CMakeFiles/juego.dir/src/graphics/Transform.cpp.o \
   CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o \
   CMakeFiles/juego.dir/src/graphics/VulkanRenderPass.cpp.o \
   CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o \
@@ -5482,11 +5491,19 @@ CMakeFiles/juego.dir/src/graphics/VulkanRenderer.cpp.o:
 
 CMakeFiles/juego.dir/src/graphics/VulkanPipeline.cpp.o:
 
+CMakeFiles/juego.dir/src/graphics/Transform.cpp.o:
+
 CMakeFiles/juego.dir/src/graphics/ShaderManager.cpp.o:
 
 CMakeFiles/juego.dir/src/graphics/ModelLoader.cpp.o:
 
+CMakeFiles/juego.dir/src/game/GameObject.cpp.o:
+
+CMakeFiles/juego.dir/src/core/WindowManager.cpp.o:
+
 CMakeFiles/juego.dir/src/core/VulkanInstance.cpp.o:
+
+CMakeFiles/juego.dir/src/core/GameLoop.cpp.o:
 
 CMakeFiles/juego.dir/src/core/FPSController.cpp.o:
 
@@ -5669,6 +5686,8 @@ CMakeFiles/juego.dir/src/graphics/BufferManager.cpp.o:
 /usr/include/c++/15.2.1/bits/stl_numeric.h:
 
 /usr/include/c++/15.2.1/bits/stl_multimap.h:
+
+/usr/include/c++/15.2.1/bits/stl_map.h:
 
 /usr/lib/libX11.so:
 
@@ -6556,8 +6575,6 @@ CMakeFiles/juego.dir/src/VulkanApp.cpp.o:
 
 /usr/include/asm-generic/posix_types.h:
 
-/usr/include/c++/15.2.1/bits/stl_map.h:
-
 /usr/include/asm/posix_types.h:
 
 /usr/include/c++/15.2.1/bits/stl_vector.h:
@@ -6789,6 +6806,8 @@ CMakeFiles/juego.dir/external/imgui/imgui_tables.cpp.o:
 /home/drymnz/Proyects/VulkanGame_Ships/src/core/VulkanInstance.cpp:
 
 /home/drymnz/Proyects/VulkanGame_Ships/src/core/WindowManager.cpp:
+
+/home/drymnz/Proyects/VulkanGame_Ships/src/game/GameObject.cpp:
 
 /home/drymnz/Proyects/VulkanGame_Ships/src/graphics/CommandManager.cpp:
 
