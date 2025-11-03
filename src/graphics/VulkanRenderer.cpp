@@ -1,10 +1,18 @@
 #include "graphics/VulkanRenderer.h"
 #include <stdexcept>
 #include <iostream>
+#include <cmath>
+#include <cstring>
 
 VulkanRenderer::VulkanRenderer()
-    : device(VK_NULL_HANDLE), currentFrame(0), useIndexBuffer(false) {}
+    : device(VK_NULL_HANDLE)
+    , currentFrame(0)
+    , useIndexBuffer(false)
+    , modelX(0.0f)
+    , modelY(-2.0f)  // Profundidad inicial
+    , modelZ(0.0f) {}
 
+    
 VulkanRenderer::~VulkanRenderer()
 {
     destroy();
@@ -45,17 +53,42 @@ void VulkanRenderer::createFramebuffers(VkRenderPass renderPass,
     framebufferManager.createFramebuffers(renderPass, imageViews, extent);
 }
 
-void VulkanRenderer::updateVertexPosition(float x, float y)
-{
-    bufferManager.updateVertexPosition(x, y);
+// Establecer posición del modelo
+// x = vertical (arriba/abajo en pantalla)
+// y = profundidad (alejamiento de cámara, negativo = lejos)
+// z = horizontal (izquierda/derecha en pantalla)
+void setModelPosition(float x, float y, float z);
+
+void VulkanRenderer::setModelPosition(float x, float y, float z) {
+    modelX = x;
+    modelY = y;
+    modelZ = z;
+}
+
+void VulkanRenderer::createModelMatrix(float* matrix, float x, float y, float z) {
+    // Matriz identidad
+    memset(matrix, 0, 16 * sizeof(float));
+    
+    float scale = 1.0f;
+    matrix[0] = scale;
+    matrix[5] = scale;
+    matrix[10] = scale;
+    matrix[15] = 1.0f;
+    
+    // Sistema de coordenadas interno:
+    // x = vertical (arriba/abajo en pantalla)
+    // y = profundidad (cerca/lejos de cámara)
+    // z = horizontal (izquierda/derecha en pantalla)
+    matrix[12] = x;
+    matrix[13] = y;
+    matrix[14] = z;
 }
 
 void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
                                VkQueue graphicsQueue, VkQueue presentQueue,
                                VkRenderPass renderPass, VkPipeline pipeline,
-                               VkExtent2D extent)
+                               VkPipelineLayout pipelineLayout, VkExtent2D extent)
 {
-
     // Esperar a que el frame anterior termine
     vkWaitForFences(device, 1, &syncManager.getInFlightFences()[currentFrame], VK_TRUE, UINT64_MAX);
 
@@ -103,11 +136,15 @@ void VulkanRenderer::drawFrame(VkDevice device, VkSwapchainKHR swapChain,
     vkCmdBeginRenderPass(commandBuffer, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline);
 
+    // Crear y enviar matriz de transformación
+    float modelMatrix[16];
+    createModelMatrix(modelMatrix, modelX, modelY, modelZ);
+    vkCmdPushConstants(commandBuffer, pipelineLayout, VK_SHADER_STAGE_VERTEX_BIT, 
+                       0, sizeof(modelMatrix), modelMatrix);
+
     VkBuffer vertexBuffers[] = {bufferManager.getVertexBuffer()};
     VkDeviceSize offsets[] = {0};
     vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
-
-    // vkCmdDraw(commandBuffer, 1, 1, 0, 0);
 
     // Dibujar con índices si tenemos un modelo cargado
     if (useIndexBuffer && bufferManager.getIndexCount() > 0)

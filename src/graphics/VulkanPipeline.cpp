@@ -1,7 +1,7 @@
 #include "graphics/VulkanPipeline.h"
 #include <stdexcept>
 #include <iostream>
-#include <array> 
+#include <array>
 
 VulkanPipeline::VulkanPipeline()
     : pipelineLayout(VK_NULL_HANDLE), graphicsPipeline(VK_NULL_HANDLE), device(VK_NULL_HANDLE) {}
@@ -106,8 +106,8 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     rasterizer.rasterizerDiscardEnable = VK_FALSE;
     rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
     rasterizer.lineWidth = 1.0f;
-    rasterizer.cullMode = VK_CULL_MODE_BACK_BIT;
-    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;  // <-- Cambiar a COUNTER_CLOCKWISE
+    rasterizer.cullMode = VK_CULL_MODE_NONE;  // <-- Cambiar de BACK_BIT a NONE
+    rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE; // <-- Cambiar a COUNTER_CLOCKWISE
     rasterizer.depthBiasEnable = VK_FALSE;
 
     VkPipelineMultisampleStateCreateInfo multisampling{};
@@ -126,8 +126,16 @@ void VulkanPipeline::createGraphicsPipeline(VkDevice dev, VkRenderPass renderPas
     colorBlending.attachmentCount = 1;
     colorBlending.pAttachments = &colorBlendAttachment;
 
+    // Configurar push constants para la matriz de transformación
+    VkPushConstantRange pushConstantRange{};
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    pushConstantRange.offset = 0;
+    pushConstantRange.size = sizeof(PushConstants);
+
     VkPipelineLayoutCreateInfo pipelineLayoutInfo{};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
+    pipelineLayoutInfo.pushConstantRangeCount = 1;
+    pipelineLayoutInfo.pPushConstantRanges = &pushConstantRange;
 
     if (vkCreatePipelineLayout(device, &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS)
     {

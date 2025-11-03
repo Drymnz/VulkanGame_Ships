@@ -22,7 +22,7 @@ void VulkanApp::run()
     initVulkan();
     initImGui();
     mainLoop();
-    cleanup();
+    cleanup(); // Se llama aquí, no en el destructor
 }
 
 void VulkanApp::initWindow()
@@ -97,25 +97,53 @@ void VulkanApp::initImGui()
     // TODO: Implementar ImGui
 }
 
-void VulkanApp::mainLoop()
-{
-    while (!glfwWindowShouldClose(window))
-    {
+void VulkanApp::mainLoop() {
+    std::cout << "Entrando al main loop..." << std::endl;
+    
+    int frameNum = 0;
+    
+    // Variables en coordenadas lógicas (lo que el usuario espera)
+    float vertical = 0.0f;      // Arriba/Abajo en pantalla
+    float depth = -2.0f;        // Profundidad (alejamiento de cámara)
+    float horizontal = 0.0f;    // Izquierda/Derecha en pantalla
+    
+    while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
-
-        inputManager.updateMovement(pointX, pointY, 0.01f);
-        renderer.updateVertexPosition(pointX, pointY);
-
-        renderer.drawFrame(vulkanDevice.getLogicalDevice(),
-                           swapChain.getSwapChain(),
-                           vulkanDevice.getGraphicsQueue(),
-                           vulkanDevice.getPresentQueue(),
-                           renderPass.getRenderPass(),
-                           pipeline.getPipeline(),
-                           swapChain.getExtent());
-
-        updateFPS();
+        
+        try {
+            // Actualizar movimiento con nombres lógicos
+            inputManager.updateMovement(vertical, depth, horizontal, 0.05f);
+            
+            // Mapear coordenadas lógicas al sistema interno de Vulkan
+            // Sistema interno: X=vertical, Y=profundidad, Z=horizontal
+            float modelX = horizontal;  // CAMBIO: horizontal va a X
+            float modelY = depth;
+            float modelZ = vertical;    // CAMBIO: vertical va a Z
+            
+            renderer.setModelPosition(modelX, modelY, modelZ);
+            
+            renderer.drawFrame(vulkanDevice.getLogicalDevice(),
+                              swapChain.getSwapChain(), 
+                              vulkanDevice.getGraphicsQueue(), 
+                              vulkanDevice.getPresentQueue(),
+                              renderPass.getRenderPass(),
+                              pipeline.getPipeline(),
+                              pipeline.getPipelineLayout(),
+                              swapChain.getExtent());
+            
+            updateFPS();
+            frameNum++;
+            
+            if (frameNum == 1) {
+                std::cout << "Primer frame renderizado exitosamente" << std::endl;
+            }
+        } catch (const std::exception& e) {
+            std::cerr << "Error en frame " << frameNum << ": " << e.what() << std::endl;
+            break;
+        }
     }
+    
+    std::cout << "Saliendo del main loop después de " << frameNum << " frames" << std::endl;
 }
 
 void VulkanApp::updateFPS()
@@ -138,28 +166,36 @@ void VulkanApp::updateFPS()
     }
 }
 
-void VulkanApp::cleanup() {
-    if (vulkanDevice.getLogicalDevice() != VK_NULL_HANDLE) {
+void VulkanApp::cleanup()
+{
+    std::cout << "Cleanup iniciado..." << std::endl; // <-- AGREGAR
+
+    if (vulkanDevice.getLogicalDevice() != VK_NULL_HANDLE)
+    {
         vkDeviceWaitIdle(vulkanDevice.getLogicalDevice());
     }
-    
+
     renderer.destroy();
     pipeline.destroy();
     renderPass.destroy();
     swapChain.destroy();
     vulkanDevice.destroy();
-    
-    if (surface != VK_NULL_HANDLE) {
+
+    if (surface != VK_NULL_HANDLE)
+    {
         vkDestroySurfaceKHR(vulkanInstance.getInstance(), surface, nullptr);
         surface = VK_NULL_HANDLE;
     }
-    
+
     vulkanInstance.destroy();
-    
-    if (window) {
+
+    if (window)
+    {
         glfwDestroyWindow(window);
         glfwTerminate();
     }
+
+    std::cout << "Cleanup completado" << std::endl; // <-- AGREGAR
 }
 
 void VulkanApp::keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)

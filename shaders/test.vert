@@ -17,7 +17,7 @@ void main() {
     vec4 worldPos = push.model * vec4(inPosition, 1.0);
     
     // Proyección perspectiva simple
-    float fov = 1.0;  // Field of view
+    float fov = 1.0;
     float aspect = 800.0 / 600.0;
     float near = 0.1;
     float far = 100.0;
@@ -30,12 +30,13 @@ void main() {
         0.0, 0.0, (2.0*far*near)/(near-far), 0.0
     );
     
-    // Vista (cámara en Z=5 mirando hacia -Z)
+    // Vista rotada: Cámara mirando desde +X hacia -X
+    // Y = derecha/izquierda, Z = arriba/abajo, X = profundidad
     mat4 view = mat4(
-        1.0, 0.0, 0.0, 0.0,
-        0.0, 1.0, 0.0, 0.0,
-        0.0, 0.0, 1.0, 0.0,
-        0.0, 0.0, -5.0, 1.0
+        0.0, 0.0, -1.0, 0.0,   // X de cámara apunta a -Z de mundo
+        -1.0, 0.0, 0.0, 0.0,   // Y de cámara apunta a -X de mundo
+        0.0, 1.0, 0.0, 0.0,    // Z de cámara apunta a +Y de mundo
+        5.0, 0.0, 0.0, 1.0     // Cámara en X=5 mirando hacia X=0
     );
     
     gl_Position = projection * view * worldPos;
